@@ -29,15 +29,15 @@ export function AboutPreview() {
     <section className="relative bg-white overflow-hidden">
       <div ref={ref} className="grid lg:grid-cols-2 min-h-[90vh]">
         <div className="flex flex-col justify-center px-6 lg:px-10 py-10 lg:py-16 reveal-left h-full w-full">
-          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center px-10 lg:px-16 py-16 min-h-[350px] md:min-h-[500px]">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end px-6 lg:px-10 pt-16 pb-8 min-h-[350px] md:min-h-[500px]">
             <div className="absolute inset-0 z-0">
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1200"
                 alt="Our Story"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000 brightness-110 contrast-125 saturate-150"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/70 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-slate-900/30 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent" />
             </div>
 
             <div className="absolute inset-0 opacity-[0.05] z-0"
@@ -49,17 +49,16 @@ export function AboutPreview() {
 
             <div className="relative z-10">
               <div className="section-label-dark reveal">About Us</div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mt-4 mb-8 reveal">
-                Built on<br />
-                <span className="text-primary-300">Decades</span><br />
-                of Trust
+              <h2 className="text-[1.9rem] font-bold text-white leading-[1.1] mt-4 mb-8 reveal">
+                Building Stronger Businesses Through<br />
+                <span className="text-white/60">Finance, Governance & Innovation</span>
               </h2>
 
-              <blockquote className="border-l-2 border-primary-500 pl-6 mb-10 reveal">
-                <p className="text-white/70 text-sm md:text-base leading-relaxed italic max-w-sm">
-                  &ldquo;Every business deserves access to world-class financial advisory — that&apos;s the principle we were built on.&rdquo;
+              <div className="mb-10 reveal">
+                <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed max-w-sm">
+                  Viswanathan R Associates is a professional consulting firm providing end-to-end financial advisory, business consulting, valuation, insolvency support, governance, and strategic finance services.
                 </p>
-              </blockquote>
+              </div>
 
               <div className="flex flex-wrap gap-8 reveal">
                 <div>
@@ -78,24 +77,26 @@ export function AboutPreview() {
 
         <div className="flex flex-col justify-center px-10 lg:px-16 py-24 h-full">
           <div className="w-full xl:pr-10">
-            <p className="text-sm font-semibold tracking-widest text-primary-600 uppercase mb-3 reveal">
+            <p className="text-base font-semibold tracking-widest text-primary-600 uppercase mb-4 reveal">
               Our Story
             </p>
-            <p className="text-secondary-700 text-lg leading-relaxed mb-8 reveal">
-              {companyInfo.story}
-            </p>
+            <div className="text-secondary-700 text-base leading-relaxed mb-8 reveal space-y-4">
+              <p>Our firm believes that sustainable business success is achieved through strong financial controls, effective governance, technology adoption, and continuous improvement.</p>
+              <p>We partner with businesses to enhance profitability, improve operational efficiency, ensure regulatory compliance, and support long-term growth.</p>
+              <p>Whether it is a startup, MSME, multinational corporation, or financial institution, we deliver practical solutions tailored to business objectives.</p>
+            </div>
 
             <div className="space-y-4 mb-10">
-              <div className="p-5 rounded-xl border-l-4 border-primary-600 bg-white shadow-soft reveal">
+              <div className="p-2 rounded-xl border-l-4 border-primary-600 bg-white shadow-soft reveal">
                 <div className="text-xs font-bold tracking-widest text-primary-600 uppercase mb-2">Vision</div>
                 <p className="text-secondary-700 text-sm leading-relaxed">
-                  To be the most trusted partner for organizations seeking exceptional financial advisory and business transformation.
+                  To be one of India's most trusted corporate advisory firms, delivering innovative, ethical, and technology-driven financial solutions that create lasting business value.
                 </p>
               </div>
-              <div className="p-5 rounded-xl border-l-4 border-secondary-400 bg-white shadow-soft reveal">
+              <div className="p-2 rounded-xl border-l-4 border-secondary-400 bg-white shadow-soft reveal">
                 <div className="text-xs font-bold tracking-widest text-secondary-500 uppercase mb-2">Mission</div>
                 <p className="text-secondary-700 text-sm leading-relaxed">
-                  We empower businesses with strategic financial insights that drive growth, optimize operations, and create lasting value.
+                  To empower businesses with strategic financial, governance, technology, and operational solutions while upholding integrity, professionalism, and client commitment.
                 </p>
               </div>
             </div>
