@@ -73,7 +73,7 @@ export function ServicesGrid() {
       />
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-white rounded-full blur-3xl opacity-50 z-0 pointer-events-none" />
 
-      <div ref={ref} className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
+      <div ref={ref} className="container-custom relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
         
         {/* Left Image Section */}
         <div className="w-full lg:w-[32%] relative reveal-left order-2 lg:order-1 pt-10 lg:pt-0">

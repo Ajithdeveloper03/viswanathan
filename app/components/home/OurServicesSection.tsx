@@ -10,19 +10,39 @@ const servicesData = [
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800',
   },
   {
+    title: 'Insolvency & Bankruptcy',
+    description: 'Comprehensive resolution services under the IBC code for distressed assets and businesses.',
+    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    title: 'Cost Audit & Optimization',
+    description: 'In-depth analysis to identify inefficiencies and implement strategic savings.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+  },
+  {
     title: 'Transfer Pricing',
     description: 'Navigate complex tax regulations and optimize your global operations.',
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800',
   },
   {
+    title: 'Internal Audit & Risk',
+    description: 'Robust internal controls and risk management frameworks for sustainable growth.',
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    title: 'AI Business Solutions',
+    description: 'Integrate advanced artificial intelligence to automate and scale your business operations.',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    title: 'Corporate Governance',
+    description: 'Implement ethical governance structures to ensure transparency and compliance.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
+  },
+  {
     title: 'Fractional CFO',
     description: 'Strategic financial leadership on a part-time basis to guide your success.',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
-  },
-  {
-    title: 'Cost Audit',
-    description: 'In-depth analysis to identify inefficiencies and implement savings.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
   }
 ];
 
@@ -48,14 +68,11 @@ export function OurServicesSection() {
   }, []);
 
   return (
-    <section className="relative pt-8 md:pt-12 pb-24 bg-[#fcfcfc] overflow-hidden">
-      <div ref={ref} className="container-custom relative z-10 max-w-[1400px]">
+    <section className="relative pt-8 md:pt-12 pb-8 bg-[#fcfcfc] overflow-hidden">
+      <div ref={ref} className="container-custom relative z-10">
         
         {/* Header Section */}
         <div className="mb-14 text-center max-w-3xl mx-auto flex flex-col items-center justify-center">
-          <div className="inline-block px-3 py-1 bg-white border border-secondary-200 shadow-sm rounded mb-4">
-            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary-600">What We Do</span>
-          </div>
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-secondary-900 leading-[1.2] tracking-tight mb-5">
             Our Services
           </h2>
@@ -73,7 +90,7 @@ export function OurServicesSection() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image Container */}
-              <div className="relative h-44 w-full rounded-t-2xl overflow-hidden group/img">
+              <div className="relative h-32 w-11/12 mx-auto mt-4 rounded-xl overflow-hidden group/img">
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/90 via-secondary-900/10 to-transparent group-hover/img:from-secondary-900/80 transition-colors duration-500 z-10"></div>
                 <img 
                   src={service.image} 
@@ -97,8 +114,8 @@ export function OurServicesSection() {
               </div>
               
               {/* Content Container */}
-              <div className="p-6 pt-8 flex-1 flex flex-col bg-white rounded-b-2xl">
-                <p className="text-secondary-600 text-[13px] leading-relaxed mb-2 flex-1">
+              <div className="p-6 pt-6 flex-1 flex flex-col bg-white rounded-b-2xl">
+                <p className="text-secondary-600 text-[15px] leading-relaxed mb-2 flex-1">
                   {service.description}
                 </p>
               </div>
@@ -107,7 +124,7 @@ export function OurServicesSection() {
         </div>
         
         {/* Bottom CTA Button */}
-        <div className="mt-10 flex justify-end reveal-up">
+        <div className="mt-10 flex justify-center reveal-up">
           <button className="btn-primary py-2.5 px-5 text-sm group flex items-center gap-2">
             View All Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

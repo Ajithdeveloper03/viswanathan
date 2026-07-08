@@ -27,12 +27,8 @@ export function CTABanner() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="relative bg-primary-50 section-padding overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <span className="text-[10rem] md:text-[15rem] lg:text-[20rem] font-bold text-primary-900/[0.03] font-serif leading-none whitespace-nowrap">
-            VRA
-          </span>
-        </div>
+      <div className="relative bg-primary-50 py-12 overflow-hidden">
+
 
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/15 rounded-full blur-[100px] animate-float-slow pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary-500/10 rounded-full blur-[80px] animate-float pointer-events-none" style={{ animationDelay: '3s' }} />
@@ -45,7 +41,7 @@ export function CTABanner() {
                 <div className="section-label-dark reveal">Get Started</div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 leading-tight mt-4 mb-4 reveal">
                   Ready to Strengthen<br />
-                  Your Business<br />
+                  <span className="text-accent-600">Your Business</span><br />
                   <span className="text-primary-600">Finances?</span>
                 </h2>
                 <p className="section-subtitle-white mb-6 reveal">
@@ -61,8 +57,8 @@ export function CTABanner() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-4">
                       <a href={`mailto:${companyInfo.contact.email}`}
-                        className="flex items-start gap-3 group hover:text-primary-600 transition-colors">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-primary-600 transition-colors duration-300">
+                        className="flex items-start gap-3 group hover:text-accent-600 transition-colors">
+                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
                           <Mail className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
                         </div>
                         <div>
@@ -72,8 +68,8 @@ export function CTABanner() {
                       </a>
 
                       <a href={`tel:${companyInfo.contact.phone.replace(/\s/g, '')}`}
-                        className="flex items-start gap-3 group hover:text-primary-600 transition-colors">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-primary-600 transition-colors duration-300">
+                        className="flex items-start gap-3 group hover:text-accent-600 transition-colors">
+                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
                           <Phone className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
                         </div>
                         <div>
@@ -84,9 +80,9 @@ export function CTABanner() {
                     </div>
 
                     <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0">
-                          <MapPin className="w-4 h-4 text-secondary-500" />
+                      <div className="flex items-start gap-3 group cursor-pointer hover:text-accent-600 transition-colors">
+                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
+                          <MapPin className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
                         </div>
                         <div>
                           <div className="text-secondary-500 text-xs mb-0.5">Office</div>

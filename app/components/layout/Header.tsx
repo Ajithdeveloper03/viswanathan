@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-0 xl:gap-1" ref={dropdownRef}>
+          <div className="hidden lg:flex items-center gap-0 xl:gap-1 -translate-y-7" ref={dropdownRef}>
             {navigation.main.map((item) => (
               <div key={item.name} className="relative">
                 {item.submenu ? (
@@ -116,7 +116,7 @@ const Header = () => {
           {/* CTA Button - Desktop */}
           <Link
             href={navigation.cta.href}
-            className={`hidden lg:inline-flex items-center gap-2 transition-colors duration-300 whitespace-nowrap btn-primary text-xs xl:text-sm px-4 xl:px-7`}
+            className={`hidden lg:inline-flex items-center gap-2 transition-colors duration-300 whitespace-nowrap btn-primary text-xs xl:text-sm px-4 xl:px-7 -translate-y-7`}
           >
             {navigation.cta.name}
           </Link>
@@ -124,7 +124,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-secondary-900 hover:bg-secondary-100"
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-secondary-900 hover:bg-secondary-100 -translate-y-7"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

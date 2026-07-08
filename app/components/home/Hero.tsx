@@ -8,9 +8,9 @@ const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-secondary-900', 'text-primary-600', 'text-accent-600'];
 
 const bannerImages = [
-  'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2000&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000&auto=format&fit=crop'
+  'viswanathanr/banner1.png',
+  'viswanathanr/banner2.png',
+  'viswanathanr/banner3.png'
 ];
 
 const Hero = () => {

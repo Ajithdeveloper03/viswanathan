@@ -11,9 +11,9 @@ const Footer = () => {
       <div className="container-custom py-20 lg:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-6">
-              <div className="w-32 h-32 flex items-center justify-center shrink-0">
+          <div className="lg:col-span-1 flex flex-col h-full">
+            <Link href="/" className="inline-flex flex-col items-start gap-4 mb-6">
+              <div className="w-32 h-32 flex items-center justify-center shrink-0 bg-white rounded-xl p-3 shadow-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/viswanathanr/vr-logo.png" 
@@ -22,33 +22,33 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            <p className="text-white/80 text-sm leading-relaxed mb-6 pr-2 lg:pr-6">
-              A premier consultancy firm delivering excellence in valuation, insolvency professional services, and corporate governance for over 25 years.
+            <p className="text-white/80 text-sm leading-relaxed mb-4 pr-2 lg:pr-6">
+              Delivering excellence in valuation, restructuring, and corporate governance for over 25 years.
             </p>
-            <div className="flex gap-3">
-              <span
-                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center transition-colors duration-200 cursor-default opacity-80 text-white"
+            <div className="flex gap-3 mt-auto pt-2">
+              <a href="#"
+                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </span>
-              <span
-                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center transition-colors duration-200 cursor-default opacity-80 text-white"
+              </a>
+              <a href="#"
+                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </span>
-              <span
-                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center transition-colors duration-200 cursor-default opacity-80 text-white"
+              </a>
+              <a href="#"
+                className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </span>
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col h-full">
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {navigation.main.map((item) => (
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Our Services */}
-          <div>
+          <div className="flex flex-col h-full">
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
               {services.slice(0, 6).map((service) => (
@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="flex flex-col h-full">
             <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex gap-3">

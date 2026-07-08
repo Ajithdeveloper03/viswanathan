@@ -164,13 +164,13 @@ export function Industries() {
   return (
     <div ref={wrapperRef} style={{ height: wrapperHeight || '600vh' }} className="relative bg-secondary-50">
       <div className="sticky top-0 overflow-hidden flex flex-col justify-center" style={{ height: '100vh' }}>
-        <div className="w-full z-30 pt-10 pb-4 px-10 shrink-0">
-          <div className="flex flex-col items-center text-center max-w-7xl mx-auto">
+        <div className="w-full z-30 pt-10 pb-4 shrink-0">
+          <div className="container-custom flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-100 text-secondary-600 text-xs font-bold tracking-widest uppercase rounded-full border border-secondary-200 mb-3 shadow-sm">
               Cross-Industry Expertise
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 leading-tight drop-shadow-sm">
-              Industries We Serve
+              Industries <span className="text-accent-600">We Serve</span>
             </h2>
           </div>
         </div>
