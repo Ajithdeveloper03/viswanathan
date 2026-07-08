@@ -35,7 +35,7 @@ export function FounderPreview() {
             <h2 className="section-title mt-4 mb-6 reveal">
               Meet Our <span className="gradient-text">Founder</span>
             </h2>
-            <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-4">
+            <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-4 text-justify sm:text-left">
               <p>
                 Mr. Viswanathan Rajagopalan is a highly accomplished finance professional with over 25 years of international experience in corporate finance, cost management, business valuation, restructuring, governance, and strategic advisory.
               </p>
@@ -60,7 +60,7 @@ export function FounderPreview() {
                 
                 {/* Full Container Image */}
                 <img 
-                  src="/viswanathanr/founder.jpg" 
+                  src="/viswanathanr/founder.png" 
                   alt={founder.name} 
                   className="absolute inset-0 w-full h-full object-cover object-top z-0"
                 />

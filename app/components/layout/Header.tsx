@@ -40,8 +40,13 @@ const Header = () => {
 
   return (
     <header
-      className="absolute top-0 left-0 right-0 z-50 py-3 bg-transparent"
+      className="absolute top-0 left-0 right-0 z-50 py-3"
     >
+      {/* Subtle overlay for better menu visibility */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 100%)' }}
+      />
 
       <div className="container-custom relative z-10">
         <nav className="flex items-center justify-between">

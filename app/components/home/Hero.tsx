@@ -40,7 +40,7 @@ const Hero = () => {
       {bannerImages.map((src, index) => (
         <div
           key={src}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out bg-white ${
             index === currentBg ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -65,10 +65,10 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container-custom w-full relative z-10 flex-1 flex flex-col justify-center">
-        <div className="max-w-3xl w-full">
+        <div className="max-w-3xl w-full flex flex-col items-center sm:items-start text-center sm:text-left">
           
           {/* Pill badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white backdrop-blur-sm rounded-full border border-secondary-200 mb-6 lg:mb-8 animate-fade-in shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full border border-secondary-200 mb-6 lg:mb-8 animate-fade-in shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-500 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500" />
@@ -79,14 +79,14 @@ const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <div className="mb-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary-900 leading-[1.1] animate-fade-in-up drop-shadow-md">
+          <div className="mb-6 w-full">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary-900 leading-[1.1] animate-fade-in-up drop-shadow-md text-center sm:text-left">
               Corporate
             </h1>
             {/* Animated word cycle */}
-            <div className="relative my-1 sm:my-2">
+            <div className="relative my-1 sm:my-2 w-full">
               {/* Structural invisible element to maintain container size for longest text */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] opacity-0 pointer-events-none select-none" aria-hidden="true">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] opacity-0 pointer-events-none select-none text-center sm:text-left" aria-hidden="true">
                 Value Creation.
               </h1>
 
@@ -95,7 +95,7 @@ const Hero = () => {
                 {words.map((word, i) => (
                   <h1
                     key={word}
-                    className={`absolute top-0 left-0 w-full text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] transition-all duration-700 ease-in-out drop-shadow-md ${wordColors[i]} ${
+                    className={`absolute top-0 left-0 w-full text-center sm:text-left text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] transition-all duration-700 ease-in-out drop-shadow-md ${wordColors[i]} ${
                       i === currentWord
                         ? 'translate-y-0 opacity-100 z-10 scale-100'
                         : i < currentWord || (currentWord === 0 && i === words.length - 1)
@@ -110,12 +110,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-base sm:text-lg text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200">
+          <p className="text-base sm:text-lg text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200 text-center sm:text-left px-4 sm:px-0">
             {companyInfo.description} With 25+ years of global experience delivering measurable results for businesses, investors, and corporate leaders.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
+          <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300 justify-center sm:justify-start">
             <span className="btn-primary group cursor-pointer text-sm tracking-wider">
               Book a Consultation
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -126,9 +126,9 @@ const Hero = () => {
           </div>
 
           {/* Credentials */}
-          <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-3 mt-4 lg:mt-6 animate-fade-in animate-delay-500">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start gap-x-6 gap-y-3 mt-4 lg:mt-6 animate-fade-in animate-delay-500">
             {['IBBI Registered Valuer', 'IBBI Insolvency Professional', 'Independent Director'].map((cred) => (
-              <div key={cred} className="flex items-center gap-2 text-secondary-600 text-sm font-medium">
+              <div key={cred} className="flex items-center justify-center sm:justify-start gap-2 text-secondary-600 text-sm font-medium">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500 shadow-[0_0_10px_rgba(197,154,27,0.3)]" />
                 {cred}
               </div>
@@ -138,8 +138,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Slider Navigation Dots - Right Aligned */}
-      <div className="absolute right-4 sm:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
+      {/* Slider Navigation Dots - Bottom on mobile, Right on desktop */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 sm:bottom-auto sm:left-auto sm:translate-x-0 sm:right-8 lg:right-12 sm:top-1/2 sm:-translate-y-1/2 z-20 flex flex-row sm:flex-col gap-3">
         {bannerImages.map((_, idx) => (
           <button
             key={idx}
@@ -147,7 +147,7 @@ const Hero = () => {
             aria-label={`Go to slide ${idx + 1}`}
             className={`transition-all duration-300 rounded-full shadow-sm ${
               currentBg === idx 
-                ? 'w-2 h-8 bg-accent-500' 
+                ? 'w-8 h-2 sm:w-2 sm:h-8 bg-accent-500' 
                 : 'w-2 h-2 bg-secondary-300 hover:bg-secondary-400'
             }`}
           />
