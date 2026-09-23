@@ -8,9 +8,9 @@ const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-secondary-900', 'text-primary-600', 'text-accent-600'];
 
 const bannerImages = [
-  'viswanathanr/banner1.png',
-  'viswanathanr/banner2.png',
-  'viswanathanr/banner3.png'
+  '/banner1.png',
+  '/banner2.png',
+  '/banner3.png'
 ];
 
 const Hero = () => {

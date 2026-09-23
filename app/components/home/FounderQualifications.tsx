@@ -134,7 +134,7 @@ export function FounderQualifications() {
           <div className="relative w-full md:w-[30%] min-h-[140px] md:min-h-[160px] shrink-0 flex items-center justify-center overflow-hidden">
             {/* Gold Medal image on the right */}
             <img 
-              src="/viswanathanr/Achievement.jpg/" 
+              src="/Achievement.jpg" 
               alt="Gold Medal Academic Excellence" 
               className="absolute inset-0 w-full h-full object-cover object-center scale-105" 
             />

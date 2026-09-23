@@ -34,14 +34,7 @@ export const navigation = {
     { name: 'Home', href: '/' },
     {
       name: 'About Us',
-      href: '#',
-      submenu: [
-        { name: 'Our Story', href: '#' },
-        { name: 'Vision & Mission', href: '#' },
-        { name: 'Founder Profile', href: '#' },
-        { name: 'Core Values', href: '#' },
-        { name: 'Why Choose Us', href: '#' },
-      ],
+      href: '/about-us',
     },
     {
       name: 'Our Services',

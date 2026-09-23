@@ -55,7 +55,7 @@ const Header = () => {
             <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 bg-transparent w-32 h-32`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/viswanathanr/vr-logo.png" 
+                src="/vr-logo.png" 
                 alt="VR Logo" 
                 className="w-full h-full object-contain"
               />

@@ -50,27 +50,17 @@ export function AboutPreview() {
             <div className="relative z-10">
               <div className="section-label-dark reveal">About Us</div>
               <h2 className="text-[1.9rem] font-bold text-white leading-[1.1] mt-4 mb-8 reveal">
-                Building Stronger Businesses Through<br />
-                <span className="text-white/60">Finance, Governance & Innovation</span>
+                Viswanathan R Associates<br />
+                <span className="text-white/60 text-xl font-medium mt-2 block">“Transforming financial insight into measurable business value.”</span>
               </h2>
 
               <div className="mb-10 reveal">
                 <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed max-w-sm text-justify sm:text-left">
-                  Viswanathan R Associates is a professional consulting firm providing end-to-end financial advisory, business consulting, valuation, insolvency support, governance, and strategic finance services.
+                  At Viswanathan R Associates, we help businesses make better financial decisions, improve operational performance, manage risk, and create sustainable value.
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-8 reveal">
-                <div>
-                  <div className="text-3xl font-bold text-white">25+</div>
-                  <div className="text-white/50 text-xs mt-1 uppercase tracking-wider font-semibold">Years Experience</div>
-                </div>
-                <div className="hidden sm:block w-px bg-white/20" />
-                <div>
-                  <div className="text-3xl font-bold text-white">970+</div>
-                  <div className="text-white/50 text-xs mt-1 uppercase tracking-wider font-semibold">Valuations</div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -78,25 +68,19 @@ export function AboutPreview() {
         <div className="flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16 lg:py-24 h-full">
           <div className="w-full xl:pr-10">
             <div className="section-label reveal">Our Story</div>
-            <div className="text-secondary-700 text-base leading-relaxed mb-8 reveal space-y-4 text-justify sm:text-left">
-              <p>Our firm believes that sustainable business success is achieved through strong financial controls, effective governance, technology adoption, and continuous improvement.</p>
-              <p>We partner with businesses to enhance profitability, improve operational efficiency, ensure regulatory compliance, and support long-term growth.</p>
-              <p>Whether it is a startup, MSME, multinational corporation, or financial institution, we deliver practical solutions tailored to business objectives.</p>
-            </div>
-
-            <div className="space-y-4 mb-10">
-              <div className="p-2 rounded-xl border-l-4 border-primary-600 bg-white shadow-soft reveal">
-                <div className="text-xs font-bold tracking-widest text-primary-600 uppercase mb-2">Vision</div>
-                <p className="text-secondary-700 text-sm leading-relaxed text-justify sm:text-left">
-                  To be one of India's most trusted corporate advisory firms, delivering innovative, ethical, and technology-driven financial solutions that create lasting business value.
-                </p>
-              </div>
-              <div className="p-2 rounded-xl border-l-4 border-primary-600 bg-white shadow-soft reveal">
-                <div className="text-xs font-bold tracking-widest text-primary-600 uppercase mb-2">Mission</div>
-                <p className="text-secondary-700 text-sm leading-relaxed text-justify sm:text-left">
-                  To empower businesses with strategic financial, governance, technology, and operational solutions while upholding integrity, professionalism, and client commitment.
-                </p>
-              </div>
+            <div className="text-secondary-700 text-base md:text-lg leading-relaxed mb-10 reveal space-y-5 text-justify sm:text-left">
+              <p>
+                Founded by Viswanathan Rajagopalan—a Finance and Corporate Secretary professional with over 30 years of global experience—our firm blends financial expertise, commercial insight, and governance knowledge.
+              </p>
+              <p>
+                Our experience spans operationally complex industries like Manufacturing, Mining, Automotive, Healthcare, IT, Pharmaceuticals, and Logistics. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors">(View LinkedIn Profile)</a>
+              </p>
+              <p>
+                Our international footprint across India, the Middle East, and Africa enables us to navigate the unique financial, regulatory, and cultural factors that drive performance in diverse markets.
+              </p>
+              <p>
+                We believe finance must go beyond accounting to provide clear insights, support confident decisions, and improve profitability. Our approach is highly practical, analytical, and focused on measurable business outcomes.
+              </p>
             </div>
 
             <span className="btn-primary group cursor-pointer reveal">

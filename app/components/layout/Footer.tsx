@@ -16,7 +16,7 @@ const Footer = () => {
               <div className="w-32 h-32 flex items-center justify-center shrink-0 bg-white rounded-xl p-3 shadow-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="/viswanathanr/vr-logo.png" 
+                  src="/vr-logo.png" 
                   alt="VR Logo" 
                   className="w-full h-full object-contain"
                 />

@@ -35,15 +35,21 @@ export function FounderPreview() {
             <h2 className="section-title mt-4 mb-6 reveal">
               Meet Our <span className="gradient-text">Founder</span>
             </h2>
-            <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-4 text-justify sm:text-left">
-              <p>
-                Mr. Viswanathan Rajagopalan is a highly accomplished finance professional with over 25 years of international experience in corporate finance, cost management, business valuation, restructuring, governance, and strategic advisory.
+            <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-5 text-justify sm:text-left">
+              <p className="text-xl font-medium text-secondary-800 italic border-l-4 border-primary-500 pl-4 py-1 mb-6">
+                “Transforming financial insight into measurable business value.”
               </p>
               <p>
-                He has successfully worked across India, the Middle East, Africa, and North America, advising multinational corporations, financial institutions, manufacturing companies, healthcare organizations, mining businesses, and technology companies.
+                Viswanathan Rajagopalan is a Finance, Cost Management, and Corporate Secretary professional with over 30 years of cross-functional and global experience.
               </p>
               <p>
-                His multidisciplinary qualifications and practical industry expertise enable him to provide holistic business solutions that combine finance, technology, governance, and operational excellence.
+                His expertise spans operationally complex industries—including Manufacturing, Mining, Automotive, Healthcare, IT, and Logistics—across India, Kuwait, the UAE, Egypt, and Liberia. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors whitespace-nowrap">(View LinkedIn Profile)</a>
+              </p>
+              <p>
+                This deep understanding of diverse financial, regulatory, and cultural environments enables him to help businesses make better decisions, improve operational performance, and manage risk.
+              </p>
+              <p>
+                He believes finance must go beyond reporting to provide clear insights and drive profitability, focusing on practical, analytical, and measurable business outcomes.
               </p>
             </div>
 
@@ -60,7 +66,7 @@ export function FounderPreview() {
                 
                 {/* Full Container Image */}
                 <img 
-                  src="/viswanathanr/founder.png" 
+                  src="/founder.png" 
                   alt={founder.name} 
                   className="absolute inset-0 w-full h-full object-cover object-top z-0"
                 />
