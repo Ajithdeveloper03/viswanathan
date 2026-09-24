@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, ChevronRight } from 'lucide-react';
+
 import Link from 'next/link';
 import { companyInfo, navigation, services } from '@/app/lib/siteData';
 
@@ -8,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="bg-[#1F2C50] text-white border-t border-[#1F2C50]/20">
       {/* Main Footer Content */}
-      <div className="container-custom py-20 lg:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      <div className="container-custom py-8 lg:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 lg:p-12">
           {/* Company Info */}
           <div className="lg:col-span-1 flex flex-col h-full">
             <Link href="/" className="inline-flex flex-col items-start gap-4 mb-6">

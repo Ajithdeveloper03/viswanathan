@@ -1,9 +1,11 @@
 'use client';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 import { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { navigation } from '@/app/lib/siteData';
 
 const Header = () => {
@@ -11,6 +13,8 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isServicePage = pathname && pathname !== '/' && pathname !== '/about-us';
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -42,17 +46,19 @@ const Header = () => {
     <header
       className="absolute top-0 left-0 right-0 z-50 py-3"
     >
-      {/* Subtle overlay for better menu visibility */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-0"
-        style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 100%)' }}
-      />
+      {/* Subtle overlay for better menu visibility - hidden on service pages */}
+      {!isServicePage && (
+        <div 
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 100%)' }}
+        />
+      )}
 
       <div className="container-custom relative z-10">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 bg-transparent w-32 h-32`}>
+            <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 ${isServicePage ? 'bg-white p-3 rounded-2xl shadow-md w-28 h-28 mt-2' : 'bg-transparent w-32 h-32'}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/vr-logo.png" 
@@ -65,14 +71,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-0 xl:gap-1 -translate-y-7" ref={dropdownRef}>
             {navigation.main.map((item) => (
-              <div key={item.name} className="relative">
+              <div 
+                key={item.name} 
+                className="relative group"
+                onMouseEnter={() => item.submenu && setOpenDropdown(item.name)}
+                onMouseLeave={() => item.submenu && setOpenDropdown(null)}
+              >
                 {item.submenu ? (
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className={`flex items-center gap-1 px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 cursor-pointer text-secondary-900 hover:text-primary-700 hover:bg-white/50 ${
-                        openDropdown === item.name
+                      className={`flex items-center gap-1 px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 cursor-pointer ${
+                        isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
+                      } ${
+                        openDropdown === item.name && !isServicePage
                           ? 'text-primary-700 bg-white/50'
+                          : openDropdown === item.name && isServicePage
+                          ? 'bg-white/20'
                           : ''
                       }`}
                     >
@@ -109,7 +124,9 @@ const Header = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 text-secondary-900 hover:text-primary-700 hover:bg-white/50"
+                    className={`block px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
+                      isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -129,7 +146,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-secondary-900 hover:bg-secondary-100 -translate-y-7"
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 -translate-y-7 ${
+              isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:bg-secondary-100'
+            }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

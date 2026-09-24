@@ -1,7 +1,10 @@
 'use client';
+import { LucideIcon } from 'lucide-react';
+
+
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { LucideIcon } from 'lucide-react';
+
 import { industries } from '@/app/lib/siteData';
 
 const industryThemes = [
@@ -51,7 +54,7 @@ const IndustryCard = ({ name, icon: Icon, description, theme, index, width }: In
 
     <div className="absolute top-0 right-0 bottom-0 w-px bg-white/10" />
 
-    <div className="absolute top-12 right-8 text-8xl font-bold opacity-10 text-white font-serif select-none">
+    <div className="absolute top-8 lg:p-12 right-8 text-8xl font-bold opacity-10 text-white font-serif select-none">
       {String(index + 1).padStart(2, '0')}
     </div>
 

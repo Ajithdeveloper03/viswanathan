@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
   "/page": "app/page.js",
   "/about-us/page": "app/about-us/page.js",
   "/business-valuation/page": "app/business-valuation/page.js"
+=======
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/industries/page": "app/industries/page.js"
+>>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3
 }

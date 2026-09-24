@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 // File: C:\Users\user\Desktop\inymart\viswanathan  adv\app\page.tsx
 import * as entry from '../../../app/page.js'
+=======
+<<<<<<<< HEAD:.next/types/app/business-valuation/page.ts
+// File: C:\Users\user\Desktop\inymart\viswanathan  adv\app\business-valuation\page.tsx
+import * as entry from '../../../../app/business-valuation/page.js'
+========
+// File: C:\Users\inyma\OneDrive\Desktop\Ajith System Backup\inymart projects\viswanathan\app\page.tsx
+import * as entry from '../../../app/page.js'
+>>>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3:.next/types/app/page.ts
+>>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../app/page.js')

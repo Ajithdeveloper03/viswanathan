@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
@@ -82,7 +81,7 @@ export function TrustIndicators() {
 
       <div ref={ref} className="container-custom relative z-10">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 tracking-tight">
+          <h2 className="text-3xl md:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 tracking-tight">
             Why Businesses <span className="text-accent-600">Trust Us</span>
           </h2>
         </div>
@@ -95,7 +94,7 @@ export function TrustIndicators() {
               }`}
             >
               <div className="absolute inset-0 bg-primary-50/0 group-hover:bg-primary-50/50 transition-colors duration-300 rounded-xl" />
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 mb-1 relative">
+              <div className="text-3xl md:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 mb-1 relative">
                 <span className="bg-gradient-to-br from-secondary-900 to-primary-700 bg-clip-text text-transparent">
                   <CountUp target={stat.value} suffix={stat.suffix} isVisible={isVisible} />
                 </span>

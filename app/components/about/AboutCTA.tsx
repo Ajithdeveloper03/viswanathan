@@ -1,7 +1,9 @@
 'use client';
+import { ArrowRight, Mail } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { ArrowRight, Mail } from 'lucide-react';
 
 export function AboutCTA() {
   const ref = useRef<HTMLDivElement>(null);

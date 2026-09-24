@@ -11,6 +11,7 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+<<<<<<< HEAD
     "/business-valuation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -20,6 +21,17 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about-us/page.js"
+=======
+    "/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact/page.js"
+    ],
+    "/industries/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/industries/page.js"
+>>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3
     ]
   }
 }

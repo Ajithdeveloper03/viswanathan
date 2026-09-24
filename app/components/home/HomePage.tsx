@@ -1,5 +1,4 @@
 'use client';
-
 import { Hero } from './Hero';
 import { TrustIndicators } from './TrustIndicators';
 import { Industries } from './Industries';

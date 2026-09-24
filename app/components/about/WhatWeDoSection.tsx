@@ -1,21 +1,9 @@
 'use client';
+import { LineChart, Calculator, Settings, Shield, User, Scale, Briefcase, LayoutDashboard, Cog, ClipboardCheck, Lightbulb, Handshake, ArrowRight } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { 
-  LineChart, 
-  Calculator, 
-  Settings, 
-  Shield, 
-  User, 
-  Scale, 
-  Briefcase, 
-  LayoutDashboard, 
-  Cog, 
-  ClipboardCheck, 
-  Lightbulb, 
-  Handshake,
-  ArrowRight
-} from 'lucide-react';
 
 export function WhatWeDoSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -114,7 +102,7 @@ export function WhatWeDoSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-secondary-50 py-16 lg:py-24">
+    <section ref={ref} className="relative bg-secondary-50 py-12 md:py-16 lg:py-24">
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="section-label reveal inline-flex mb-4">Our Services</div>
