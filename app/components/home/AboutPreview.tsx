@@ -1,7 +1,10 @@
 'use client';
+import { ArrowRight } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+
 import { companyInfo } from '@/app/lib/siteData';
 
 export function AboutPreview() {
@@ -29,7 +32,7 @@ export function AboutPreview() {
     <section className="relative bg-white overflow-hidden">
       <div ref={ref} className="grid lg:grid-cols-2 min-h-[90vh]">
         <div className="flex flex-col justify-center px-6 lg:px-10 py-10 lg:py-16 reveal-left h-full w-full">
-          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end px-6 lg:px-10 pt-16 pb-8 min-h-[350px] md:min-h-[500px]">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end px-6 lg:px-10 pt-16 pb-8 min-h-[350px] md:min-h-[300px] lg:h-[500px]">
             <div className="absolute inset-0 z-0">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1200"
@@ -60,12 +63,11 @@ export function AboutPreview() {
                 </p>
               </div>
 
-
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16 lg:py-24 h-full">
+        <div className="flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-12 md:py-16 lg:py-24 h-full">
           <div className="w-full xl:pr-10">
             <div className="section-label reveal">Our Story</div>
             <div className="text-secondary-700 text-base md:text-lg leading-relaxed mb-10 reveal space-y-5 text-justify sm:text-left">

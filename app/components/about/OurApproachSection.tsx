@@ -1,7 +1,9 @@
 'use client';
+import { Eye, Settings2, ShieldCheck, Target, TrendingUp } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { Eye, Settings2, ShieldCheck, Target, TrendingUp } from 'lucide-react';
 
 export function OurApproachSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -53,9 +55,9 @@ export function OurApproachSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-white py-16 lg:py-24 overflow-hidden">
+    <section ref={ref} className="relative bg-white py-12 md:py-16 lg:py-24 overflow-hidden">
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-20 items-center">
           
           <div className="reveal-left">
             <div className="section-label inline-flex mb-4">Methodology</div>

@@ -1,7 +1,10 @@
 'use client';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+
 import { founder } from '@/app/lib/siteData';
 
 export function FounderPreview() {
@@ -28,7 +31,7 @@ export function FounderPreview() {
   return (
     <section className="relative bg-white overflow-hidden section-padding">
       <div ref={ref} className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 lg:p-12 items-center">
           {/* Left Side: Content */}
           <div className="lg:col-span-7 lg:pr-8">
             <div className="section-label reveal">Leadership</div>
@@ -59,10 +62,10 @@ export function FounderPreview() {
           <div className="lg:col-span-5 reveal-scale h-full">
             <div className="relative h-full min-h-[350px] lg:min-h-[450px]">
               {/* Offset Border Background */}
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary-300 rounded-[2rem]" />
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary-300 rounded-2xl lg:rounded-[2rem]" />
 
               {/* Main Card */}
-              <div className="relative h-full rounded-[2rem] overflow-hidden bg-white flex flex-col items-center shadow-soft-xl border border-secondary-100">
+              <div className="relative h-full rounded-2xl lg:rounded-[2rem] overflow-hidden bg-white flex flex-col items-center shadow-soft-xl border border-secondary-100">
                 
                 {/* Full Container Image */}
                 <img 

@@ -1,7 +1,10 @@
 'use client';
+import { ArrowRight, LucideIcon } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { ArrowRight, LucideIcon } from 'lucide-react';
+
 import { services } from '@/app/lib/siteData';
 
 const displayedServices = services.slice(0, 5);
@@ -73,11 +76,11 @@ export function ServicesGrid() {
       />
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-white rounded-full blur-3xl opacity-50 z-0 pointer-events-none" />
 
-      <div ref={ref} className="container-custom relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
+      <div ref={ref} className="container-custom relative z-10 flex flex-col lg:flex-row gap-8 lg:p-12 lg:gap-8 items-start">
         
         {/* Left Image Section */}
         <div className="w-full lg:w-[32%] relative reveal-left order-2 lg:order-1 pt-10 lg:pt-0">
-          <div className="relative w-full h-[350px] md:h-[500px] lg:h-[700px] rounded-tr-[50%] rounded-br-[50%] overflow-hidden shadow-xl">
+          <div className="relative w-full h-[350px] md:h-[300px] lg:h-[500px] lg:h-[700px] rounded-tr-[50%] rounded-br-[50%] overflow-hidden shadow-xl">
             <img
               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=1000"
               alt="Accountant Consultant"

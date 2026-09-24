@@ -1,7 +1,9 @@
 'use client';
+import { Compass, Rocket, CheckCircle2 } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { Compass, Rocket, CheckCircle2 } from 'lucide-react';
 
 export function VisionMissionSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,7 +35,7 @@ export function VisionMissionSection() {
   ];
 
   return (
-    <section ref={ref} className="relative py-16 lg:py-24 overflow-hidden">
+    <section ref={ref} className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-slate-900 z-0">
         <div className="absolute inset-0 opacity-20" 
@@ -45,10 +47,10 @@ export function VisionMissionSection() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 lg:p-12">
           
           {/* Vision Box */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[2rem] p-8 lg:p-12 reveal-left">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl lg:rounded-[2rem] p-8 lg:p-8 lg:p-12 reveal-left">
             <div className="w-14 h-14 rounded-2xl bg-primary-500/20 flex items-center justify-center mb-8 border border-primary-400/30">
               <Compass className="w-7 h-7 text-primary-300" />
             </div>
@@ -59,7 +61,7 @@ export function VisionMissionSection() {
           </div>
 
           {/* Mission Box */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[2rem] p-8 lg:p-12 reveal">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl lg:rounded-[2rem] p-8 lg:p-8 lg:p-12 reveal">
             <div className="w-14 h-14 rounded-2xl bg-accent-500/20 flex items-center justify-center mb-8 border border-accent-400/30">
               <Rocket className="w-7 h-7 text-accent-300" />
             </div>

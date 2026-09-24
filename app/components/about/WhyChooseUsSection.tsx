@@ -1,7 +1,9 @@
 'use client';
+import { CheckCircle } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
 
 export function WhyChooseUsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,7 +36,7 @@ export function WhyChooseUsSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-white py-16 lg:py-24">
+    <section ref={ref} className="relative bg-white py-12 md:py-16 lg:py-24">
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto">
           
@@ -57,7 +59,7 @@ export function WhyChooseUsSection() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-br from-primary-900 to-slate-900 rounded-[2rem] p-8 md:p-12 text-center shadow-2xl reveal-scale relative overflow-hidden">
+          <div className="bg-gradient-to-br from-primary-900 to-slate-900 rounded-2xl lg:rounded-[2rem] p-8 md:p-8 lg:p-12 text-center shadow-2xl reveal-scale relative overflow-hidden">
             <div className="absolute inset-0 noise-bg opacity-30" />
             <p className="text-xl md:text-2xl text-white leading-relaxed font-serif relative z-10">
               Whether you are evaluating a business, improving cost performance, strengthening controls, planning an investment, managing compliance, or navigating financial and operational complexity, Viswanathan R Associates can help turn information into action and action into measurable value.

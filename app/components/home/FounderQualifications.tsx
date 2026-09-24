@@ -1,7 +1,9 @@
 'use client';
+import { CheckCircle2, Award, ShieldCheck, GraduationCap } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { CheckCircle2, Award, ShieldCheck, GraduationCap } from 'lucide-react';
 
 const professionalQualifications = [
   'ICMAI (India)',

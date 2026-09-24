@@ -1,3 +1,5 @@
 {
-  "/business-valuation/page": "app/business-valuation/page.js"
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/industries/page": "app/industries/page.js"
 }

@@ -1,7 +1,10 @@
 'use client';
+import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+
 import { companyInfo } from '@/app/lib/siteData';
 
 export function CTABanner() {
@@ -29,17 +32,16 @@ export function CTABanner() {
     <section className="relative overflow-hidden">
       <div className="relative bg-primary-50 py-12 overflow-hidden">
 
-
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/15 rounded-full blur-[100px] animate-float-slow pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary-500/10 rounded-full blur-[80px] animate-float pointer-events-none" style={{ animationDelay: '3s' }} />
 
         <div ref={ref} className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-16 items-start">
             {/* Left Side: Text + Reach Us Directly Box */}
             <div className="flex flex-col h-full justify-between lg:pr-8">
               <div>
                 <div className="section-label-dark reveal">Get Started</div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 leading-tight mt-4 mb-4 reveal">
+                <h2 className="text-3xl md:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 leading-tight mt-4 mb-4 reveal">
                   Ready to Strengthen<br />
                   <span className="text-accent-600">Your Business</span><br />
                   <span className="text-primary-600">Finances?</span>

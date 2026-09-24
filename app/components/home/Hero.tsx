@@ -1,7 +1,10 @@
 'use client';
+import { ArrowRight } from 'lucide-react';
+
+
 
 import { useEffect, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+
 import { companyInfo } from '@/app/lib/siteData';
 
 const words = ['Finance.', 'Transformation.', 'Value Creation.'];

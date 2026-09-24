@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useRef } from 'react';
 
 export function useReveal(threshold = 0.15) {

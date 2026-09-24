@@ -1,33 +1,4 @@
-import {
-  Building2,
-  Scale,
-  Calculator,
-  ArrowLeftRight,
-  Shield,
-  Brain,
-  Settings,
-  UserCog,
-  ClipboardCheck,
-  Factory,
-  Mountain,
-  Heart,
-  Car,
-  Monitor,
-  Building,
-  Cog,
-  TrendingUp,
-  Store,
-  Rocket,
-  Users,
-  Building2 as BuildingSmall,
-  Target,
-  HeartHandshake,
-  Lightbulb,
-  UserCheck,
-  BookOpen,
-  Award,
-  Leaf,
-} from 'lucide-react';
+import { Building2, Scale, Calculator, ArrowLeftRight, Shield, Brain, Settings, UserCog, ClipboardCheck, Factory, Mountain, Heart, Car, Monitor, Building, Cog, TrendingUp, Store, Rocket, Users, Building2 as BuildingSmall, Target, HeartHandshake, Lightbulb, UserCheck, BookOpen, Award, Leaf } from 'lucide-react';
 
 export const navigation = {
   main: [
@@ -41,20 +12,17 @@ export const navigation = {
       href: '#',
       submenu: [
         { name: 'Business Valuation', href: '/business-valuation' },
-        { name: 'Insolvency & Bankruptcy', href: '#' },
-        { name: 'Cost Audit & Optimization', href: '#' },
-        { name: 'Transfer Pricing', href: '#' },
-        { name: 'Internal Audit & Risk', href: '#' },
-        { name: 'AI Driven Solutions', href: '#' },
-        { name: 'ERP Consulting', href: '#' },
-        { name: 'Fractional CFO', href: '#' },
-        { name: 'Corporate Governance', href: '#' },
+        { name: 'Insolvency & Bankruptcy Code', href: '/insolvency-bankruptcy' },
+        { name: 'Business Proposals', href: '/business-proposals' },
+        { name: 'Independent Director', href: '/independent-director' },
+        { name: 'Internal Audit', href: '/internal-audit' },
+        { name: 'Cost Management_Audit', href: '/cost-management-audit' },
       ],
     },
-    { name: 'Industries We Serve', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Industries We Serve', href: '/industries' },
+    { name: 'Contact Us', href: '/contact' },
   ],
-  cta: { name: 'Book a Consultation', href: '#' },
+  cta: { name: 'Book a Consultation', href: '/contact' },
 };
 
 export const trustIndicators = [

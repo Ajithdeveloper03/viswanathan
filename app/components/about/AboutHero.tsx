@@ -1,7 +1,9 @@
 'use client';
+import { Linkedin, ArrowDown } from 'lucide-react';
+
+
 
 import { useRef, useEffect } from 'react';
-import { Linkedin, ArrowDown } from 'lucide-react';
 
 export function AboutHero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -91,9 +93,9 @@ export function AboutHero() {
       </section>
 
       {/* Text Content Section */}
-      <section id="about-content" className="relative bg-white py-16 lg:py-24">
+      <section id="about-content" className="relative bg-white py-12 md:py-16 lg:py-24">
         <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-16 items-stretch">
             
             {/* Left Side: Content */}
             <div className="flex flex-col justify-center text-secondary-700 text-lg leading-relaxed text-justify sm:text-left h-full">
@@ -130,8 +132,8 @@ export function AboutHero() {
             </div>
 
             {/* Right Side: Image */}
-            <div className="reveal-scale h-full min-h-[400px] lg:min-h-full">
-              <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="reveal-scale h-full min-h-[250px] lg:h-[400px] lg:min-h-full">
+              <div className="relative w-full h-full rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200" 
                   alt="Viswanathan R Associates Team" 
