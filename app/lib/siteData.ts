@@ -40,7 +40,7 @@ export const navigation = {
       name: 'Our Services',
       href: '#',
       submenu: [
-        { name: 'Business Valuation', href: '#' },
+        { name: 'Business Valuation', href: '/business-valuation' },
         { name: 'Insolvency & Bankruptcy', href: '#' },
         { name: 'Cost Audit & Optimization', href: '#' },
         { name: 'Transfer Pricing', href: '#' },
