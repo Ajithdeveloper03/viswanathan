@@ -98,7 +98,7 @@ export function AboutHero() {
             {/* Left Side: Content */}
             <div className="flex flex-col justify-center text-secondary-700 text-lg leading-relaxed text-justify sm:text-left h-full">
               <div className="mb-10 text-center sm:text-left">
-                <div className="section-label reveal inline-flex mb-4">About Us</div>
+                <div className="section-label reveal inline-flex mb-4">About Us &ndash; Business Valuation Service in Chennai</div>
                 <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 mb-6 reveal">
                   Viswanathan R Associates
                 </h2>
@@ -115,11 +115,13 @@ export function AboutHero() {
                   Founded by Viswanathan Rajagopalan, a Finance, Cost Management and Corporate Secretary professional, with more than 30 years of cross-functional and international experience, our firm combines financial expertise, commercial insight, Governance knowledge, and practical business understanding.
                 </p>
                 <p className="reveal">
-                  Our professional experience spans Manufacturing, Mining, Automotive, Healthcare, Information Technology, Pharmaceuticals, Logistics, and other operationally complex industries.{' '}
-                  <a href="#" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors whitespace-nowrap">
-                    (Link to LinkedIn Profile) <Linkedin className="w-4 h-4" />
-                  </a>
+                  Our professional experience spans Manufacturing, Mining, Automotive, Healthcare, Information Technology, Pharmaceuticals, Logistics, and other operationally complex industries.
                 </p>
+                <div className="reveal">
+                  <a href="#" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0a66c2] text-white font-semibold rounded-xl hover:bg-[#004182] transition-colors shadow-sm w-fit">
+                    <Linkedin className="w-5 h-5" /> View LinkedIn Profile
+                  </a>
+                </div>
                 <p className="reveal">
                   Our international experience includes India, Kuwait, the UAE, Egypt, Liberia, and other business environments. This enables us to understand the financial, operational, regulatory, and cultural factors that influence business performance across markets.
                 </p>
