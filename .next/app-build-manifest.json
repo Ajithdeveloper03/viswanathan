@@ -1,11 +1,20 @@
 {
   "pages": {
+<<<<<<< HEAD
+=======
+    "/business-valuation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/business-valuation/page.js"
+    ],
+>>>>>>> a857432dc8144c3b089648f98184547e9a5a4c31
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+<<<<<<< HEAD
     "/business-valuation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -15,16 +24,55 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
+=======
+    "/insolvency-bankruptcy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/insolvency-bankruptcy/page.js"
+    ],
+    "/business-proposals/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/business-proposals/page.js"
+    ],
+    "/industries/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/industries/page.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact/page.js"
+    ],
+    "/independent-director/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/independent-director/page.js"
+    ],
+    "/internal-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/internal-audit/page.js"
+    ],
+    "/cost-management-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/cost-management-audit/page.js"
+>>>>>>> a857432dc8144c3b089648f98184547e9a5a4c31
     ],
     "/about-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about-us/page.js"
+<<<<<<< HEAD
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
+=======
+>>>>>>> a857432dc8144c3b089648f98184547e9a5a4c31
     ]
   }
 }

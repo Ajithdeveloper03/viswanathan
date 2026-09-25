@@ -58,7 +58,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 ${isServicePage ? 'bg-white p-3 rounded-2xl shadow-md w-28 h-28 mt-2' : 'bg-transparent w-32 h-32'}`}>
+            <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 ${isServicePage ? 'bg-white p-2.5 rounded-full shadow-lg w-24 h-24 lg:w-28 lg:h-28' : 'bg-transparent w-32 h-32'}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/vr-logo.png" 
@@ -69,7 +69,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-0 xl:gap-1 -translate-y-7" ref={dropdownRef}>
+          <div className="hidden lg:flex items-center gap-0 xl:gap-1" ref={dropdownRef}>
             {navigation.main.map((item) => (
               <div 
                 key={item.name} 
@@ -138,7 +138,7 @@ const Header = () => {
           {/* CTA Button - Desktop */}
           <Link
             href={navigation.cta.href}
-            className={`hidden lg:inline-flex items-center gap-2 transition-colors duration-300 whitespace-nowrap btn-primary text-xs xl:text-sm px-4 xl:px-7 -translate-y-7`}
+            className={`hidden lg:inline-flex items-center gap-2 transition-all duration-300 whitespace-nowrap text-xs xl:text-sm px-5 xl:px-7 py-2.5 rounded-full font-bold shadow-md ${isServicePage ? 'bg-[#1F2C50] text-white hover:bg-[#151f3b]' : 'btn-primary'}`}
           >
             {navigation.cta.name}
           </Link>
@@ -146,7 +146,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 -translate-y-7 ${
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
               isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:bg-secondary-100'
             }`}
             aria-label="Toggle menu"

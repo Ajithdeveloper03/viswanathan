@@ -1,6 +1,14 @@
 {
+<<<<<<< HEAD
   "/_not-found/page": "app/_not-found/page.js",
   "/business-valuation/page": "app/business-valuation/page.js",
   "/page": "app/page.js",
   "/about-us/page": "app/about-us/page.js"
+=======
+  "/business-valuation/page": "app/business-valuation/page.js",
+  "/cost-management-audit/page": "app/cost-management-audit/page.js",
+  "/business-proposals/page": "app/business-proposals/page.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/industries/page": "app/industries/page.js"
+>>>>>>> a857432dc8144c3b089648f98184547e9a5a4c31
 }
