@@ -4,8 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
-import WhyChooseUs from '../components/ui/WhyChooseUs';
-
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
 
 const CostManagementPage = () => {
@@ -140,64 +139,22 @@ const CostManagementPage = () => {
                We help businesses understand what their products, services, and operations truly cost, so every pricing and investment decision rests on facts, not assumptions.
              </p>
              <p className="text-secondary-500 leading-relaxed pl-6">
-               In today's highly competitive environment, a precise understanding of cost structures is essential for sustainable profitability. We specialize in building meticulous costing architectures that transform complex operational data into actionable financial strategies.
+               In today&apos;s highly competitive environment, a precise understanding of cost structures is essential for sustainable profitability. We specialize in building meticulous costing architectures that transform complex operational data into actionable financial strategies.
              </p>
            </div>
            
         </div>
       </div>
 
-      {/* 3. WHAT WE DO (Cards Grid) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa] relative">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="inline-block px-4 py-1.5 bg-white text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6 shadow-sm border border-secondary-100">
-               Our Capabilities
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-900">We Do</span>
-            </h2>
-            <p className="text-secondary-600 text-xl font-light">
-              Led by an expert Management Accountant, our services follow applicable Cost Accounting Standards and Company Law requirements.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whatWeDo.map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <div key={idx} className="group bg-white rounded-3xl lg:rounded-[2.5rem] p-10 hover:-translate-y-3 transition-all duration-500 ease-in-out border border-secondary-100 hover:border-transparent hover:bg-primary-900 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col h-full relative overflow-hidden">
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="w-16 h-16 bg-[#f8f9fa] rounded-2xl flex items-center justify-center text-primary-900 shadow-sm mb-8 group-hover:scale-110 transition-transform duration-500 border border-secondary-100 group-hover:border-transparent">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    
-                    <h5 className="text-2xl font-extrabold text-primary-900 group-hover:text-white leading-tight mb-4 transition-colors duration-300">
-                      {service.title}
-                    </h5>
-                    <p className="text-secondary-600 group-hover:text-secondary-200 mb-6 font-medium transition-colors duration-300">
-                      {service.desc}
-                    </p>
-
-                    <ul className="space-y-4 mb-8 flex-grow">
-                      {service.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-secondary-600 group-hover:text-secondary-300 text-[15px] transition-colors duration-300">
-                          <CheckCircle2 className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" />
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                </div>
-              )
-            })}
-          </div>
-
-                    {/* Replaced Flow Diagram */}
-        </div>
-      </section>
+      {/* 3. WHAT WE DO (GSAP Scroll Section) */}
+      <GSAPScrollSection 
+        title="What We Do"
+        subtitle="Our Capabilities"
+        items={whatWeDo.map(item => ({
+          ...item,
+          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
+        }))}
+      />
 
       {/* NEW PROCESS STRIP */}
       <ProcessFlow 
@@ -312,9 +269,9 @@ const CostManagementPage = () => {
 
             {/* Contact Box (Floating White Card) */}
             <div className="bg-white rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 text-center shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] relative group">
-               <h3 className="text-4xl font-extrabold text-primary-900 mb-6 leading-[1.2]">Let's Talk Costing</h3>
+               <h3 className="text-4xl font-extrabold text-primary-900 mb-6 leading-[1.2]">Let&apos;s Talk Costing</h3>
                <p className="text-secondary-600 mb-10 text-lg leading-relaxed">
-                 Need a one-time cost review or a full costing system? Get in touch and we'll design an approach that fits your business.
+                 Need a one-time cost review or a full costing system? Get in touch and we&apos;ll design an approach that fits your business.
                </p>
                
                <div className="flex flex-col gap-4 max-w-sm mx-auto">

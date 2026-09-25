@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
-import ServiceCarousel from '../components/ui/ServiceCarousel';
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
 
 const InternalAuditPage = () => {
@@ -194,7 +194,7 @@ const InternalAuditPage = () => {
                   </li>
                 ))}
               </ul>
-              <div className="bg-[#f8f9fa] p-6 rounded-2xl border border-secondary-100 text-sm text-secondary-600 italic shadow-inner">
+              <div className="bg-[#f8f9fa] p-6 rounded-2xl border border-secondary-100 text-sm text-secondary-600 shadow-inner">
                 Note: the extent of overseas work depends on local licensing and legal requirements, which we assess with each engagement.
               </div>
             </div>
@@ -204,30 +204,12 @@ const InternalAuditPage = () => {
         </div>
       </section>
 
-      {/* 4. TYPES OF INTERNAL AUDIT SERVICES (Carousel Layout) */}
-      <ServiceCarousel
+      {/* 4. TYPES OF INTERNAL AUDIT SERVICES (GSAP Scroll Section) */}
+      <GSAPScrollSection 
         title="Types of Internal Audit Services"
-        cards={auditTypes.map((type, idx) => ({
-          tag: `0${idx + 1}`,
-          title: type.title,
-          icon: type.icon,
-          desc: (
-            <ul className="space-y-3 mt-2">
-              {type.items.map((item, i) => {
-                const [bold, ...rest] = item.split(': ');
-                const descText = rest.join(': ');
-                return (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-accent-500 mt-1 flex-shrink-0">•</span>
-                    <span>
-                      <strong className="text-white font-semibold">{bold}</strong>
-                      {descText && <span className="text-secondary-300">: {descText}</span>}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          )
+        items={auditTypes.map(item => ({
+          ...item,
+          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
         }))}
       />
 

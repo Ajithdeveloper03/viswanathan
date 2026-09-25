@@ -47,7 +47,7 @@ const ContactModal = () => {
         </div>
         
         <h3 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-4 leading-[1.2]">
-          Let's Discuss Your <br/>
+          Let&apos;s Discuss Your <br/>
           <span className="font-light text-secondary-500">Requirements</span>
         </h3>
         <p className="text-secondary-600 text-lg mb-10">

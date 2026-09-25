@@ -4,10 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
-import WhyChooseUs from '../components/ui/WhyChooseUs';
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
-
 const BusinessProposalsPage = () => {
   const whatWeDo = [
     {
@@ -121,52 +120,15 @@ const BusinessProposalsPage = () => {
         </div>
       </div>
 
-      {/* 3. WHAT WE DO (Cards Grid) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa] relative">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="inline-block px-4 py-1.5 bg-white text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6 shadow-sm border border-secondary-100">
-               Core Expertise
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-900">Focus Areas</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {whatWeDo.map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <div key={idx} className="group bg-white rounded-3xl lg:rounded-[2.5rem] p-10 hover:-translate-y-3 transition-all duration-500 ease-in-out border border-secondary-100 hover:border-transparent hover:bg-primary-900 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col h-full relative overflow-hidden">
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="w-16 h-16 bg-[#f8f9fa] rounded-2xl flex items-center justify-center text-primary-900 shadow-sm mb-8 group-hover:scale-110 transition-transform duration-500 border border-secondary-100 group-hover:border-transparent">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    
-                    <h5 className="text-2xl font-extrabold text-primary-900 group-hover:text-white leading-tight mb-4 transition-colors duration-300">
-                      {service.title}
-                    </h5>
-                    <p className="text-secondary-600 group-hover:text-secondary-200 mb-8 font-medium transition-colors duration-300">
-                      {service.desc}
-                    </p>
-
-                    <ul className="space-y-4 mb-8 flex-grow">
-                      {service.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-secondary-600 group-hover:text-secondary-300 text-[15px] transition-colors duration-300">
-                          <CheckCircle2 className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" />
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 3. WHAT WE DO (GSAP Scroll Section) */}
+      <GSAPScrollSection 
+        title="Our Focus Areas"
+        subtitle="Core Expertise"
+        items={whatWeDo.map(item => ({
+          ...item,
+          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
+        }))}
+      />
 
       {/* 4. GLOBAL PERSPECTIVE (Texon Collage Layout) */}
       <section className="py-12 md:py-16 lg:py-24 bg-white">
@@ -213,8 +175,6 @@ const BusinessProposalsPage = () => {
                 </div>
               </div>
             </div>
-
-            {/* Right: Image Collage */}
             <div className="relative h-[700px] w-full hidden lg:block">
               <div className="absolute top-0 right-0 w-[80%] h-[300px] lg:h-[500px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-10 hover:z-30 transition-all duration-500 group">
                 <Image src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200" alt="Global Trade" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -290,9 +250,9 @@ const BusinessProposalsPage = () => {
 
             {/* Contact Box (Floating White Card) */}
             <div className="bg-white rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 text-center shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] relative group">
-               <h3 className="text-4xl font-extrabold text-primary-900 mb-6 leading-[1.2]">Let's Discuss <br/>Your Proposal</h3>
+               <h3 className="text-4xl font-extrabold text-primary-900 mb-6 leading-[1.2]">Let&apos;s Discuss <br/>Your Proposal</h3>
                <p className="text-secondary-600 mb-10 text-lg leading-relaxed">
-                 Tell us about your funding need, acquisition plan, or cross-border opportunity, and we'll suggest the right approach.
+                 Tell us about your funding need, acquisition plan, or cross-border opportunity, and we&apos;ll suggest the right approach.
                </p>
                
                <div className="flex flex-col gap-4 max-w-sm mx-auto">

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ProcessFlow from '../components/ui/ProcessFlow';
 import WhyChooseUs from '../components/ui/WhyChooseUs';
-
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
 
 const BusinessValuation = () => {
@@ -185,111 +185,30 @@ const BusinessValuation = () => {
         </div>
       </section>
 
-      {/* 4. OUR SERVICES (Texon Interactive Cards) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="inline-block px-4 py-1.5 bg-primary-50 text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-               Our Expertise
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
-              Specialized Business Valuation <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-900">Services in Chennai</span>
-            </h2>
-          </div>
+      {/* 4. OUR SERVICES (GSAP Scroll Section) */}
+      <GSAPScrollSection 
+        title="Specialized Business Valuation Services in Chennai"
+        subtitle="Our Expertise"
+        items={services.map(s => ({
+          title: s.title,
+          desc: s.subtitle,
+          items: s.items,
+          icon: <BarChart className="w-8 h-8" />
+        }))}
+      />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, idx) => (
-              <div key={idx} className="group bg-[#f8f9fa] rounded-3xl lg:rounded-[2.5rem] p-10 hover:-translate-y-3 transition-all duration-500 ease-in-out border border-secondary-100 hover:border-transparent hover:bg-primary-900 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col h-full relative overflow-hidden">
-
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary-900 shadow-sm mb-8 group-hover:scale-110 transition-transform duration-500 border border-secondary-100 group-hover:border-transparent">
-                    <BarChart className="w-7 h-7" />
-                  </div>
-                  
-                  <h5 className="text-2xl font-extrabold text-primary-900 group-hover:text-white leading-tight mb-3 transition-colors duration-300">
-                    {service.title}
-                  </h5>
-                  <span className="text-accent-600 group-hover:text-accent-400 font-bold block mb-6 text-sm tracking-wide uppercase transition-colors duration-300">
-                    {service.subtitle}
-                  </span>
-
-                  <ul className="space-y-4 mb-8 flex-grow">
-                    {service.items.slice(0, 4).map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-secondary-600 group-hover:text-secondary-200 text-[15px] transition-colors duration-300">
-                        <CheckCircle2 className="w-5 h-5 text-primary-900 group-hover:text-accent-400 flex-shrink-0 opacity-60 transition-colors duration-300" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                    {service.items.length > 4 && (
-                      <li className="text-sm font-semibold text-secondary-400 group-hover:text-secondary-400/80 italic transition-colors duration-300">
-                        + {service.items.length - 4} more capabilities...
-                      </li>
-                    )}
-                  </ul>
-
-                  <Link href="#contact" className="mt-auto inline-flex items-center gap-2 text-primary-900 group-hover:text-white font-bold transition-colors duration-300">
-                    Discuss Requirements <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. VALUATION APPROACH (Texon Large Interactive Layout) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa]">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            
-            {/* Left: Image Grid (Texon Style Collage) */}
-            <div className="relative h-[700px] w-full">
-              <div className="absolute top-0 left-0 w-4/5 h-[300px] lg:h-[500px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-10 hover:z-30 transition-all duration-500 group">
-                <Image src="https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80&w=1200" alt="Approach 1" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <div className="absolute bottom-0 right-0 w-3/5 h-[250px] lg:h-[400px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-20 border-8 border-[#f8f9fa] group">
-                <Image src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=800" alt="Approach 2" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              {/* Decorative Element */}
-              <div className="absolute top-1/2 -right-8 w-32 h-32 bg-accent-500 rounded-full blur-3xl opacity-20"></div>
-            </div>
-
-            {/* Right: Content */}
-            <div className="flex flex-col">
-              <div className="mb-12">
-                <div className="inline-block px-4 py-1.5 bg-white text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6 shadow-sm">
-                   Our Process
-                </div>
-                <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
-                  A Meticulous <br/><span className="text-secondary-400 font-light">Valuation Approach</span>
-                </h2>
-              </div>
-              
-              <div className="space-y-8">
-                {[
-                  { title: "Purpose & Structure", desc: "Understanding intended use, nature, scale, and structure of the transaction." },
-                  { title: "Financial Performance", desc: "Analyzing historical revenue, profitability, cash flow, and key drivers." },
-                  { title: "Industry & Risk", desc: "Evaluating macroeconomic conditions, competition, and growth prospects." },
-                  { title: "Methodology", desc: "Applying the most appropriate valuation methodologies and assumptions." }
-                ].map((step, idx) => (
-                  <div key={idx} className="flex gap-6 group">
-                    <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0 text-xl font-extrabold text-secondary-300 group-hover:bg-primary-900 group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold text-primary-900 mb-3 group-hover:text-accent-600 transition-colors duration-300">{step.title}</h4>
-                      <p className="text-secondary-600 leading-relaxed text-lg">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* 5. VALUATION APPROACH */}
+      <ProcessFlow 
+        title="A Meticulous"
+        highlightText="Valuation Approach"
+        subtitle="Our Process"
+        steps={[
+          { title: "Purpose & Structure", desc: "Understanding intended use, nature, scale, and structure of the transaction.", icon: Search },
+          { title: "Financial Performance", desc: "Analyzing historical revenue, profitability, cash flow, and key drivers.", icon: BarChart },
+          { title: "Industry & Risk", desc: "Evaluating macroeconomic conditions, competition, and growth prospects.", icon: Globe },
+          { title: "Methodology", desc: "Applying the most appropriate valuation methodologies and assumptions.", icon: FileSpreadsheet }
+        ]}
+      />
 
       {/* 7. CTA Section (Texon Large Banner) */}
       <section id="contact" className="py-12 md:py-16 lg:py-24 relative bg-primary-900">

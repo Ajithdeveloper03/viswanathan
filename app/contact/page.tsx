@@ -1,16 +1,12 @@
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import React from 'react';
-
 import Link from 'next/link';
 import Image from 'next/image';
-
 import { companyInfo } from '@/app/lib/siteData';
-
 const ContactPage = () => {
   return (
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
-      {/* 1. HERO SECTION (Texon Style) */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=2000"
@@ -21,22 +17,20 @@ const ContactPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
-        
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-6 border border-white/20">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="text-accent-400">Contact Us</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
             Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Our Team</span>
           </h1>
         </div>
       </section>
-
-      {/* 2. OVERLAPPING CONTACT INFO CARDS */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16 lg:mb-24">
-        <div className="grid md:grid-cols-3 gap-8">
+      
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 py-12 lg:py-16">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {[
             { 
               icon: MapPin, 
@@ -56,16 +50,14 @@ const ContactPage = () => {
           ].map((info, idx) => {
             const Icon = info.icon;
             return (
-              <div key={idx} className="bg-white rounded-3xl lg:rounded-3xl lg:rounded-[3rem] p-6 lg:p-10 text-center shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-4 transition-all duration-500 border border-secondary-100 group relative overflow-hidden">
-                {/* Decorative Background Blob */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-50 rounded-bl-[100%] opacity-50 group-hover:scale-150 transition-transform duration-700 z-0"></div>
-
+              <div key={idx} className="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 border border-secondary-100 group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-primary-50 rounded-bl-[100%] opacity-50 group-hover:scale-150 transition-transform duration-700 z-0"></div>
                 <div className="relative z-10">
-                  <div className="w-20 h-20 mx-auto bg-[#f8f9fa] text-accent-600 rounded-2xl lg:rounded-[2rem] flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-all duration-500 group-hover:rotate-[15deg] shadow-sm">
-                    <Icon className="w-8 h-8" />
+                  <div className="w-16 h-16 mx-auto bg-[#f8f9fa] text-accent-600 rounded-xl lg:rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-500 group-hover:text-white transition-all duration-300 group-hover:rotate-[15deg] shadow-sm">
+                    <Icon className="w-7 h-7" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-primary-900 mb-5">{info.title}</h3>
-                  <div className="space-y-2 text-secondary-600 text-lg font-medium">
+                  <h3 className="text-xl font-extrabold text-primary-900 mb-3">{info.title}</h3>
+                  <div className="space-y-1.5 text-secondary-600 text-base font-medium">
                     {info.lines.map((line, i) => (
                       <p key={i}>{line}</p>
                     ))}
@@ -77,14 +69,10 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* 3. CONTACT FORM & IMAGE (Minimalist Split Layout) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa] relative">
+      <section className="py-8 lg:py-12 bg-[#f8f9fa] relative">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
-          
-          <div className="bg-white rounded-3xl lg:rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row">
-            
-            {/* Left: Huge Interactive Image Box */}
-            <div className="relative w-full lg:w-[45%] h-[300px] lg:h-[500px] lg:h-auto">
+          <div className="bg-white rounded-2xl lg:rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row">
+            <div className="relative w-full lg:w-[45%] h-[250px] lg:h-[450px] lg:h-auto">
               <Image 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
                 alt="Modern Office" 
@@ -92,54 +80,45 @@ const ContactPage = () => {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-accent-500/10 mix-blend-multiply"></div>
-              
-              {/* Floating Contact Info Box inside Image */}
-              <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-3xl flex flex-col sm:flex-row gap-6 justify-between shadow-xl">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl flex flex-col sm:flex-row gap-4 justify-between shadow-lg">
                 <div>
-                  <p className="text-secondary-500 text-xs font-bold uppercase tracking-wider mb-1">Phone Number</p>
-                  <p className="text-primary-900 font-extrabold text-lg">{companyInfo.contact.phone}</p>
+                  <p className="text-secondary-500 text-[10px] font-bold uppercase tracking-wider mb-0.5">Phone Number</p>
+                  <p className="text-primary-900 font-extrabold text-base">{companyInfo.contact.phone}</p>
                 </div>
                 <div>
-                  <p className="text-secondary-500 text-xs font-bold uppercase tracking-wider mb-1">Email Address</p>
-                  <p className="text-primary-900 font-extrabold text-lg">{companyInfo.contact.email}</p>
+                  <p className="text-secondary-500 text-[10px] font-bold uppercase tracking-wider mb-0.5">Email Address</p>
+                  <p className="text-primary-900 font-extrabold text-base">{companyInfo.contact.email}</p>
                 </div>
               </div>
             </div>
-
-            {/* Right: Minimalist Form */}
-            <div className="w-full lg:w-[55%] p-6 md:p-10 lg:p-16 lg:p-20">
-              
-              <div className="flex items-center gap-2 text-accent-500 mb-6">
-                 <div className="w-6 h-6 bg-accent-500 rounded flex items-center justify-center text-white">
-                    <span className="text-[10px] font-bold">|||</span>
+            <div className="w-full lg:w-[55%] p-6 md:p-8 lg:p-12">
+              <div className="flex items-center gap-2 text-accent-500 mb-4">
+                 <div className="w-5 h-5 bg-accent-500 rounded flex items-center justify-center text-white">
+                    <span className="text-[9px] font-bold">|||</span>
                  </div>
-                 <span className="font-bold text-sm tracking-wide">Schedule</span>
+                 <span className="font-bold text-xs tracking-wide">Schedule</span>
               </div>
-              
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 mb-6 leading-[1.2]">
-                Let's Discuss How We <br/>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary-900 mb-3 leading-[1.2]">
+                Let&apos;s Discuss How We <br/>
                 <span className="font-light text-secondary-500">Can Transform Your Business</span>
               </h3>
-              <p className="text-secondary-600 text-lg mb-12">
+              <p className="text-secondary-600 text-base mb-8">
                 Schedule a free consultation to discover personalized solutions from our financial experts.
               </p>
-
-              <form className="space-y-10">
-                <div className="grid md:grid-cols-2 gap-10">
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative">
-                    <input type="text" placeholder="Full Name *" className="w-full pb-3 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium" />
+                    <input type="text" placeholder="Full Name *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
                   </div>
                   <div className="relative">
-                    <input type="email" placeholder="Full Email *" className="w-full pb-3 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium" />
+                    <input type="email" placeholder="Full Email *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
                   </div>
                 </div>
-
                 <div className="relative">
-                  <input type="tel" placeholder="Phone number *" className="w-full pb-3 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium" />
+                  <input type="tel" placeholder="Phone number *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
                 </div>
-
                 <div className="relative">
-                  <select className="w-full pb-3 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 font-medium appearance-none cursor-pointer">
+                  <select className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 font-medium appearance-none cursor-pointer text-sm">
                     <option value="" disabled selected className="text-secondary-400">Select a Service *</option>
                     <option value="business-valuation">Business Valuation</option>
                     <option value="internal-audit">Internal Audit</option>
@@ -150,25 +129,20 @@ const ContactPage = () => {
                     <option value="other">Other Inquiry</option>
                   </select>
                 </div>
-
                 <div className="relative">
-                  <textarea rows={4} placeholder="Your comment *" className="w-full pb-3 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium resize-none"></textarea>
+                  <textarea rows={3} placeholder="Your comment *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm resize-none"></textarea>
                 </div>
-
-                <button type="button" className="mt-6 flex items-center gap-4 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-2 pr-8 transition-all duration-300 group shadow-lg">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                <button type="button" className="mt-4 flex items-center gap-3 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-1.5 pr-6 transition-all duration-300 group shadow-md w-max">
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
                   </div>
-                  <span className="font-bold text-sm tracking-wide">Submit Your Message</span>
+                  <span className="font-bold text-xs tracking-wide">Submit Your Message</span>
                 </button>
               </form>
-              
             </div>
           </div>
         </div>
       </section>
-
-      {/* 4. MAP SECTION */}
       <section className="h-[250px] lg:h-[400px] lg:h-[600px] relative w-full">
          <iframe 
            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5413340578647!2d80.2520336!3d13.0648439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526615b369c0d1%3A0xc3f5a2f58e6dd150!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715096538604!5m2!1sen!2sin" 
@@ -181,9 +155,7 @@ const ContactPage = () => {
          ></iframe>
          <div className="absolute inset-0 bg-primary-900/10 pointer-events-none mix-blend-multiply"></div>
       </section>
-
     </div>
   );
 };
-
 export default ContactPage;
