@@ -7,3 +7,4 @@ const HomePage = dynamic(() => import('@/app/components/home/HomePage'), {
 export default function Page() {
   return <HomePage />;
 }
+

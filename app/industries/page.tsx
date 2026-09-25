@@ -3,6 +3,7 @@ import React from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import TestimonialCarousel from '../components/ui/TestimonialCarousel';
 
 const IndustriesPage = () => {
   const industries = [
@@ -90,7 +91,7 @@ const IndustriesPage = () => {
       </div>
 
       {/* 3. ECOSYSTEM REACH (Branching Layout) */}
-      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+      <section className="py-20 md:py-32 bg-secondary-900 relative overflow-hidden">
         <style>{`
           @keyframes flowLine {
             to { stroke-dashoffset: -40; }
@@ -112,15 +113,19 @@ const IndustriesPage = () => {
           }
         `}</style>
 
-        {/* Faint Grid Background - Ultra Clean */}
-        <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#f8fafc 1px, transparent 1px), linear-gradient(90deg, #f8fafc 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        {/* Faint Grid Background - Dark Mode */}
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         
+        {/* Subtle glowing neon orbs in background */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen"></div>
+
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24 relative z-20">
-             <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium text-primary-900 leading-[1.2] tracking-tight">
-               A Comprehensive Ecosystem <br className="hidden md:block"/> Empowering <span className="text-accent-500">Global Industries</span>
+             <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium text-white leading-[1.2] tracking-tight">
+               A Comprehensive Ecosystem <br className="hidden md:block"/> Empowering <span className="text-accent-400">Global Industries</span>
              </h2>
-             <p className="text-secondary-600 text-lg mt-6 max-w-2xl mx-auto">
+             <p className="text-secondary-300 text-lg mt-6 max-w-2xl mx-auto">
                Our multi-sector reach enables us to deploy specialized financial frameworks tailored exactly to the unique operational and regulatory demands of your industry.
              </p>
           </div>
@@ -131,23 +136,23 @@ const IndustriesPage = () => {
              {/* LEFT COLUMN */}
              <div className="flex-1 relative h-full">
                {[
-                 { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}] },
-                 { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}] },
-                 { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}] },
-                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}] },
+                 { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                ].map((category, idx) => {
                  const top = 12.5 + idx * 25;
                  return (
                    <div key={idx} className="absolute w-full flex items-center justify-end gap-4 xl:gap-6 pr-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
                      <div className="flex flex-wrap justify-end gap-3 w-[300px] xl:w-[400px]">
                        {category.items.map((item, i) => (
-                         <div key={i} className="float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:bg-primary-900 hover:border-primary-900 hover:-translate-y-1 transition-all duration-300 cursor-pointer group" style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
-                           <item.i className="w-6 h-6 xl:w-7 xl:h-7 text-accent-500 group-hover:text-accent-400 transition-colors" strokeWidth={2} />
-                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap text-primary-900 group-hover:text-white transition-colors">{item.n}</span>
+                         <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
+                           <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
+                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
                          </div>
                        ))}
                      </div>
-                     <span className="text-accent-600 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-right bg-white px-2 py-1 z-10">{category.cat}</span>
+                     <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-right bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
                      <div className="w-2.5 h-2.5 rounded-sm absolute right-0 translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
                    </div>
                  );
@@ -184,8 +189,8 @@ const IndustriesPage = () => {
                </svg>
                
                {/* Center Logo - Clean & Premium */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-white rounded-3xl shadow-[0_15px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-100 flex items-center justify-center z-20 hover:scale-110 transition-transform duration-500 cursor-pointer">
-                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center">
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
+                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
                    <Image src="/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
                  </div>
                </div>
@@ -194,21 +199,21 @@ const IndustriesPage = () => {
              {/* RIGHT COLUMN */}
              <div className="flex-1 relative h-full">
                {[
-                 { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}] },
-                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}] },
-                 { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}] },
-                 { cat: "SERVICES", items: [{n: "Service", i: Briefcase}] },
+                 { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                ].map((category, idx) => {
                  const top = 12.5 + idx * 25;
                  return (
                    <div key={idx} className="absolute w-full flex items-center justify-start gap-4 xl:gap-6 pl-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
                      <div className="w-2.5 h-2.5 rounded-sm absolute left-0 -translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
-                     <span className="text-accent-600 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-left bg-white px-2 py-1 z-10">{category.cat}</span>
+                     <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-left bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
                      <div className="flex flex-wrap justify-start gap-3 w-[300px] xl:w-[400px]">
                        {category.items.map((item, i) => (
-                         <div key={i} className="float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:bg-primary-900 hover:border-primary-900 hover:-translate-y-1 transition-all duration-300 cursor-pointer group" style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
-                           <item.i className="w-6 h-6 xl:w-7 xl:h-7 text-accent-500 group-hover:text-accent-400 transition-colors" strokeWidth={2} />
-                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap text-primary-900 group-hover:text-white transition-colors">{item.n}</span>
+                         <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
+                           <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
+                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
                          </div>
                        ))}
                      </div>
@@ -220,18 +225,23 @@ const IndustriesPage = () => {
           
           {/* MOBILE FALLBACK (Grid) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:hidden relative z-10">
-             {industries.map((ind, idx) => (
-               <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
-                 <ind.icon className="w-8 h-8 text-accent-500 mb-4" />
-                 <span className="text-sm font-bold text-primary-900">{ind.name}</span>
-               </div>
-             ))}
+             {industries.map((ind, idx) => {
+               return (
+                 <div key={idx} className="bg-white/15 text-white border border-white/20 hover:bg-accent-500 hover:border-accent-400 p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center transition-all duration-300 group cursor-pointer">
+                   <ind.icon className="w-8 h-8 mb-4 text-accent-400 group-hover:text-white transition-colors" />
+                   <span className="text-sm font-bold group-hover:text-white transition-colors">{ind.name}</span>
+                 </div>
+               );
+             })}
           </div>
 
         </div>
       </section>
 
-      {/* 4. CTA (Texon Massive Banner) */}
+      {/* 4. TESTIMONIALS */}
+      <TestimonialCarousel />
+
+      {/* 5. CTA (Texon Massive Banner) */}
       <section id="contact" className="py-12 md:py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
 
         <div className="absolute inset-0 z-0">
@@ -270,3 +280,4 @@ const IndustriesPage = () => {
 };
 
 export default IndustriesPage;
+

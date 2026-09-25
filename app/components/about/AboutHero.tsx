@@ -4,7 +4,7 @@ import { Linkedin, ArrowDown } from 'lucide-react';
 
 
 import { useRef, useEffect } from 'react';
-
+import Image from 'next/image';
 export function AboutHero() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -40,10 +40,12 @@ export function AboutHero() {
         
         {/* Static Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/banner2.png"
             alt="About Us Banner"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            className="object-cover object-center"
           />
         </div>
 
@@ -136,10 +138,11 @@ export function AboutHero() {
             {/* Right Side: Image */}
             <div className="reveal-scale h-full min-h-[250px] lg:h-[400px] lg:min-h-full">
               <div className="relative w-full h-full rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200" 
                   alt="Viswanathan R Associates Team" 
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply" />
               </div>

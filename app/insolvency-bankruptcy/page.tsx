@@ -61,7 +61,7 @@ const IBCPage = () => {
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=2000"
@@ -88,7 +88,7 @@ const IBCPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16 lg:mb-24">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
            
            <div className="lg:w-1/2">
@@ -120,7 +120,7 @@ const IBCPage = () => {
       </div>
 
       {/* 3. SECTIONS WE WORK UNDER (GSAP Scroll Section) */}
-      <GSAPScrollSection 
+      <GSAPScrollSection theme="dark" 
         title="Sections We Work Under"
         subtitle="IBC Frameworks"
         items={sections.map(s => ({
@@ -177,7 +177,7 @@ const IBCPage = () => {
       </section>
 
             {/* NEW PROCESS STRIP */}
-      <ProcessFlow 
+      <ProcessFlow theme="light" 
         subtitle="Resolution Pathway"
         title="Our proven insolvency process for"
         highlightText="corporate distress"
@@ -239,3 +239,6 @@ const IBCPage = () => {
 };
 
 export default IBCPage;
+
+
+

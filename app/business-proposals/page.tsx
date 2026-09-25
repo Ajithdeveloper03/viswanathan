@@ -63,7 +63,7 @@ const BusinessProposalsPage = () => {
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000"
@@ -90,7 +90,7 @@ const BusinessProposalsPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16 lg:mb-24">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
            
            <div className="lg:w-1/2">
@@ -121,7 +121,7 @@ const BusinessProposalsPage = () => {
       </div>
 
       {/* 3. WHAT WE DO (GSAP Scroll Section) */}
-      <GSAPScrollSection 
+      <GSAPScrollSection theme="dark" 
         title="Our Focus Areas"
         subtitle="Core Expertise"
         items={whatWeDo.map(item => ({
@@ -130,9 +130,8 @@ const BusinessProposalsPage = () => {
         }))}
       />
 
-      {/* 4. GLOBAL PERSPECTIVE (Texon Collage Layout) */}
       <section className="py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
-        {/* Subtle Background */}
+
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-50/50 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/2"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-50/50 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/3"></div>
@@ -197,7 +196,7 @@ const BusinessProposalsPage = () => {
       </section>
 
             {/* 5. PROCESS STRIP */}
-      <ProcessFlow 
+      <ProcessFlow theme="light" 
         subtitle="Deal Execution"
         title="Our proven transaction process for"
         highlightText="securing capital"
@@ -287,3 +286,6 @@ const BusinessProposalsPage = () => {
 };
 
 export default BusinessProposalsPage;
+
+
+

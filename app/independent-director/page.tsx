@@ -87,7 +87,7 @@ const IndependentDirectorPage = () => {
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
@@ -145,7 +145,7 @@ const IndependentDirectorPage = () => {
       </div>
 
       {/* 3. AREAS OF CONTRIBUTION (GSAP Scroll Section) */}
-      <GSAPScrollSection 
+      <GSAPScrollSection theme="light" 
         title="Areas of Contribution"
         subtitle="Board Contributions"
         items={areasOfContribution.map(item => ({
@@ -240,7 +240,7 @@ const IndependentDirectorPage = () => {
       </section>
 
             {/* NEW PROCESS STRIP */}
-      <ProcessFlow 
+      <ProcessFlow theme="navy" 
         subtitle="Governance Approach"
         title="Our proven oversight process for"
         highlightText="board excellence"
@@ -291,3 +291,5 @@ const IndependentDirectorPage = () => {
 };
 
 export default IndependentDirectorPage;
+
+
