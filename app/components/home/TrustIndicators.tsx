@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 25, suffix: '+', label: 'Years of Experience', isNumeric: true },
-  { value: 970, suffix: '+', label: 'Valuations Completed', isNumeric: true },
-  { value: 12, suffix: '+', label: 'Industries Served', isNumeric: true },
+  { value: 30, suffix: '+', label: 'Years of Experience', isNumeric: true },
+  { value: 1000, suffix: '+', label: 'Valuations Completed', isNumeric: true },
+  { value: 25, suffix: '+', label: 'Industries Served', isNumeric: true },
   { value: 100, suffix: '%', label: 'Client Commitment', isNumeric: true },
 ];
 

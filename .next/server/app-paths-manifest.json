@@ -1,11 +1,7 @@
 {
-<<<<<<< HEAD
   "/page": "app/page.js",
-  "/about-us/page": "app/about-us/page.js",
-  "/business-valuation/page": "app/business-valuation/page.js"
-=======
-  "/contact/page": "app/contact/page.js",
-  "/page": "app/page.js",
-  "/industries/page": "app/industries/page.js"
->>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3
+  "/insolvency-bankruptcy/page": "app/insolvency-bankruptcy/page.js",
+  "/cost-management-audit/page": "app/cost-management-audit/page.js",
+  "/internal-audit/page": "app/internal-audit/page.js",
+  "/about-us/page": "app/about-us/page.js"
 }

@@ -1,11 +1,9 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
-
-
-
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-import { companyInfo } from '@/app/lib/siteData';
+import { companyInfo, navigation } from '@/app/lib/siteData';
 
 const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-secondary-900', 'text-primary-600', 'text-accent-600'];
@@ -16,9 +14,12 @@ const bannerImages = [
   '/banner3.png'
 ];
 
+const heroServices = navigation.main.find(item => item.name === 'Our Services')?.submenu || [];
+
 const Hero = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const [currentBg, setCurrentBg] = useState(0);
+  const [currentService, setCurrentService] = useState(0);
 
   // Word cycler
   useEffect(() => {
@@ -33,6 +34,15 @@ const Hero = () => {
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % bannerImages.length);
     }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Service cycler
+  useEffect(() => {
+    if (heroServices.length === 0) return;
+    const interval = setInterval(() => {
+      setCurrentService((prev) => (prev + 1) % heroServices.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -77,14 +87,14 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500" />
             </span>
             <span className="text-[10px] sm:text-xs font-semibold tracking-widest text-secondary-600 uppercase">
-              Trusted by 970+ businesses worldwide
+              Trusted by 1000+ businesses worldwide
             </span>
           </div>
 
           {/* Main headline */}
           <div className="mb-6 w-full">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary-900 leading-[1.1] animate-fade-in-up drop-shadow-md text-center sm:text-left">
-              Corporate
+              Business
             </h1>
             {/* Animated word cycle */}
             <div className="relative my-1 sm:my-2 w-full">
@@ -114,14 +124,14 @@ const Hero = () => {
           </div>
 
           <p className="text-base sm:text-lg text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200 text-center sm:text-left px-4 sm:px-0">
-            {companyInfo.description} With 25+ years of global experience delivering measurable results for businesses, investors, and corporate leaders.
+            {companyInfo.description} With 30+ years of global experience delivering measurable results for businesses, investors, and corporate leaders.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300 justify-center sm:justify-start">
             <span className="btn-primary group cursor-pointer text-sm tracking-wider">
               Book a Consultation
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200" />
             </span>
             <span className="btn-secondary cursor-pointer text-sm tracking-wider">
               Explore Services
@@ -163,6 +173,42 @@ const Hero = () => {
           <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-secondary-400 to-transparent" />
         </div>
       </div>
+
+      {/* Service Cycler - Bottom Right */}
+      {heroServices.length > 0 && (
+        <div className="absolute bottom-6 right-6 lg:bottom-10 lg:right-10 z-30 hidden sm:block animate-fade-in-up animate-delay-700">
+          <Link href={heroServices[currentService].href} className="block group">
+            <div className="bg-white/80 backdrop-blur-md border border-secondary-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-xl p-4 w-64 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:border-primary-200 transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-secondary-100">
+                <div 
+                  className="h-full bg-primary-500"
+                  style={{ width: '100%', animation: 'lineGrow 4s linear infinite', transformOrigin: 'left' }}
+                />
+              </div>
+              <p className="text-[10px] uppercase tracking-widest text-secondary-500 font-bold mb-1 mt-1">Our Service</p>
+              <div className="flex items-center justify-between relative h-5">
+                <div className="flex-1 relative h-full w-full">
+                  {heroServices.map((service, i) => (
+                    <h4
+                      key={service.name}
+                      className={`absolute top-0 left-0 w-full text-sm font-bold text-secondary-900 group-hover:text-primary-700 transition-all duration-500 ease-in-out truncate pr-2 ${
+                        i === currentService
+                          ? 'translate-y-0 opacity-100 z-10'
+                          : i < currentService || (currentService === 0 && i === heroServices.length - 1)
+                            ? '-translate-y-3 opacity-0 z-0'
+                            : 'translate-y-3 opacity-0 z-0'
+                      }`}
+                    >
+                      {service.name}
+                    </h4>
+                  ))}
+                </div>
+                <ArrowRight className="w-4 h-4 text-primary-600 shrink-0 transform group-hover:translate-x-1 transition-transform z-20 relative" />
+              </div>
+            </div>
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

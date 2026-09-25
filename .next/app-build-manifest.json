@@ -11,27 +11,35 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-<<<<<<< HEAD
-    "/business-valuation/page": [
+    "/industries/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/business-valuation/page.js"
+      "static/chunks/app/industries/page.js"
     ],
     "/about-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about-us/page.js"
-=======
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
     ],
-    "/industries/page": [
+    "/business-valuation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/industries/page.js"
->>>>>>> cedb11657ef8ff66785223bc3c9304a3cb4cd3d3
+      "static/chunks/app/business-valuation/page.js"
+    ],
+    "/cost-management-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/cost-management-audit/page.js"
+    ],
+    "/insolvency-bankruptcy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/insolvency-bankruptcy/page.js"
+    ],
+    "/internal-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/internal-audit/page.js"
     ]
   }
 }
