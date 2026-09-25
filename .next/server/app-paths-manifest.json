@@ -1,7 +1,4 @@
 {
-  "/business-valuation/page": "app/business-valuation/page.js",
-  "/cost-management-audit/page": "app/cost-management-audit/page.js",
-  "/business-proposals/page": "app/business-proposals/page.js",
-  "/about-us/page": "app/about-us/page.js",
-  "/industries/page": "app/industries/page.js"
+  "/industries/page": "app/industries/page.js",
+  "/business-valuation/page": "app/business-valuation/page.js"
 }

@@ -34,7 +34,7 @@ const IndustriesPage = () => {
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
       
       {/* 1. HERO SECTION (Texon Style) */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?auto=format&fit=crop&q=80&w=2000"
@@ -59,7 +59,7 @@ const IndustriesPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX & COLLAGE */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16 lg:mb-24">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 py-12 lg:py-16 mb-12 lg:mb-16">
         <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-16 items-center justify-between border border-secondary-100">
            
            <div className="lg:w-1/2 relative z-10">
@@ -91,7 +91,7 @@ const IndustriesPage = () => {
       </div>
 
       {/* 3. ECOSYSTEM REACH (Branching Layout) */}
-      <section className="py-20 md:py-32 bg-secondary-900 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-secondary-900 relative overflow-hidden">
         <style>{`
           @keyframes flowLine {
             to { stroke-dashoffset: -40; }
@@ -121,7 +121,7 @@ const IndustriesPage = () => {
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen"></div>
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24 relative z-20">
+          <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16 relative z-20">
              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium text-white leading-[1.2] tracking-tight">
                A Comprehensive Ecosystem <br className="hidden md:block"/> Empowering <span className="text-accent-400">Global Industries</span>
              </h2>
@@ -136,10 +136,10 @@ const IndustriesPage = () => {
              {/* LEFT COLUMN */}
              <div className="flex-1 relative h-full">
                {[
-                 { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                ].map((category, idx) => {
                  const top = 12.5 + idx * 25;
                  return (
@@ -199,10 +199,10 @@ const IndustriesPage = () => {
              {/* RIGHT COLUMN */}
              <div className="flex-1 relative h-full">
                {[
-                 { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                 { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                ].map((category, idx) => {
                  const top = 12.5 + idx * 25;
                  return (
@@ -227,7 +227,7 @@ const IndustriesPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:hidden relative z-10">
              {industries.map((ind, idx) => {
                return (
-                 <div key={idx} className="bg-white/15 text-white border border-white/20 hover:bg-accent-500 hover:border-accent-400 p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center transition-all duration-300 group cursor-pointer">
+                 <div key={idx} className="bg-white/15 backdrop-blur-md text-white border border-white/20 hover:bg-accent-500 hover:border-accent-400 p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center transition-all duration-300 group cursor-pointer">
                    <ind.icon className="w-8 h-8 mb-4 text-accent-400 group-hover:text-white transition-colors" />
                    <span className="text-sm font-bold group-hover:text-white transition-colors">{ind.name}</span>
                  </div>
@@ -242,7 +242,7 @@ const IndustriesPage = () => {
       <TestimonialCarousel />
 
       {/* 5. CTA (Texon Massive Banner) */}
-      <section id="contact" className="py-12 md:py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
+      <section id="contact" className="py-12 lg:py-16 bg-primary-900 text-white relative overflow-hidden">
 
         <div className="absolute inset-0 z-0">
           <Image
@@ -280,4 +280,6 @@ const IndustriesPage = () => {
 };
 
 export default IndustriesPage;
+
+
 

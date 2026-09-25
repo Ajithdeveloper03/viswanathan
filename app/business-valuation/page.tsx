@@ -85,8 +85,8 @@ const BusinessValuation = () => {
   ];
 
   return (
-    <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
-      
+    <div className="bg-accent-50 text-secondary-900 font-sans">
+
       {/* 1. HERO SECTION (Texon Style: Centered, Large Padding, Pill Breadcrumb) */}
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -99,7 +99,7 @@ const BusinessValuation = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
@@ -109,45 +109,45 @@ const BusinessValuation = () => {
             <span className="text-accent-400">Business Valuation</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-            Business Valuation <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services in Chennai</span>
+            Business Valuation <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services in Chennai</span>
           </h1>
         </div>
       </section>
 
       {/* Overlapping Info Box (Texon Signature) */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
-        <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
-           <div className="lg:w-1/2">
-             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-               Valuation Expertise
-             </div>
-             <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
-               Clear, Supportable <br/>
-               <span className="text-secondary-400 font-light">Numbers & Reasoning</span>
-             </h2>
-           </div>
-           <div className="lg:w-1/2">
-             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-                With 1,000+ valuations completed across entity types, deal structures, and industries, we provide business valuation service in Chennai and deliver defensible, well-documented valuations that stand up to scrutiny from investors, regulators, tax authorities, and auditors.
-             </p>
-             <p className="text-secondary-500 leading-relaxed pl-6">
-                Whether you are raising capital, restructuring, merging, or reporting, we give you a clear, supportable number and the reasoning behind it.
-             </p>
-           </div>
+        <div className="bg-white rounded-3xl p-6 border-secondary-200 shadow-2xl md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
+          <div className="lg:w-1/2">
+            <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
+              Valuation Expertise
+            </div>
+            <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
+              Clear, Supportable <br />
+              <span className="text-secondary-400 font-light">Numbers & Reasoning</span>
+            </h2>
+          </div>
+          <div className="lg:w-1/2">
+            <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
+              With 1,000+ valuations completed across entity types, deal structures, and industries, we provide business valuation service in Chennai and deliver defensible, well-documented valuations that stand up to scrutiny from investors, regulators, tax authorities, and auditors.
+            </p>
+            <p className="text-secondary-500 leading-relaxed pl-6">
+              Whether you are raising capital, restructuring, merging, or reporting, we give you a clear, supportable number and the reasoning behind it.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* 3. BUSINESS STRUCTURES (Texon Card Grid with Image Top) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa]">
+      <section className="py-12 md:py-16 lg:py-24 bg-accent-50">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-20">
             <div className="max-w-2xl">
-              <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-4">
+              <div className="inline-block px-4 py-1.5 bg-primary-800 border border-primary-700 text-accent-400 font-bold text-sm tracking-wider uppercase rounded-full mb-4 shadow-sm relative z-10">
                 Entity Types
               </div>
-              <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900">Valuation for Every <br/>Business Structure</h2>
+              <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white relative z-10">Valuation for Every <br /><span className="text-accent-400">Business Structure</span></h2>
             </div>
-            <p className="text-secondary-600 max-w-md text-lg leading-relaxed border-l-2 border-secondary-200 pl-6">
+            <p className="text-secondary-300 max-w-md text-lg leading-relaxed border-l-2 border-accent-500 pl-6 relative z-10">
               Our approach is tailored to specific circumstances, objectives, and stages of development across all major entity types.
             </p>
           </div>
@@ -186,7 +186,7 @@ const BusinessValuation = () => {
       </section>
 
       {/* 4. OUR SERVICES (GSAP Scroll Section) */}
-      <GSAPScrollSection theme="light" 
+      <GSAPScrollSection theme="navy"
         title="Specialized Business Valuation Services in Chennai"
         subtitle="Our Expertise"
         items={services.map(s => ({
@@ -198,7 +198,7 @@ const BusinessValuation = () => {
       />
 
       {/* 5. VALUATION APPROACH */}
-      <ProcessFlow theme="navy" 
+      <ProcessFlow theme="gold"
         title="A Meticulous"
         highlightText="Valuation Approach"
         subtitle="Our Process"
@@ -223,15 +223,15 @@ const BusinessValuation = () => {
           <div className="absolute inset-0 bg-primary-900/80"></div>
         </div>
 
-<div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[250px] lg:h-[400px] lg:h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center">
           <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              Valuations That Support <br/> <span className="text-accent-400">Better Decisions</span>
+              Valuations That Support <br /> <span className="text-accent-400">Better Decisions</span>
             </h2>
             <p className="text-xl md:text-2xl text-secondary-300 leading-relaxed font-light">
               We help clients understand the key factors influencing business value, identify opportunities, and make informed decisions with greater confidence.
@@ -253,5 +253,7 @@ const BusinessValuation = () => {
 };
 
 export default BusinessValuation;
+
+
 
 
