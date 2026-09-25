@@ -28,39 +28,39 @@ export function WhatWeDoSection() {
 
   const services = [
     {
-      title: "Business valuation and enterprise valuation",
-      description: "with 1,000+ valuations covering wide range of businesses and valuation purposes",
-      linkText: "(Link to Valuation Page)",
+      title: "Business valuation service in Chennai",
+      description: "and enterprise valuation with 1,000+ valuations covering wide range of businesses and valuation purposes",
+      linkText: "Learn More",
       icon: LineChart
     },
     {
       title: "Cost Optimization",
       description: "through Cost Drivers, Cost Reporting and profitability analysis",
-      linkText: "(Link to Costing Page)",
+      linkText: "Learn More",
       icon: Calculator
     },
     {
       title: "Costing system Design and Setup",
       description: "Cost Elements and Cost Drivers",
-      linkText: "(Link to Costing Page)",
+      linkText: "Learn More",
       icon: Settings
     },
     {
       title: "Internal Audit",
       description: "controls, risk management, and business process improvement",
-      linkText: "(Link to Internal Audit Page)",
+      linkText: "Learn More",
       icon: Shield
     },
     {
       title: "Independent Director",
       description: "",
-      linkText: "(Link to Independent Director Page)",
+      linkText: "Learn More",
       icon: User
     },
     {
       title: "Insolvency",
       description: "restructuring, and resolution-related advisory",
-      linkText: "(Link to IBC Page)",
+      linkText: "Learn More",
       icon: Scale
     },
     {
@@ -112,21 +112,26 @@ export function WhatWeDoSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="card-interactive reveal">
-              <div className="w-12 h-12 rounded-lg bg-primary-50 flex items-center justify-center mb-6">
-                <service.icon className="w-6 h-6 text-primary-600" />
+            <div key={index} className="bg-white rounded-2xl border border-secondary-200 p-6 xl:p-8 flex flex-col text-left hover:shadow-soft hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 reveal h-full">
+              
+              <div className="flex gap-4 items-start mb-4">
+                <div className="w-12 h-12 flex-shrink-0 rounded-xl border-2 border-secondary-100 flex items-center justify-center bg-secondary-50/50">
+                  <service.icon className="w-6 h-6 text-primary-600" />
+                </div>
+                <h3 className="text-lg font-bold text-secondary-900 leading-tight pt-1">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-secondary-900 mb-3">{service.title}</h3>
+
               {service.description && (
-                <p className="text-secondary-600 text-sm leading-relaxed mb-4">
+                <p className="text-secondary-600 text-sm leading-relaxed mb-6 flex-grow">
                   {service.description}
                 </p>
               )}
+              
               {service.linkText && (
-                <a href="#" className="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors mt-auto">
-                  {service.linkText} <ArrowRight className="w-4 h-4 ml-1" />
+                <a href="#" className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-secondary-900 hover:text-primary-600 transition-colors group w-fit">
+                  {service.linkText} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               )}
             </div>

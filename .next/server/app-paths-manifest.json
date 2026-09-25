@@ -1,8 +1,0 @@
-{
-  "/industries/page": "app/industries/page.js",
-  "/independent-director/page": "app/independent-director/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/business-proposals/page": "app/business-proposals/page.js",
-  "/insolvency-bankruptcy/page": "app/insolvency-bankruptcy/page.js",
-  "/business-valuation/page": "app/business-valuation/page.js"
-}

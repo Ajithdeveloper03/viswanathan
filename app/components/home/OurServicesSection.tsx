@@ -1,7 +1,6 @@
 'use client';
 import { ArrowRight, Plus } from 'lucide-react';
-
-
+import Link from 'next/link';
 
 import { useRef, useEffect } from 'react';
 
@@ -10,41 +9,37 @@ const servicesData = [
     title: 'Business Valuation',
     description: 'Accurate valuation services for businesses to ensure informed decision-making.',
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800',
+    href: '/business-valuation',
   },
   {
     title: 'Insolvency & Bankruptcy',
     description: 'Comprehensive resolution services under the IBC code for distressed assets and businesses.',
     image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800',
+    href: '/insolvency-bankruptcy',
   },
   {
-    title: 'Cost Audit & Optimization',
-    description: 'In-depth analysis to identify inefficiencies and implement strategic savings.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    title: 'Business Proposals',
+    description: 'Expertly crafted business proposals to help you secure funding and partnerships.',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+    href: '/business-proposals',
   },
   {
-    title: 'Transfer Pricing',
-    description: 'Navigate complex tax regulations and optimize your global operations.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800',
+    title: 'Independent Director',
+    description: 'Strategic advisory and independent governance oversight for your board of directors.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
+    href: '/independent-director',
   },
   {
-    title: 'Internal Audit & Risk',
+    title: 'Internal Audit',
     description: 'Robust internal controls and risk management frameworks for sustainable growth.',
     image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800',
+    href: '/internal-audit',
   },
   {
-    title: 'AI Business Solutions',
-    description: 'Integrate advanced artificial intelligence to automate and scale your business operations.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
-  },
-  {
-    title: 'Corporate Governance',
-    description: 'Implement ethical governance structures to ensure transparency and compliance.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
-  },
-  {
-    title: 'Fractional CFO',
-    description: 'Strategic financial leadership on a part-time basis to guide your success.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+    title: 'Cost Management & Audit',
+    description: 'In-depth analysis to identify inefficiencies and implement strategic savings.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    href: '/cost-management-audit',
   }
 ];
 
@@ -83,8 +78,8 @@ export function OurServicesSection() {
           </p>
         </div>
 
-        {/* Cards Grid - 4 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards Grid - 3 Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesData.map((service, index) => (
             <div 
               key={index}
@@ -109,17 +104,21 @@ export function OurServicesSection() {
 
                 {/* Floating Plus Button */}
                 <div className="absolute -bottom-5 right-5 z-30">
-                  <div className="w-10 h-10 bg-primary-600 rounded-full shadow-lg flex items-center justify-center transform group-hover:rotate-90 group-hover:bg-primary-700 transition-all duration-300 cursor-pointer text-white">
+                  <Link href={service.href} className="w-10 h-10 bg-primary-600 rounded-full shadow-lg flex items-center justify-center transform group-hover:rotate-90 group-hover:bg-primary-700 transition-all duration-300 cursor-pointer text-white">
                     <Plus strokeWidth={2.5} className="w-5 h-5" />
-                  </div>
+                  </Link>
                 </div>
               </div>
               
               {/* Content Container */}
               <div className="p-6 pt-6 flex-1 flex flex-col bg-white rounded-b-2xl">
-                <p className="text-secondary-600 text-[15px] leading-relaxed mb-2 flex-1">
+                <p className="text-secondary-600 text-[15px] leading-relaxed mb-4 flex-1">
                   {service.description}
                 </p>
+                <Link href={service.href} className="mt-auto self-start flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors group/btn">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           ))}

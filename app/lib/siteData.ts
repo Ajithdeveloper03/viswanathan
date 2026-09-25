@@ -1,4 +1,4 @@
-import { Building2, Scale, Calculator, ArrowLeftRight, Shield, Brain, Settings, UserCog, ClipboardCheck, Factory, Mountain, Heart, Car, Monitor, Building, Cog, TrendingUp, Store, Rocket, Users, Building2 as BuildingSmall, Target, HeartHandshake, Lightbulb, UserCheck, BookOpen, Award, Leaf } from 'lucide-react';
+import { Zap, Code, Cloud, CreditCard, Landmark, Plane, Utensils, Activity, ShoppingCart, Briefcase, Building2, Scale, Calculator, ArrowLeftRight, Shield, Brain, Settings, UserCog, ClipboardCheck, Factory, Mountain, Heart, Car, Monitor, Building, Cog, TrendingUp, Store, Rocket, Users, Building2 as BuildingSmall, Target, HeartHandshake, Lightbulb, UserCheck, BookOpen, Award, Leaf } from 'lucide-react';
 
 export const navigation = {
   main: [
@@ -26,8 +26,8 @@ export const navigation = {
 };
 
 export const trustIndicators = [
-  { value: '25+', label: 'Years of Experience', highlight: true },
-  { value: '970+', label: 'Valuations Completed' },
+  { value: '30+', label: 'Years of Experience', highlight: true },
+  { value: '1000+', label: 'Valuations Completed' },
   { value: 'IBBI', label: 'Registered Valuer' },
   { value: 'IBBI', label: 'Registered IP' },
   { value: 'ID', label: 'Independent Director' },
@@ -166,18 +166,21 @@ export const services = [
 ];
 
 export const industries = [
-  { name: 'Manufacturing', icon: Factory, description: 'Process optimization, cost management, and valuation for manufacturing businesses.' },
-  { name: 'Mining & Natural Resources', icon: Mountain, description: 'Specialized services for extraction industries and resource companies.' },
-  { name: 'Healthcare', icon: Heart, description: 'Financial advisory for hospitals, clinics, and healthcare organizations.' },
-  { name: 'Automotive', icon: Car, description: 'Expertise across OEMs, suppliers, and automotive services.' },
-  { name: 'Information Technology', icon: Monitor, description: 'Valuation and governance for tech companies and startups.' },
-  { name: 'Infrastructure', icon: Building, description: 'Advisory for infrastructure projects and construction companies.' },
-  { name: 'Engineering', icon: Cog, description: 'Financial services for engineering and project-based businesses.' },
-  { name: 'Trading & Distribution', icon: TrendingUp, description: 'Working capital optimization and operational efficiency.' },
-  { name: 'Retail', icon: Store, description: 'Strategy, valuation, and cost management for retail businesses.' },
-  { name: 'Startups', icon: Rocket, description: 'Fundraising, valuation, and growth advisory for startups.' },
-  { name: 'Family Businesses', icon: Users, description: 'Succession planning, governance, and wealth preservation.' },
-  { name: 'MSMEs', icon: BuildingSmall, description: 'Scalable solutions for micro, small, and medium enterprises.' },
+  { name: 'Mining Industry', icon: Mountain, description: 'Specialized valuation and advisory for extraction and resource companies.' },
+  { name: 'Power Plants', icon: Zap, description: 'Financial services and optimization for energy and power generation.' },
+  { name: 'Software', icon: Code, description: 'Valuation and governance for software development companies.' },
+  { name: 'Software as a Service (SaaS)', icon: Cloud, description: 'Growth advisory, financial modeling, and metrics tracking for SaaS platforms.' },
+  { name: 'Artificial Intelligence (AI)', icon: Brain, description: 'Strategic insights and valuation for AI startups and enterprises.' },
+  { name: 'Financial Technology (FinTech)', icon: CreditCard, description: 'Advisory for payment processors, digital banks, and financial innovators.' },
+  { name: 'Non-Banking Financial Company (NBFC)', icon: Landmark, description: 'Regulatory compliance, restructuring, and valuation for NBFCs.' },
+  { name: 'Airlines', icon: Plane, description: 'Operational efficiency and restructuring services for the aviation sector.' },
+  { name: 'Hotels', icon: Building, description: 'Asset valuation and financial advisory for hospitality businesses.' },
+  { name: 'Restaurants', icon: Utensils, description: 'Cost optimization and growth strategy for food service businesses.' },
+  { name: 'Hospitals', icon: Activity, description: 'Financial planning and valuation for medical institutions and hospitals.' },
+  { name: 'Healthcare', icon: Heart, description: 'Broad financial advisory for clinics, telehealth, and healthcare organizations.' },
+  { name: 'Manufacturing Industries', icon: Factory, description: 'Process optimization, cost management, and valuation for manufacturing.' },
+  { name: 'Fast-Moving Consumer Goods (FMCG)', icon: ShoppingCart, description: 'Working capital optimization and strategy for consumer goods.' },
+  { name: 'Service Industry', icon: Briefcase, description: 'Business process consulting and financial leadership for service providers.' },
 ];
 
 export const coreValues = [
@@ -193,7 +196,7 @@ export const coreValues = [
 export const founder = {
   name: 'Viswanathan Rajagopalan',
   title: 'Founder & Principal Consultant',
-  bio: 'With over 25 years of global experience spanning corporate finance, valuation, and business transformation, Mr. Viswanathan Rajagopalan founded VRA to bring world-class advisory services to businesses across industries. His career includes leadership roles in multinational corporations and advisory firms across India, the Middle East, and Southeast Asia.',
+  bio: 'With over 30 years of global experience spanning corporate finance, valuation, and business transformation, Mr. Viswanathan Rajagopalan founded VRA to bring world-class advisory services to businesses across industries. His career includes leadership roles in multinational corporations and advisory firms across India, the Middle East, and Southeast Asia.',
   qualifications: [
     'IBBI Registered Valuer (Securities & Financial Assets)',
     'IBBI Registered Insolvency Professional',
@@ -202,7 +205,7 @@ export const founder = {
     'Advanced certifications in business valuation and restructuring',
   ],
   experience: [
-    'Led 970+ business valuation engagements across sectors',
+    'Led 1000+ business valuation engagements across sectors',
     'Managed complex insolvency and restructuring mandates',
     'Advised Fortune 500 and mid-market companies on strategic transactions',
     'Implemented transformation initiatives yielding measurable results',
@@ -239,7 +242,7 @@ export const companyInfo = {
 };
 
 export const whyChooseUs = [
-  { title: 'Unmatched Expertise', description: '25+ years of cross-industry experience with 970+ successful valuations.' },
+  { title: 'Unmatched Expertise', description: '30+ years of cross-industry experience with 1000+ successful valuations.' },
   { title: 'Regulatory Credentials', description: 'IBBI-registered Valuer and Insolvency Professional with recognized qualifications.' },
   { title: 'Global Perspective', description: 'International experience across diverse markets and regulatory environments.' },
   { title: 'AI-Powered Insights', description: 'Leveraging technology to deliver deeper insights and optimize outcomes.' },
