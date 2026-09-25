@@ -39,7 +39,7 @@ export function FounderPreview() {
               Meet Our <span className="gradient-text">Founder</span>
             </h2>
             <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-5 text-justify sm:text-left">
-              <p className="text-xl font-medium text-secondary-800 italic border-l-4 border-primary-500 pl-4 py-1 mb-6">
+              <p className="text-xl font-medium text-secondary-800 border-l-4 border-primary-500 pl-4 py-1 mb-6">
                 “Transforming financial insight into measurable business value.”
               </p>
               <p>

@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
 
 const IBCPage = () => {
@@ -118,57 +119,17 @@ const IBCPage = () => {
         </div>
       </div>
 
-      {/* 3. SECTIONS WE WORK UNDER (Grid of Large Cards) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f8f9fa] relative">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="inline-block px-4 py-1.5 bg-white text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6 shadow-sm border border-secondary-100">
-               IBC Frameworks
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              Sections We <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-900">Work Under</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sections.map((sec, idx) => {
-              const Icon = sec.icon;
-              return (
-                <div key={idx} className="group bg-white rounded-3xl lg:rounded-[2.5rem] p-10 hover:-translate-y-3 transition-all duration-500 ease-in-out border border-secondary-100 hover:border-transparent hover:bg-primary-900 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col h-full relative overflow-hidden">
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    
-                    <div className="flex items-center justify-between mb-8">
-                       <div className="w-16 h-16 bg-[#f8f9fa] rounded-2xl flex items-center justify-center text-primary-900 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-secondary-100 group-hover:border-transparent group-hover:bg-accent-500 group-hover:text-white">
-                         <Icon className="w-7 h-7" />
-                       </div>
-                       <span className="px-4 py-2 bg-primary-50 text-primary-900 font-bold rounded-full text-sm group-hover:bg-white/10 group-hover:text-white transition-colors duration-300">
-                         {sec.id}
-                       </span>
-                    </div>
-                    
-                    <h5 className="text-2xl font-extrabold text-primary-900 group-hover:text-white leading-tight mb-4 transition-colors duration-300">
-                      {sec.title}
-                    </h5>
-                    <p className="text-secondary-600 group-hover:text-secondary-200 mb-8 font-medium transition-colors duration-300 leading-relaxed">
-                      {sec.desc}
-                    </p>
-
-                    <div className="mt-auto bg-[#f8f9fa] p-5 rounded-2xl group-hover:bg-primary-950 transition-colors duration-300 border border-secondary-100 group-hover:border-white/10">
-                      <span className="block text-accent-600 font-bold text-sm uppercase tracking-wide mb-2">How We Help</span>
-                      <p className="text-secondary-700 text-sm leading-relaxed group-hover:text-secondary-300 transition-colors duration-300">
-                        {sec.how}
-                      </p>
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 3. SECTIONS WE WORK UNDER (GSAP Scroll Section) */}
+      <GSAPScrollSection 
+        title="Sections We Work Under"
+        subtitle="IBC Frameworks"
+        items={sections.map(s => ({
+          title: s.title,
+          desc: s.id,
+          icon: s.icon ? <s.icon className="w-8 h-8" /> : undefined,
+          items: [s.desc, `How We Help: ${s.how}`]
+        }))}
+      />
 
       {/* 4. OUR SERVICES (Texon Split Layout) */}
       <section className="py-12 md:py-16 lg:py-24 bg-white">

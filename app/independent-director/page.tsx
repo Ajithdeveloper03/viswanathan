@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
+import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
 
 const IndependentDirectorPage = () => {
@@ -133,7 +134,7 @@ const IndependentDirectorPage = () => {
            
            <div className="lg:w-1/2">
              <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-               Good governance protects a company's reputation, its investors, and its long-term value. As a practising Cost Accountant with board experience, I bring an independent, finance-driven perspective to boards of companies in India.
+               Good governance protects a company&apos;s reputation, its investors, and its long-term value. As a practising Cost Accountant with board experience, I bring an independent, finance-driven perspective to boards of companies in India.
              </p>
              <p className="text-secondary-500 leading-relaxed pl-6">
                An Independent Director is more than a compliance requirement. The role offers objective oversight, a check on conflicts of interest, and experienced counsel on strategy, risk, and financial integrity under the Companies Act, 2013 and applicable SEBI and RBI norms.
@@ -143,49 +144,15 @@ const IndependentDirectorPage = () => {
         </div>
       </div>
 
-      {/* 3. AREAS OF CONTRIBUTION (Cards Grid) */}
-      <section className="py-32 bg-white relative">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="inline-block px-4 py-1.5 bg-primary-50 text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-               Board Contributions
-            </div>
-            <h2 className="text-5xl font-extrabold text-primary-900 leading-[1.2]">
-              Areas of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-900">Contribution</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {areasOfContribution.map((area, idx) => {
-              const Icon = area.icon;
-              return (
-                <div key={idx} className="group bg-[#f8f9fa] rounded-3xl lg:rounded-[2.5rem] p-10 hover:-translate-y-3 transition-all duration-500 ease-in-out border border-secondary-100 hover:border-transparent hover:bg-primary-900 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col h-full relative overflow-hidden">
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary-900 shadow-sm mb-8 group-hover:scale-110 transition-transform duration-500 border border-secondary-100 group-hover:border-transparent">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    
-                    <h5 className="text-2xl font-extrabold text-primary-900 group-hover:text-white leading-tight mb-8 transition-colors duration-300">
-                      {area.title}
-                    </h5>
-
-                    <ul className="space-y-4 mb-8 flex-grow">
-                      {area.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-secondary-600 group-hover:text-secondary-200 text-[15px] transition-colors duration-300">
-                          <CheckCircle2 className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" />
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 3. AREAS OF CONTRIBUTION (GSAP Scroll Section) */}
+      <GSAPScrollSection 
+        title="Areas of Contribution"
+        subtitle="Board Contributions"
+        items={areasOfContribution.map(item => ({
+          ...item,
+          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
+        }))}
+      />
 
       {/* 4. SECTOR EXPERIENCE & WHY IT HELPS (Split Layout) */}
       <section className="py-32 bg-[#f8f9fa]">
@@ -252,7 +219,7 @@ const IndependentDirectorPage = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold mb-2">Practical, Independent Voice</h4>
-                      <p className="text-secondary-300">Balanced, well-prepared, and sharply focused on the company's long-term health.</p>
+                      <p className="text-secondary-300">Balanced, well-prepared, and sharply focused on the company&apos;s long-term health.</p>
                     </div>
                   </li>
                   <li className="flex gap-5">

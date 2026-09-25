@@ -104,7 +104,7 @@ export function AboutHero() {
                 <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 mb-6 reveal">
                   Viswanathan R Associates
                 </h2>
-                <p className="text-xl md:text-2xl font-medium text-primary-700 italic reveal">
+                <p className="text-xl md:text-2xl font-medium text-primary-700 reveal">
                   “Transforming financial insight into measurable business value.”
                 </p>
               </div>
