@@ -1,151 +1,45 @@
 'use client';
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
-
-
-import { useRef, useEffect } from 'react';
-
+import { FileText, Phone } from 'lucide-react';
+import Image from 'next/image';
+import ModalTriggerButton from '@/app/components/ui/ModalTriggerButton';
 import { companyInfo } from '@/app/lib/siteData';
 
 export function CTABanner() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach((el, i) => {
-              setTimeout(() => el.classList.add('visible'), i * 100);
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className="relative overflow-hidden">
-      <div className="relative bg-primary-50 py-12 overflow-hidden">
+    <section id="contact" className="py-10 md:py-14 relative bg-primary-900">
+      
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+         <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+          alt="CTA Background"
+          className="w-full h-full object-cover opacity-30 mix-blend-luminosity"
+        />
+        <div className="absolute inset-0 bg-primary-900/80"></div>
+      </div>
 
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/15 rounded-full blur-[100px] animate-float-slow pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary-500/10 rounded-full blur-[80px] animate-float pointer-events-none" style={{ animationDelay: '3s' }} />
-
-        <div ref={ref} className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-16 items-start">
-            {/* Left Side: Text + Reach Us Directly Box */}
-            <div className="flex flex-col h-full justify-between lg:pr-8">
-              <div>
-                <div className="section-label-dark reveal">Get Started</div>
-                <h2 className="text-3xl md:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 leading-tight mt-4 mb-4 reveal">
-                  Ready to Strengthen<br />
-                  <span className="text-accent-600">Your Business</span><br />
-                  <span className="text-primary-600">Finances?</span>
-                </h2>
-                <p className="section-subtitle-white mb-6 reveal">
-                  Let&apos;s discuss how our expertise can help you navigate complexity, optimize operations, and create lasting value.
-                </p>
-              </div>
-
-              {/* Info Box (Moved from right, removed box styling) */}
-              <div className="reveal-scale mt-4">
-                <div className="space-y-5">
-                  <h3 className="text-lg font-semibold text-secondary-900 mb-3">Reach Us Directly</h3>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      <a href={`mailto:${companyInfo.contact.email}`}
-                        className="flex items-start gap-3 group hover:text-accent-600 transition-colors">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
-                          <Mail className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
-                        </div>
-                        <div>
-                          <div className="text-secondary-500 text-xs mb-0.5">Email</div>
-                          <div className="text-secondary-900 font-medium text-[13px]">{companyInfo.contact.email}</div>
-                        </div>
-                      </a>
-
-                      <a href={`tel:${companyInfo.contact.phone.replace(/\s/g, '')}`}
-                        className="flex items-start gap-3 group hover:text-accent-600 transition-colors">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
-                          <Phone className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
-                        </div>
-                        <div>
-                          <div className="text-secondary-500 text-xs mb-0.5">Phone</div>
-                          <div className="text-secondary-900 font-medium text-[13px]">{companyInfo.contact.phone}</div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3 group cursor-pointer hover:text-accent-600 transition-colors">
-                        <div className="w-9 h-9 rounded-full bg-white border border-secondary-200 shadow-sm flex items-center justify-center shrink-0 group-hover:bg-accent-600 group-hover:border-accent-600 transition-colors duration-300">
-                          <MapPin className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
-                        </div>
-                        <div>
-                          <div className="text-secondary-500 text-xs mb-0.5">Office</div>
-                          <address className="text-secondary-900 font-medium text-[13px] not-italic leading-relaxed">
-                            {companyInfo.address.line1},<br />
-                            {companyInfo.address.line2},<br />
-                            {companyInfo.address.city} — {companyInfo.address.pincode}
-                          </address>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 mt-4 border-t border-secondary-200 flex flex-col sm:flex-row gap-2 sm:gap-6">
-                    <div className="text-secondary-500 font-medium text-xs">Business Hours:</div>
-                    <div className="text-secondary-700 font-medium text-sm">Mon–Fri: 9:00 AM – 6:00 PM &nbsp;|&nbsp; Sat: 9:00 AM – 1:00 PM</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side: Contact Form */}
-            <div className="reveal-scale lg:pl-6">
-              <div className="bg-white border border-secondary-200 rounded-2xl p-6 shadow-xl">
-                <h3 className="text-xl font-bold text-secondary-900 mb-1.5">Send us a Message</h3>
-                <p className="text-secondary-600 text-xs mb-5">Fill out the form below and we&apos;ll get back to you shortly.</p>
-                
-                <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-secondary-700">First Name</label>
-                      <input type="text" className="w-full px-3 py-2 bg-secondary-50 border border-secondary-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 text-secondary-900 placeholder-secondary-400 transition-all text-sm" placeholder="John" />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-secondary-700">Last Name</label>
-                      <input type="text" className="w-full px-3 py-2 bg-secondary-50 border border-secondary-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 text-secondary-900 placeholder-secondary-400 transition-all text-sm" placeholder="Doe" />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-secondary-700">Email Address</label>
-                    <input type="email" className="w-full px-3 py-2 bg-secondary-50 border border-secondary-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 text-secondary-900 placeholder-secondary-400 transition-all text-sm" placeholder="john@example.com" />
-                  </div>
-                  
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-secondary-700">Phone Number</label>
-                    <input type="tel" className="w-full px-3 py-2 bg-secondary-50 border border-secondary-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 text-secondary-900 placeholder-secondary-400 transition-all text-sm" placeholder="+91 98765 43210" />
-                  </div>
-                  
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-secondary-700">Message</label>
-                    <textarea rows={3} className="w-full px-3 py-2 bg-secondary-50 border border-secondary-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 text-secondary-900 placeholder-secondary-400 transition-all resize-none text-sm" placeholder="How can we help you?"></textarea>
-                  </div>
-                  
-                  <button type="submit" className="w-full btn-primary py-2.5 text-sm mt-1 group">
-                    Submit Inquiry
-                    <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </form>
-              </div>
-            </div>
+      {/* Decorative Glows */}
+      <div className="absolute inset-0 opacity-10 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="container-custom relative z-10 text-center">
+        <div className="max-w-4xl mx-auto space-y-8 md:space-y-10">
+          <div className="inline-block px-4 py-1.5 bg-white/10 text-white font-bold text-sm tracking-wider uppercase rounded-full border border-white/20 shadow-sm backdrop-blur-sm">
+            Get Started
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mt-6">
+            Ready to Strengthen <br/> <span className="text-accent-400">Your Business Finances?</span>
+          </h2>
+          <p className="text-lg md:text-xl lg:text-2xl text-secondary-300 leading-relaxed font-light max-w-3xl mx-auto">
+            Let&apos;s discuss how our expertise can help you navigate complexity, optimize operations, and create lasting value.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-6">
+            <ModalTriggerButton className="w-full sm:w-auto flex items-center justify-center gap-3 bg-accent-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-accent-600 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-10px_rgba(178,143,82,0.4)]">
+              Contact Us Today
+            </ModalTriggerButton>
           </div>
         </div>
       </div>

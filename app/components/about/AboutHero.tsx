@@ -93,7 +93,7 @@ export function AboutHero() {
       </section>
 
       {/* Text Content Section */}
-      <section id="about-content" className="relative bg-white py-12 md:py-16 lg:py-24">
+      <section id="about-content" className="relative bg-white pt-8 pb-4">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-16 items-stretch">
             
@@ -119,17 +119,17 @@ export function AboutHero() {
                 <p className="reveal">
                   Our professional experience spans Manufacturing, Mining, Automotive, Healthcare, Information Technology, Pharmaceuticals, Logistics, and other operationally complex industries.
                 </p>
-                <div className="reveal">
-                  <a href="#" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0a66c2] text-white font-semibold rounded-xl hover:bg-[#004182] transition-colors shadow-sm w-fit">
-                    <Linkedin className="w-5 h-5" /> View LinkedIn Profile
-                  </a>
-                </div>
                 <p className="reveal">
                   Our international experience includes India, Kuwait, the UAE, Egypt, Liberia, and other business environments. This enables us to understand the financial, operational, regulatory, and cultural factors that influence business performance across markets.
                 </p>
                 <p className="reveal">
                   We believe Finance should go beyond accounting and reporting. It should provide clear insight, support confident decision-making, and help organizations improve profitability. Our approach is therefore practical, analytical, and focused on measurable business outcomes.
                 </p>
+                <div className="reveal mt-4">
+                  <a href="#" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0a66c2] text-white font-semibold rounded-xl hover:bg-[#004182] transition-colors shadow-sm w-fit">
+                    <Linkedin className="w-5 h-5" /> View LinkedIn Profile
+                  </a>
+                </div>
               </div>
             </div>
 

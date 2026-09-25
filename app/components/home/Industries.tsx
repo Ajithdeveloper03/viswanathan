@@ -74,8 +74,16 @@ const WaveShape = () => (
     viewBox="0 0 100 100" 
     preserveAspectRatio="none"
   >
-    <path d="M 10 0 C 40 30 60 80 100 100 L 100 0 Z" fill="#38bdf8" opacity="0.3" />
-    <path d="M 30 0 C 55 20 75 65 100 80 L 100 0 Z" fill="#34d399" opacity="0.3" />
+    <path 
+      d="M 10 0 C 40 30 60 80 100 100 L 100 0 Z" 
+      fill="#1F2C50" 
+      className="opacity-[0.5] group-hover:opacity-[0.08] transition-opacity duration-500 ease-in-out" 
+    />
+    <path 
+      d="M 30 0 C 55 20 75 65 100 80 L 100 0 Z" 
+      fill="#B28F52" 
+      className="opacity-[0.85] group-hover:opacity-[0.15] transition-opacity duration-500 ease-in-out" 
+    />
   </svg>
 );
 
@@ -95,11 +103,11 @@ const CategoryCard = ({ category, icon: CategoryIcon, items, index }: any) => (
       </h3>
     </div>
 
-    <div className="relative z-10 flex-1 flex flex-col gap-3.5">
+    <div className="relative z-10 flex-1 flex flex-col justify-center gap-3.5 py-2">
       {items.map((item: any, i: number) => (
         <div key={i} className="flex items-center gap-3 group/item cursor-pointer">
-          <div className="w-7 h-7 rounded-full bg-secondary-50 flex items-center justify-center shrink-0 group-hover/item:bg-primary-50 transition-colors duration-200">
-            <item.icon className="w-3.5 h-3.5 text-secondary-400 group-hover/item:text-primary-600 transition-colors duration-200" strokeWidth={2} />
+          <div className="w-7 h-7 rounded-full bg-secondary-50 flex items-center justify-center shrink-0 group-hover/item:bg-accent-50 transition-colors duration-200">
+            <item.icon className="w-3.5 h-3.5 text-secondary-400 group-hover/item:text-accent-600 transition-colors duration-200" strokeWidth={2} />
           </div>
           <span className="text-secondary-600 text-[14px] font-medium group-hover/item:text-primary-700 transition-colors duration-200">
             {item.name}

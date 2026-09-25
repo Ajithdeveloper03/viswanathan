@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/insolvency-bankruptcy/page": "app/insolvency-bankruptcy/page.js",
-  "/cost-management-audit/page": "app/cost-management-audit/page.js",
-  "/internal-audit/page": "app/internal-audit/page.js",
+  "/business-valuation/page": "app/business-valuation/page.js",
   "/about-us/page": "app/about-us/page.js"
 }

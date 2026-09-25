@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { AboutHero } from '../components/about/AboutHero';
+import { FounderQualifications } from '../components/home/FounderQualifications';
 import { WhatWeDoSection } from '../components/about/WhatWeDoSection';
 import { OurApproachSection } from '../components/about/OurApproachSection';
 import { VisionMissionSection } from '../components/about/VisionMissionSection';
@@ -15,6 +16,7 @@ export default function AboutUsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <AboutHero />
+      <FounderQualifications />
       <WhatWeDoSection />
       <OurApproachSection />
       <VisionMissionSection />

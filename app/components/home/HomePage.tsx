@@ -3,9 +3,8 @@ import { Hero } from './Hero';
 import { TrustIndicators } from './TrustIndicators';
 import { Industries } from './Industries';
 import { AboutPreview } from './AboutPreview';
-import { FounderPreview } from './FounderPreview';
-import { FounderQualifications } from './FounderQualifications';
 import { OurServicesSection } from './OurServicesSection';
+import { Testimonials } from './Testimonials';
 import { CTABanner } from './CTABanner';
 
 const HomePage = () => {
@@ -13,12 +12,11 @@ const HomePage = () => {
     <main>
       <Hero />
       <TrustIndicators />
-      <Industries />
       <AboutPreview />
-      <FounderPreview />
-      <FounderQualifications />
+      <Industries />
       
       <OurServicesSection />
+      <Testimonials />
       <CTABanner />
     </main>
   );
