@@ -131,8 +131,15 @@ const BusinessProposalsPage = () => {
       />
 
       {/* 4. GLOBAL PERSPECTIVE (Texon Collage Layout) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+      <section className="py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
+        {/* Subtle Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-50/50 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-50/50 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/3"></div>
+          <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(243, 244, 246, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(243, 244, 246, 0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
             {/* Left: Content */}

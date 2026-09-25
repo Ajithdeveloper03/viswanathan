@@ -40,46 +40,47 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
       const cards = gsap.utils.toArray('.stacked-card') as HTMLElement[];
       if(cards.length === 0) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: () => {
-             const h = containerRef.current?.offsetHeight || 0;
-             const wh = window.innerHeight;
-             // If container is taller than screen, pin when we reach its bottom, else pin at top.
-             return h > wh ? "bottom bottom" : "top 40px";
-          },
-          end: `+=${cards.length * 100}%`,
-          pin: true,
-          scrub: 1, // smooth scrubbing
-          markers: false
-        }
-      });
+      // Only apply ScrollTrigger and stacking animations on desktop (min-width: 1024px)
+      let mm = gsap.matchMedia();
+      
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: () => {
+               const h = containerRef.current?.offsetHeight || 0;
+               const wh = window.innerHeight;
+               return h > wh ? "bottom bottom" : "top 40px";
+            },
+            end: `+=${cards.length * 100}%`,
+            pin: true,
+            scrub: 1, 
+            markers: false
+          }
+        });
 
-      cards.forEach((card, i) => {
-        if (i === 0) {
-          gsap.set(card, { y: 0, scale: 1, transformOrigin: "top center" });
-          return;
-        }
+        cards.forEach((card, i) => {
+          if (i === 0) {
+            gsap.set(card, { y: 0, scale: 1, transformOrigin: "top center" });
+            return;
+          }
 
-        // Set initial state for incoming cards
-        gsap.set(card, { y: "150vh", scale: 1, transformOrigin: "top center" });
+          gsap.set(card, { y: "150vh", scale: 1, transformOrigin: "top center" });
 
-        // Animate this card sliding up
-        tl.to(card, {
-          y: i * 20, // Stack slightly lower
-          duration: 1,
-          ease: "none"
-        }, i);
-
-        // Animate all previous cards shrinking slightly to create depth (but keeping full opacity)
-        for (let j = 0; j < i; j++) {
-          tl.to(cards[j], {
-            scale: 1 - ((i - j) * 0.04), // Shrink 4% for each layer of depth
+          tl.to(card, {
+            y: i * 20, 
             duration: 1,
             ease: "none"
           }, i);
-        }
+
+          for (let j = 0; j < i; j++) {
+            tl.to(cards[j], {
+              scale: 1 - ((i - j) * 0.04), 
+              duration: 1,
+              ease: "none"
+            }, i);
+          }
+        });
       });
 
     }, containerRef); 
@@ -88,8 +89,15 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
   }, []);
 
   return (
-    <section className="bg-[#f8f9fa] relative overflow-hidden" ref={containerRef}>
-      <div className="w-full flex flex-col justify-center items-center relative px-4 md:px-8 lg:px-16 py-8 lg:py-12 min-h-screen">
+    <section className="bg-white relative overflow-hidden" ref={containerRef}>
+      {/* Abstract Background Design */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #f8f9fa 0, #f8f9fa 2px, transparent 2px, transparent 12px)', opacity: 0.8 }}></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-100/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-100/30 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/3"></div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center items-center relative z-10 px-4 md:px-8 lg:px-16 py-8 lg:py-12 lg:min-h-screen">
         
         {/* Header */}
         <div className="text-center w-full max-w-4xl mx-auto mb-12 relative z-10">
@@ -103,12 +111,12 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
           </h2>
         </div>
 
-        {/* Stacked Cards Wrapper using Grid to ensure height matches tallest card */}
-        <div className="relative w-full max-w-6xl mx-auto grid grid-cols-1 grid-rows-1 perspective-[1000px] pb-24">
+        {/* Stacked Cards Wrapper: Flex column on mobile, CSS Grid on desktop for overlapping */}
+        <div className="relative w-full max-w-6xl mx-auto flex flex-col gap-8 lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:perspective-[1000px] lg:pb-24">
           {items.map((item, idx) => (
             <div 
               key={idx} 
-              className="stacked-card col-start-1 row-start-1 w-full flex flex-col lg:flex-row bg-white rounded-3xl lg:rounded-[2.5rem] shadow-[0_-10px_40px_rgba(0,0,0,0.15)] border border-secondary-100 overflow-hidden transform-gpu"
+              className="stacked-card lg:col-start-1 lg:row-start-1 w-full flex flex-col lg:flex-row bg-white rounded-3xl lg:rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)] lg:shadow-[0_-10px_40px_rgba(0,0,0,0.15)] border border-secondary-100 overflow-hidden transform-gpu"
               style={{ zIndex: idx, backfaceVisibility: 'hidden' }}
             >
               

@@ -251,7 +251,7 @@ const IndustriesPage = () => {
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center">
           <div className="max-w-4xl mx-auto space-y-10">
-            <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
               Need Expertise in <br/><span className="text-accent-400">Your Industry?</span>
             </h2>
             <p className="text-xl md:text-2xl text-secondary-300 leading-relaxed font-light">

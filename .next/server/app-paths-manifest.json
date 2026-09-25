@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/business-proposals/page": "app/business-proposals/page.js",
+  "/business-valuation/page": "app/business-valuation/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/industries/page": "app/industries/page.js",
+  "/cost-management-audit/page": "app/cost-management-audit/page.js",
+  "/page": "app/page.js",
+  "/insolvency-bankruptcy/page": "app/insolvency-bankruptcy/page.js",
+  "/independent-director/page": "app/independent-director/page.js",
+  "/internal-audit/page": "app/internal-audit/page.js",
+  "/about-us/page": "app/about-us/page.js"
+}
