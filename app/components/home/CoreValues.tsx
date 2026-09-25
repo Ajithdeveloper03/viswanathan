@@ -34,7 +34,7 @@ export function CoreValues() {
   const col3 = [...coreValues.slice(5), ...coreValues.slice(0, 5)];
 
   return (
-    <section className="relative pt-[20px] pb-24 bg-secondary-50 overflow-hidden">
+    <section className="relative pt-[20px] pb-24 bg-white overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] lg:h-[500px] bg-primary-200/40 rounded-full blur-[120px] pointer-events-none" />
       

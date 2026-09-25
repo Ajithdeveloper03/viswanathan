@@ -64,7 +64,7 @@ export function WhyChooseUsSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-secondary-50 py-8 lg:py-12">
+    <section ref={ref} className="relative bg-white py-8 lg:py-12">
       <div className="container-custom relative z-10">
         
         <div className="text-center mb-16 max-w-3xl mx-auto">

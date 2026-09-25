@@ -40,7 +40,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="relative w-full border-t-[8px] border-[#1F2C50] bg-[#f4f9fd] overflow-hidden py-12 lg:py-16">
+    <section className="relative w-full border-t-[8px] border-[#1F2C50] bg-white overflow-hidden py-12 lg:py-16">
       
       {/* Background Image with Curved Left Edge */}
       <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full z-0 hidden lg:block">
@@ -52,7 +52,7 @@ export function Testimonials() {
             />
          </div>
           {/* Curve overlap from left */}
-          <div className="absolute top-0 left-0 w-[150px] h-full text-[#f4f9fd]">
+          <div className="absolute top-0 left-0 w-[150px] h-full text-white">
              <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
                 <path d="M0,0 L100,0 C30,30 30,70 100,100 L0,100 Z" fill="currentColor" />
              </svg>
@@ -63,7 +63,7 @@ export function Testimonials() {
          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             
             {/* Left side text */}
-            <div className="lg:col-span-4 pr-4">
+            <div className="lg:col-span-4 pr-4 min-w-0">
               <span className="text-[#1F2C50] text-[13px] font-extrabold tracking-[0.2em] uppercase mb-4 block">
                 Testimonials
               </span>
@@ -76,7 +76,7 @@ export function Testimonials() {
             </div>
             
             {/* Right side slider */}
-            <div className="lg:col-span-8 relative group">
+            <div className="lg:col-span-8 relative group min-w-0">
                
                {/* Left Arrow */}
                <button 

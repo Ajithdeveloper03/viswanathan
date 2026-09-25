@@ -12,7 +12,7 @@ export function VisionMissionSection() {
   ];
 
   return (
-    <section className="py-8 lg:py-12 bg-[#f8fafc] overflow-hidden">
+    <section className="py-8 lg:py-12 bg-white overflow-hidden">
       <div className="container-custom">
         
         {/* Section Heading */}
@@ -46,17 +46,17 @@ export function VisionMissionSection() {
               </div>
             </div>
 
-            {/* Approach Section (Replacing Trust Builders) */}
-            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 items-center sm:items-start">
+            {/* Approach Section */}
+            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 items-center justify-center pt-2">
               
               {/* List */}
-              <div className="flex-1 w-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">How We Help Organizations</h3>
-                <ul className="space-y-3">
+              <div className="w-full max-w-lg mx-auto text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">How We Help Organizations</h3>
+                <ul className="space-y-4 text-left inline-block">
                   {originalPoints.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" strokeWidth={3} />
-                      <span className="text-gray-500 text-[14px] font-medium leading-tight">{item}</span>
+                      <span className="text-gray-500 text-[14px] font-medium leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
