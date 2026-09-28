@@ -65,9 +65,7 @@ export function OurApproachSection() {
                 <p>
                   Every organization has different goals, challenges, and operating realities. We begin by understanding the business—not just its financial statements.
                 </p>
-                <p className="font-medium text-secondary-800">
-                  Our approach is based on:
-                </p>
+
               </div>
               
               <div className="hidden lg:block">
