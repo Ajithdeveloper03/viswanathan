@@ -201,17 +201,7 @@ const InternalAuditPage = () => {
         </div>
       </section>
 
-      {/* 4. TYPES OF INTERNAL AUDIT — GSAP Scroll (gray-50 bg) */}
-      <GSAPScrollSection
-        bg="bg-gray-50"
-        title="Types of Internal Audit Services"
-        items={auditTypes.map(item => ({
-          ...item,
-          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
-        }))}
-      />
-
-      <WhyChooseUsSection
+<WhyChooseUsSection
         heading="What You Gain"
         subheading="Benefits"
         imageUrl="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
@@ -223,6 +213,18 @@ const InternalAuditPage = () => {
           { icon: <CheckCircle2 className="w-5 h-5" />, title: "Consistent governance across locations and countries." }
         ]}
       />
+
+      {/* 4. TYPES OF INTERNAL AUDIT — GSAP Scroll (gray-50 bg) */}
+      <GSAPScrollSection
+        bg="bg-gray-50"
+        title="Types of Internal Audit Services"
+        items={auditTypes.map(item => ({
+          ...item,
+          icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
+        }))}
+      />
+
+      
 
       {/* 5. CTA — unchanged bg-primary-900 */}
       <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
