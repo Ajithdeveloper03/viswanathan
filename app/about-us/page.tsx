@@ -6,6 +6,7 @@ import { OurApproachSection } from '../components/about/OurApproachSection';
 import { VisionMissionSection } from '../components/about/VisionMissionSection';
 import { WhyChooseUsSection } from '../components/about/WhyChooseUsSection';
 import { AboutCTA } from '../components/about/AboutCTA';
+import ClientLogos from '../components/ui/ClientLogos';
 
 export const metadata: Metadata = {
   title: 'About Us | Viswanathan R Associates',

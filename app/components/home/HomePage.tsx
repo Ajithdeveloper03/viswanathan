@@ -7,6 +7,8 @@ import { OurServicesSection } from './OurServicesSection';
 import { Testimonials } from './Testimonials';
 import { CTABanner } from './CTABanner';
 
+import ClientLogos from '../ui/ClientLogos';
+
 const HomePage = () => {
   return (
     <main>
@@ -16,6 +18,7 @@ const HomePage = () => {
       <Industries />
       
       <OurServicesSection />
+      <ClientLogos />
       <Testimonials />
       <CTABanner />
     </main>

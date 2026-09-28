@@ -5,6 +5,8 @@ import { Linkedin, ArrowDown } from 'lucide-react';
 
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
+import ClientLogos from '../ui/ClientLogos';
+
 export function AboutHero() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -94,6 +96,9 @@ export function AboutHero() {
         </div>
       </section>
 
+      {/* Client Logos Slider right after Banner */}
+      <ClientLogos hideHeader={true} />
+
       {/* Text Content Section */}
       <section id="about-content" className="relative bg-white pt-8 pb-4">
         <div className="container-custom relative z-10">
@@ -101,12 +106,12 @@ export function AboutHero() {
             
             {/* Left Side: Content */}
             <div className="flex flex-col justify-center text-secondary-700 text-lg leading-relaxed text-justify sm:text-left h-full">
-              <div className="mb-10 text-center sm:text-left">
+              <div className="mb-6 text-center sm:text-left">
                 <div className="section-label reveal inline-flex mb-4">About Us &ndash; Business Valuation Service in Chennai</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 mb-6 reveal">
-                  Viswanathan R Associates
+                <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 mb-2 reveal">
+                  Viswanathan R <span className="text-accent-500">Associates</span>
                 </h2>
-                <p className="text-xl md:text-2xl font-medium text-primary-700 reveal">
+                <p className="text-xl md:text-2xl font-medium text-accent-500 mt-2">
                   “Transforming financial insight into measurable business value.”
                 </p>
               </div>
