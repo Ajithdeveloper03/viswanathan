@@ -16,7 +16,7 @@ export const navigation = {
         { name: 'Business Proposals', href: '/business-proposals' },
         { name: 'Independent Director', href: '/independent-director' },
         { name: 'Internal Audit', href: '/internal-audit' },
-        { name: 'Cost Management_Audit', href: '/cost-management-audit' },
+        { name: 'Cost Management Audit', href: '/cost-management-audit' },
       ],
     },
     { name: 'Industries We Serve', href: '/industries' },

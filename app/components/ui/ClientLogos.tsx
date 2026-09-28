@@ -7,7 +7,7 @@ interface ClientLogosProps {
 const clients = Array.from({ length: 10 }).map((_, i) => ({
   id: i + 1,
   name: `Trusted Client ${i + 1}`,
-  logo: '/vr-logo.png'
+  logo: '/vrassociates/vr-logo.png'
 }));
 
 export default function ClientLogos({ hideHeader = false }: ClientLogosProps = {}) {

@@ -46,24 +46,12 @@ const industryGroups = [
     ]
   },
   {
-    category: 'TRANSPORT',
-    icon: Plane,
-    items: [
-      { name: 'Airlines', icon: Plane },
-    ]
-  },
-  {
-    category: 'INFRA',
-    icon: Factory,
-    items: [
-      { name: 'Manufacturing Industries', icon: Factory },
-    ]
-  },
-  {
-    category: 'SERVICES',
+    category: 'INFRA & SERVICES',
     icon: Briefcase,
     items: [
+      { name: 'Manufacturing Industries', icon: Factory },
       { name: 'Service Industry', icon: Briefcase },
+      { name: 'Airlines', icon: Plane },
     ]
   },
 ];
@@ -155,7 +143,7 @@ export function Industries() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industryGroups.map((group, index) => (
             <CategoryCard
               key={group.category}

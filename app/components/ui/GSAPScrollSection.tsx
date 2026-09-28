@@ -21,6 +21,7 @@ interface GSAPScrollSectionProps {
   title: string;
   subtitle?: string;
   items: ScrollItem[];
+  bg?: string;
 }
 
 const defaultImages = [
@@ -32,7 +33,7 @@ const defaultImages = [
   "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
 ];
 
-export default function GSAPScrollSection({ title, subtitle, items }: GSAPScrollSectionProps) {
+export default function GSAPScrollSection({ title, subtitle, items, bg = 'bg-white' }: GSAPScrollSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -89,7 +90,7 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-[#f8f9fa] via-white to-primary-50/40 relative overflow-hidden" ref={containerRef}>
+    <section className={`${bg} relative overflow-hidden`} ref={containerRef}>
       {/* Abstract Background Design */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-200/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 animate-[pulseSoft_8s_ease-in-out_infinite]"></div>
@@ -107,10 +108,7 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
         </div>
       </div>
-
       <div className="w-full flex flex-col justify-center items-center relative z-10 px-4 md:px-8 lg:px-16 py-12 lg:py-16">
-
-        {/* Header */}
         <div className="text-center w-full max-w-4xl mx-auto mb-12 relative z-10">
           {subtitle && (
             <div className="inline-block px-4 py-1.5 bg-white text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-4 shadow-sm border border-secondary-100">
@@ -121,8 +119,6 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
             {title}
           </h2>
         </div>
-
-        {/* Stacked Cards Wrapper: Flex column on mobile, CSS Grid on desktop for overlapping */}
         <div className="relative w-full max-w-6xl mx-auto flex flex-col gap-8 lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:perspective-[1000px] lg:pb-12">
           {items.map((item, idx) => (
             <div
@@ -131,7 +127,6 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
               style={{ zIndex: idx, backfaceVisibility: 'hidden' }}
             >
 
-              {/* Left Image Side */}
               <div className="w-full lg:w-[40%] relative min-h-[250px] lg:min-h-[400px]">
                 <Image
                   src={defaultImages[idx % defaultImages.length]}
@@ -142,7 +137,6 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
                 <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply"></div>
               </div>
 
-              {/* Right Content Side - Compacted Spacing */}
               <div className="w-full lg:w-[60%] p-6 lg:p-10 flex flex-col justify-center bg-white">
                 {item.icon && (
                   <div className="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center text-accent-600 mb-4 shadow-sm border border-accent-100">

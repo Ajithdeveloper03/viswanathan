@@ -69,7 +69,7 @@ export function FounderPreview() {
                 
                 {/* Full Container Image */}
                 <img 
-                  src="/founder.png" 
+                  src="/vrassociates/founder.png" 
                   alt={founder.name} 
                   className="absolute inset-0 w-full h-full object-cover object-top z-0"
                 />

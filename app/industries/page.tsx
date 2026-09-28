@@ -31,10 +31,10 @@ const IndustriesPage = () => {
   ];
 
   return (
-    <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
-      
-      {/* 1. HERO SECTION (Texon Style) */}
-      <section className="relative pt-56 pb-48 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
+    <div className="bg-white text-secondary-900 font-sans">
+
+      {/* 1. HERO */}
+      <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?auto=format&fit=crop&q=80&w=2000"
@@ -45,7 +45,6 @@ const IndustriesPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
-        
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
@@ -58,192 +57,162 @@ const IndustriesPage = () => {
         </div>
       </section>
 
-      {/* 2. OVERLAPPING INTRO BOX & COLLAGE */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16 lg:mb-24">
-        <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-16 items-center justify-between border border-secondary-100">
-           
-           <div className="lg:w-1/2 relative z-10">
-             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-               Cross-Industry Expertise
-             </div>
-             <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-8">
-               Tailored Financial <br/>
-               <span className="text-secondary-400 font-light">Solutions & Advisory</span>
-             </h2>
-             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-               Different industries face entirely unique financial challenges, regulatory landscapes, and market dynamics. Our team brings deep domain expertise across a wide spectrum of sectors.
-             </p>
-             <p className="text-secondary-500 leading-relaxed pl-6">
-               Whether you are valuing a mining operation, auditing a SaaS startup, or restructuring a manufacturing giant, we apply industry-specific methodologies to ensure our financial solutions are precise, relevant, and actionable.
-             </p>
-           </div>
-
-           <div className="lg:w-1/2 relative h-[300px] lg:h-[500px] w-full group hidden lg:block">
-             <div className="absolute top-0 right-0 w-[70%] h-[350px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-20 group-hover:-translate-y-4 transition-all duration-700">
-               <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" alt="Industry 1" fill className="object-cover" />
-             </div>
-             <div className="absolute bottom-0 left-0 w-[60%] h-[300px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-10 border-8 border-white group-hover:translate-x-4 transition-all duration-700">
-                <Image src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800" alt="Industry 2" fill className="object-cover" />
-             </div>
-           </div>
-
+      {/* 2. INTRO BOX + IMAGE COLLAGE (white) */}
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
+        <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-12 items-center justify-between border border-secondary-100">
+          <div className="lg:w-1/2 relative z-10">
+            <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
+              Cross-Industry Expertise
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
+              Tailored Financial <br/>
+              <em className="not-italic text-secondary-400 font-light">Solutions & Advisory</em>
+            </h2>
+            <p className="text-secondary-600 text-lg leading-relaxed mb-4 border-l-4 border-accent-500 pl-6">
+              Different industries face entirely unique financial challenges, regulatory landscapes, and market dynamics. Our team brings deep domain expertise across a wide spectrum of sectors.
+            </p>
+            <p className="text-secondary-500 leading-relaxed pl-6">
+              Whether you are valuing a mining operation, auditing a SaaS startup, or restructuring a manufacturing giant, we apply industry-specific methodologies to ensure our financial solutions are precise, relevant, and actionable.
+            </p>
+          </div>
+          <div className="lg:w-1/2 relative h-[320px] w-full group hidden lg:block">
+            <div className="absolute top-0 right-0 w-[70%] h-[220px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
+              <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" alt="Industry 1" fill className="object-cover" />
+            </div>
+            <div className="absolute bottom-0 left-0 w-[60%] h-[190px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
+              <Image src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800" alt="Industry 2" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* 3. ECOSYSTEM REACH (Branching Layout) */}
-      <section className="py-20 md:py-32 bg-secondary-900 relative overflow-hidden">
+      {/* 3. ECOSYSTEM REACH — dark bg, branching layout (keep original design) */}
+      <section className="py-16 lg:py-24 bg-secondary-900 relative overflow-hidden">
         <style>{`
-          @keyframes flowLine {
-            to { stroke-dashoffset: -40; }
-          }
-          .flowing-line {
-            stroke-dasharray: 6 6;
-            animation: flowLine 2s linear infinite;
-          }
-          @keyframes floatCard {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
-          }
-          .float-card {
-            animation: floatCard 4s ease-in-out infinite;
-          }
-          @keyframes pulseSoft {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.5); }
-          }
+          @keyframes flowLine { to { stroke-dashoffset: -40; } }
+          .flowing-line { stroke-dasharray: 6 6; animation: flowLine 2s linear infinite; }
+          @keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+          .float-card { animation: floatCard 4s ease-in-out infinite; }
+          @keyframes pulseSoft { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.5); } }
         `}</style>
 
-        {/* Faint Grid Background - Dark Mode */}
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-        
-        {/* Subtle glowing neon orbs in background */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen"></div>
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24 relative z-20">
-             <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium text-white leading-[1.2] tracking-tight">
-               A Comprehensive Ecosystem <br className="hidden md:block"/> Empowering <span className="text-accent-400">Global Industries</span>
-             </h2>
-             <p className="text-secondary-300 text-lg mt-6 max-w-2xl mx-auto">
-               Our multi-sector reach enables us to deploy specialized financial frameworks tailored exactly to the unique operational and regulatory demands of your industry.
-             </p>
+          <div className="text-center max-w-4xl mx-auto mb-14 relative z-20">
+            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium text-white leading-[1.2] tracking-tight">
+              A Comprehensive Ecosystem <br className="hidden md:block"/> Empowering <span className="text-accent-400">Global Industries</span>
+            </h2>
+            <p className="text-secondary-300 text-lg mt-6 max-w-2xl mx-auto">
+              Our multi-sector reach enables us to deploy specialized financial frameworks tailored exactly to the unique operational and regulatory demands of your industry.
+            </p>
           </div>
 
           {/* Desktop Branching Layout */}
           <div className="relative max-w-[1400px] mx-auto hidden lg:flex items-stretch justify-center h-[700px] xl:h-[800px]">
-             
-             {/* LEFT COLUMN */}
-             <div className="flex-1 relative h-full">
-               {[
-                 { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-               ].map((category, idx) => {
-                 const top = 12.5 + idx * 25;
-                 return (
-                   <div key={idx} className="absolute w-full flex items-center justify-end gap-4 xl:gap-6 pr-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
-                     <div className="flex flex-wrap justify-end gap-3 w-[300px] xl:w-[400px]">
-                       {category.items.map((item, i) => (
-                         <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
-                           <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
-                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
-                         </div>
-                       ))}
-                     </div>
-                     <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-right bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
-                     <div className="w-2.5 h-2.5 rounded-sm absolute right-0 translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
-                   </div>
-                 );
-               })}
-             </div>
+            {/* LEFT COLUMN */}
+            <div className="flex-1 relative h-full">
+              {[
+                { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+              ].map((category, idx) => {
+                const top = 12.5 + idx * 25;
+                return (
+                  <div key={idx} className="absolute w-full flex items-center justify-end gap-4 xl:gap-6 pr-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
+                    <div className="flex flex-wrap justify-end gap-3 w-[300px] xl:w-[400px]">
+                      {category.items.map((item, i) => (
+                        <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
+                          <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
+                          <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-right bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
+                    <div className="w-2.5 h-2.5 rounded-sm absolute right-0 translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
+                  </div>
+                );
+              })}
+            </div>
 
-             {/* CENTER SVG & LOGO */}
-             <div className="w-48 xl:w-64 relative flex-shrink-0 z-0">
-               {/* SVG Paths */}
-               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                 <defs>
-                   {/* Gradient: Navy to Gold */}
-                   <linearGradient id="navyToGoldLeft" x1="1" y1="0" x2="0" y2="0">
-                     <stop offset="0%" stopColor="#1F2C50"/>
-                     <stop offset="100%" stopColor="#C59E5E"/>
-                   </linearGradient>
-                   <linearGradient id="navyToGoldRight" x1="0" y1="0" x2="1" y2="0">
-                     <stop offset="0%" stopColor="#1F2C50"/>
-                     <stop offset="100%" stopColor="#C59E5E"/>
-                   </linearGradient>
-                 </defs>
-                 
-                 {/* Left paths */}
-                 <path d="M 0 12.5 C 40 12.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
-                 <path d="M 0 37.5 C 40 37.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
-                 <path d="M 0 62.5 C 40 62.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
-                 <path d="M 0 87.5 C 40 87.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
-                 
-                 {/* Right paths */}
-                 <path d="M 100 12.5 C 60 12.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                 <path d="M 100 37.5 C 60 37.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                 <path d="M 100 62.5 C 60 62.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                 <path d="M 100 87.5 C 60 87.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-               </svg>
-               
-               {/* Center Logo - Clean & Premium */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
-                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
-                   <Image src="/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
-                 </div>
-               </div>
-             </div>
+            {/* CENTER SVG & LOGO */}
+            <div className="w-48 xl:w-64 relative flex-shrink-0 z-0">
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="navyToGoldLeft" x1="1" y1="0" x2="0" y2="0">
+                    <stop offset="0%" stopColor="#1F2C50"/>
+                    <stop offset="100%" stopColor="#C59E5E"/>
+                  </linearGradient>
+                  <linearGradient id="navyToGoldRight" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#1F2C50"/>
+                    <stop offset="100%" stopColor="#C59E5E"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 0 12.5 C 40 12.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
+                <path d="M 0 37.5 C 40 37.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
+                <path d="M 0 62.5 C 40 62.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
+                <path d="M 0 87.5 C 40 87.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
+                <path d="M 100 12.5 C 60 12.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 37.5 C 60 37.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 62.5 C 60 62.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 87.5 C 60 87.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+              </svg>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
+                <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
+                  <Image src="/vrassociates/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
+                </div>
+              </div>
+            </div>
 
-             {/* RIGHT COLUMN */}
-             <div className="flex-1 relative h-full">
-               {[
-                 { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                 { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-               ].map((category, idx) => {
-                 const top = 12.5 + idx * 25;
-                 return (
-                   <div key={idx} className="absolute w-full flex items-center justify-start gap-4 xl:gap-6 pl-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
-                     <div className="w-2.5 h-2.5 rounded-sm absolute left-0 -translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
-                     <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-left bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
-                     <div className="flex flex-wrap justify-start gap-3 w-[300px] xl:w-[400px]">
-                       {category.items.map((item, i) => (
-                         <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
-                           <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
-                           <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
-                         </div>
-                       ))}
-                     </div>
-                   </div>
-                 );
-               })}
-             </div>
+            {/* RIGHT COLUMN */}
+            <div className="flex-1 relative h-full">
+              {[
+                { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+              ].map((category, idx) => {
+                const top = 12.5 + idx * 25;
+                return (
+                  <div key={idx} className="absolute w-full flex items-center justify-start gap-4 xl:gap-6 pl-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
+                    <div className="w-2.5 h-2.5 rounded-sm absolute left-0 -translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
+                    <span className="text-accent-400 font-bold text-xs xl:text-sm tracking-[0.2em] uppercase w-28 text-left bg-primary-950 px-2 py-1 z-10">{category.cat}</span>
+                    <div className="flex flex-wrap justify-start gap-3 w-[300px] xl:w-[400px]">
+                      {category.items.map((item, i) => (
+                        <div key={i} className={`float-card flex items-center gap-2 xl:gap-3 px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${category.theme}`} style={{ animationDelay: `${(idx * 0.3) + (i * 0.2)}s` }}>
+                          <item.i className={`w-6 h-6 xl:w-7 xl:h-7 transition-colors ${category.iconTheme}`} strokeWidth={2} />
+                          <span className="text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap transition-colors">{item.n}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          
-          {/* MOBILE FALLBACK (Grid) */}
+
+          {/* MOBILE FALLBACK */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:hidden relative z-10">
-             {industries.map((ind, idx) => {
-               return (
-                 <div key={idx} className="bg-white/15 text-white border border-white/20 hover:bg-accent-500 hover:border-accent-400 p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center transition-all duration-300 group cursor-pointer">
-                   <ind.icon className="w-8 h-8 mb-4 text-accent-400 group-hover:text-white transition-colors" />
-                   <span className="text-sm font-bold group-hover:text-white transition-colors">{ind.name}</span>
-                 </div>
-               );
-             })}
+            {industries.map((ind, idx) => (
+              <div key={idx} className="bg-white/15 backdrop-blur-md text-white border border-white/20 hover:bg-accent-500 hover:border-accent-400 p-5 rounded-2xl shadow-sm flex flex-col items-center justify-center text-center transition-all duration-300 group cursor-pointer">
+                <ind.icon className="w-7 h-7 mb-3 text-accent-400 group-hover:text-white transition-colors" />
+                <span className="text-sm font-bold group-hover:text-white transition-colors">{ind.name}</span>
+              </div>
+            ))}
           </div>
-
         </div>
       </section>
 
-      {/* 4. TESTIMONIALS */}
-      <TestimonialCarousel />
+      {/* 4. TESTIMONIALS (gray-50 via component) */}
+      <div className="bg-gray-50">
+        <TestimonialCarousel />
+      </div>
 
-      {/* 5. CTA (Texon Massive Banner) */}
-      <section id="contact" className="py-12 md:py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
-
+      {/* 5. CTA — unchanged bg-primary-900 */}
+      <section id="contact" className="py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -253,21 +222,19 @@ const IndustriesPage = () => {
           />
           <div className="absolute inset-0 bg-primary-900/80"></div>
         </div>
-
-<div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[250px] lg:h-[400px] lg:h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
         </div>
-
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto space-y-10">
+          <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
               Need Expertise in <br/><span className="text-accent-400">Your Industry?</span>
             </h2>
             <p className="text-xl md:text-2xl text-secondary-300 leading-relaxed font-light">
               Contact us today to discuss how our specialized sector knowledge can help you make better financial decisions.
             </p>
-            <div className="pt-8">
+            <div className="pt-4">
               <Link href="/contact" className="inline-flex items-center gap-4 bg-accent-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.2)]">
                 Discuss Your Sector <ArrowRight className="w-6 h-6" />
               </Link>
@@ -280,4 +247,3 @@ const IndustriesPage = () => {
 };
 
 export default IndustriesPage;
-

@@ -87,9 +87,9 @@ const TestimonialCarousel = () => {
               <div className="min-h-[160px]">
                 <p 
                   key={current.quote}
-                  className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white mb-10 animate-fade-in"
+                  className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white mb-10 animate-fade-in normal-case"
                 >
-                  "{current.quote}"
+                  &quot;{current.quote}&quot;
                 </p>
               </div>
               

@@ -143,7 +143,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      <section className="h-[250px] lg:h-[400px] lg:h-[600px] relative w-full">
+      <section className="h-[250px] md:h-[400px] lg:h-[600px] relative w-full">
          <iframe 
            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5413340578647!2d80.2520336!3d13.0648439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526615b369c0d1%3A0xc3f5a2f58e6dd150!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715096538604!5m2!1sen!2sin" 
            width="100%" 
