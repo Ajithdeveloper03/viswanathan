@@ -154,7 +154,19 @@ const CostManagementPage = () => {
         }))}
       />
 
-     
+     {/* 6. WHY CHOOSE US & CTA */}
+      <WhyChooseUsSection
+        heading="Why Work With Us"
+        subheading="Our Advantage"
+        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
+        imageAlt="Cost Management Experts"
+        items={[
+          { icon: <ShieldCheck className="w-5 h-5" />, title: "Wide industry experience, from heavy infrastructure to SaaS." },
+          { icon: <Layers className="w-5 h-5" />,      title: "Practical, implementable recommendations, not just reports." },
+          { icon: <Settings className="w-5 h-5" />,    title: "Systems your team can run long after the engagement ends." },
+          { icon: <BarChart className="w-5 h-5" />,    title: "Clear, data-backed insight for better pricing and investment decisions." },
+        ]}
+      />
 
       {/* 5. PROCESS FLOW — gray-50 bg */}
       <ProcessFlow
@@ -171,19 +183,7 @@ const CostManagementPage = () => {
         ]}
       />
 
-      {/* 6. WHY CHOOSE US & CTA */}
-      <WhyChooseUsSection
-        heading="Why Work With Us"
-        subheading="Our Advantage"
-        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
-        imageAlt="Cost Management Experts"
-        items={[
-          { icon: <ShieldCheck className="w-5 h-5" />, title: "Wide industry experience, from heavy infrastructure to SaaS." },
-          { icon: <Layers className="w-5 h-5" />,      title: "Practical, implementable recommendations, not just reports." },
-          { icon: <Settings className="w-5 h-5" />,    title: "Systems your team can run long after the engagement ends." },
-          { icon: <BarChart className="w-5 h-5" />,    title: "Clear, data-backed insight for better pricing and investment decisions." },
-        ]}
-      />
+      
 
       {/* CTA — unchanged bg-primary-900 */}
       <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
