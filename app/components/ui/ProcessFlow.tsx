@@ -13,11 +13,12 @@ interface ProcessFlowProps {
   boldText?: string;
   subtitle?: string;
   steps: ProcessStep[];
+  bg?: string;
 }
 
-const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldText, subtitle, steps }) => {
+const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldText, subtitle, steps, bg = 'bg-gray-50' }) => {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-tr from-accent-50/30 via-[#f8f9fa] to-primary-50/20 relative font-sans overflow-hidden">
+    <section className={`py-12 md:py-16 ${bg} relative font-sans overflow-hidden`}>
       {/* Premium Subtle Background Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute top-10 left-10 w-[500px] h-[500px] bg-accent-300/10 rounded-full blur-[120px] animate-[pulseSoft_7s_ease-in-out_infinite]"></div>
@@ -63,17 +64,17 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
                 {idx < steps.length - 1 && (
                   <div className="hidden md:flex absolute top-[3.5rem] left-[calc(50%+3.5rem)] w-[calc(100%-7rem)] z-0 items-center justify-end">
                     {/* Dashed Line */}
-                    <div className="absolute left-0 right-1 top-1/2 -translate-y-1/2 border-t-[2px] border-dashed border-[#e5e7eb] group-hover:border-accent-400 transition-colors duration-500"></div>
+                    <div className="absolute left-0 right-1 top-1/2 -translate-y-1/2 border-t-[4px] border-dashed border-[#e5e7eb] group-hover:border-accent-400 transition-colors duration-500"></div>
                     {/* Arrow SVG */}
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative z-10 text-secondary-300 group-hover:text-accent-500 transition-colors duration-500 group-hover:translate-x-2">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="relative z-10 text-secondary-300 group-hover:text-accent-500 transition-colors duration-500 group-hover:translate-x-2">
                       <path d="M9 18l6-6-6-6" />
                     </svg>
                   </div>
                 )}
 
                 {/* Icon Circle */}
-                <div className="w-28 h-28 rounded-full bg-[#f8f9fa] flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-primary-900 group-hover:border-primary-900 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.3)] border border-secondary-100 shadow-sm">
-                  <Icon className="w-10 h-10 text-accent-500 group-hover:text-white transition-colors duration-500 group-hover:rotate-12" strokeWidth={2} />
+                <div className="w-28 h-28 rounded-full bg-primary-900 border-primary-900 flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-white group-hover:border-secondary-100 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.1)] border shadow-md">
+                  <Icon className="w-10 h-10 text-white group-hover:text-accent-500 transition-colors duration-500 group-hover:rotate-12" strokeWidth={2} />
                 </div>
 
                 {/* Content */}

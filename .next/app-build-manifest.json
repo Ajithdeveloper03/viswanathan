@@ -1,15 +1,30 @@
 {
   "pages": {
-    "/industries/page": [
+    "/independent-director/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/industries/page.js"
+      "static/chunks/app/independent-director/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/internal-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/internal-audit/page.js"
+    ],
+    "/cost-management-audit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/cost-management-audit/page.js"
+    ],
+    "/business-proposals/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/business-proposals/page.js"
     ],
     "/business-valuation/page": [
       "static/chunks/webpack.js",

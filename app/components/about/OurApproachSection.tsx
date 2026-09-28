@@ -53,7 +53,7 @@ export function OurApproachSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-white py-16 lg:py-24 overflow-x-clip">
+    <section ref={ref} className="relative bg-white py-8 lg:py-12 overflow-x-clip">
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           

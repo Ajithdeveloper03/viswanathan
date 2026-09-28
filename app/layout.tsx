@@ -1,13 +1,35 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { DM_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/ui/ScrollToTop';
 import { Providers } from './providers';
 
-const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' });
-const outfitSerif = Outfit({ subsets: ['latin'], variable: '--font-serif' });
+/**
+ * DM Sans — clean, modern geometric sans-serif
+ * Used for: body text, navigation, labels, UI, buttons
+ */
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: ['500', '600', '700', '800', '900'],
+  style: ['normal'],
+  display: 'swap',
+});
+
+/**
+ * Playfair Display — authoritative editorial serif
+ * Widely used by financial publications, law firms & consulting groups
+ * Used for: all h1, h2, h3 headings
+ */
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Viswanathan R Associates - Corporate Finance Advisory',
@@ -27,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${outfitSerif.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable}`}>
       <body className="min-h-screen flex flex-col font-sans overflow-x-hidden">
         <Providers>
           <Header />

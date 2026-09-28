@@ -44,9 +44,17 @@ const Header = () => {
 
   return (
     <header
-      className="absolute top-0 left-0 right-0 z-50 py-3"
+      className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isServicePage
+          ? `fixed ${
+              isScrolled
+                ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-1'
+                : 'bg-transparent py-3'
+            }`
+          : 'absolute py-3'
+      }`}
     >
-      {/* Subtle overlay for better menu visibility - hidden on service pages */}
+      {/* White gradient overlay for home/about pages only */}
       {!isServicePage && (
         <div 
           className="absolute inset-0 pointer-events-none z-0"
@@ -58,7 +66,13 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className={`relative flex items-center justify-center transition-all duration-500 shrink-0 ${isServicePage ? 'bg-white p-2.5 rounded-full shadow-lg w-24 h-24 lg:w-28 lg:h-28' : 'bg-transparent w-32 h-32'}`}>
+            <div className={`relative flex items-center justify-center transition-all duration-300 shrink-0 ${
+              isServicePage
+                ? isScrolled
+                  ? 'bg-white p-1 rounded-full shadow-md w-12 h-12 lg:w-24 lg:h-24'
+                  : 'bg-white p-2 rounded-full shadow-lg w-20 h-20 lg:w-24 lg:h-24'
+                : 'bg-transparent w-32 h-32'
+            }`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/vr-logo.png" 
@@ -82,10 +96,16 @@ const Header = () => {
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className={`flex items-center gap-1 px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 cursor-pointer ${
-                        isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
+                        isServicePage
+                          ? isScrolled
+                            ? 'text-primary-900 hover:text-accent-600 hover:bg-gray-50'
+                            : 'text-white hover:bg-white/20'
+                          : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
                       } ${
                         openDropdown === item.name && !isServicePage
                           ? 'text-primary-700 bg-white/50'
+                          : openDropdown === item.name && isServicePage && isScrolled
+                          ? 'text-accent-600 bg-gray-50'
                           : openDropdown === item.name && isServicePage
                           ? 'bg-white/20'
                           : ''
@@ -125,7 +145,11 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={`block px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
-                      isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
+                      isServicePage
+                        ? isScrolled
+                          ? 'text-primary-900 hover:text-accent-600 hover:bg-gray-50'
+                          : 'text-white hover:bg-white/20'
+                        : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
                     }`}
                   >
                     {item.name}
@@ -138,7 +162,13 @@ const Header = () => {
           {/* CTA Button - Desktop */}
           <Link
             href={navigation.cta.href}
-            className={`hidden lg:inline-flex items-center gap-2 transition-all duration-300 whitespace-nowrap text-xs xl:text-sm px-5 xl:px-7 py-2.5 rounded-full font-bold shadow-md ${isServicePage ? 'bg-[#1F2C50] text-white hover:bg-[#151f3b]' : 'btn-primary'}`}
+            className={`hidden lg:inline-flex items-center gap-2 transition-all duration-300 whitespace-nowrap text-xs xl:text-sm px-5 xl:px-7 py-2.5 rounded-full font-bold shadow-md ${
+              isServicePage
+                ? isScrolled
+                  ? 'bg-accent-500 text-white hover:bg-accent-600'
+                  : 'bg-[#1F2C50] text-white hover:bg-[#151f3b]'
+                : 'btn-primary'
+            }`}
           >
             {navigation.cta.name}
           </Link>
@@ -147,7 +177,11 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-              isServicePage ? 'text-white hover:bg-white/20' : 'text-secondary-900 hover:bg-secondary-100'
+              isServicePage
+                ? isScrolled
+                  ? 'text-primary-900 hover:bg-gray-100'
+                  : 'text-white hover:bg-white/20'
+                : 'text-secondary-900 hover:bg-secondary-100'
             }`}
             aria-label="Toggle menu"
           >

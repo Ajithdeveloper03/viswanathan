@@ -21,6 +21,7 @@ interface GSAPScrollSectionProps {
   title: string;
   subtitle?: string;
   items: ScrollItem[];
+  bg?: string;
 }
 
 const defaultImages = [
@@ -32,7 +33,7 @@ const defaultImages = [
   "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
 ];
 
-export default function GSAPScrollSection({ title, subtitle, items }: GSAPScrollSectionProps) {
+export default function GSAPScrollSection({ title, subtitle, items, bg = 'bg-white' }: GSAPScrollSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -89,7 +90,7 @@ export default function GSAPScrollSection({ title, subtitle, items }: GSAPScroll
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-[#f8f9fa] via-white to-primary-50/40 relative overflow-hidden" ref={containerRef}>
+    <section className={`${bg} relative overflow-hidden`} ref={containerRef}>
       {/* Abstract Background Design */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-200/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 animate-[pulseSoft_8s_ease-in-out_infinite]"></div>
