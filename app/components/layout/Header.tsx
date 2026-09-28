@@ -75,7 +75,7 @@ const Header = () => {
             }`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/vr-logo.png" 
+                src="/vrassociates/vr-logo.png" 
                 alt="VR Logo" 
                 className="w-full h-full object-contain"
               />

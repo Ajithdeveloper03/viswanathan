@@ -43,7 +43,7 @@ export function AboutHero() {
         {/* Static Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/banner2.png"
+            src="/vrassociates/banner2.png"
             alt="About Us Banner"
             fill
             priority

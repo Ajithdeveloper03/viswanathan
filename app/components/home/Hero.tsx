@@ -1,6 +1,7 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { companyInfo, navigation } from '@/app/lib/siteData';
@@ -9,9 +10,9 @@ const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-secondary-900', 'text-primary-600', 'text-accent-600'];
 
 const bannerImages = [
-  '/banner1.png',
-  '/banner2.png',
-  '/banner3.png'
+  '/vrassociates/banner1.png',
+  '/vrassociates/banner2.png',
+  '/vrassociates/banner3.png'
 ];
 
 const heroServices = navigation.main.find(item => item.name === 'Our Services')?.submenu || [];
@@ -57,10 +58,13 @@ const Hero = () => {
             index === currentBg ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
+          <Image
             src={src}
             alt="Hero Background"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
+            className="object-cover object-center"
           />
         </div>
       ))}

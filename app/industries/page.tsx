@@ -162,7 +162,7 @@ const IndustriesPage = () => {
               </svg>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
-                  <Image src="/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
+                  <Image src="/vrassociates/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
                 </div>
               </div>
             </div>
