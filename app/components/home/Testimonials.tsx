@@ -105,7 +105,7 @@ export function Testimonials() {
 
                        {/* Quote Text */}
                        <p className="text-gray-500 text-[15px] leading-relaxed flex-1">
-                         "{testimonial.text}"
+                         &quot;{testimonial.text}&quot;
                        </p>
 
                        {/* Author Info */}

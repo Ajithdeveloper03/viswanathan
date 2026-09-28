@@ -70,7 +70,7 @@ export function WhyChooseUsSection() {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="section-label reveal inline-flex mb-4">Our Differentiators</div>
           <h2 className="section-title mb-6 reveal">
-            Why Choose Us for Business <br /> Valuation Service in Chennai?
+            Why Choose Us for Business <br /> <span className="text-accent-500">Valuation Service in Chennai?</span>
           </h2>
           <p className="section-subtitle mx-auto reveal text-secondary-700">
             Clients choose Viswanathan R Associates for our combination of:
@@ -92,7 +92,7 @@ export function WhyChooseUsSection() {
 
               {/* Overlapping Plus Button */}
               <div className="absolute top-[200px] right-6 z-10">
-                <button className="w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center shadow-lg hover:bg-primary-700 hover:scale-110 transition-all cursor-default">
+                <button className="w-12 h-12 rounded-full bg-accent-500 text-white flex items-center justify-center shadow-lg hover:bg-accent-600 hover:scale-110 transition-all cursor-default">
                   <reason.icon className="w-6 h-6" />
                 </button>
               </div>

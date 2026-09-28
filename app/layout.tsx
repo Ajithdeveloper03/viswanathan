@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   title: 'Viswanathan R Associates - Corporate Finance Advisory',
   description: 'Strategic Financial Advisory for Businesses, Investors, Banks, and Corporate Leaders.',
   keywords: 'Business Valuation, Financial Advisory, Corporate Finance, Insolvency',
+  icons: {
+    icon: '/vrassociates/vr-logo.png',
+    shortcut: '/vrassociates/vr-logo.png',
+  },
   openGraph: {
     title: 'Viswanathan R Associates',
     description: 'Strategic Financial Advisory for Businesses, Investors, Banks, and Corporate Leaders.',

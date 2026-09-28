@@ -18,7 +18,7 @@ export function VisionMissionSection() {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0f172a]">
-            Our Mission & Vision
+            Our Mission <span className="text-accent-500">& Vision</span>
           </h2>
         </div>
 

@@ -106,7 +106,7 @@ export function WhatWeDoSection() {
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="section-label reveal inline-flex mb-4">Our Services</div>
-          <h2 className="section-title mb-6 reveal">What We Do</h2>
+          <h2 className="section-title mb-6 reveal">What <span className="text-accent-500">We Do</span></h2>
           <p className="section-subtitle mx-auto reveal">
             We support Promoters, Boards, Leadership teams, Investors, and Growing businesses through services including:
           </p>
@@ -118,7 +118,7 @@ export function WhatWeDoSection() {
               
               <div className="flex gap-4 items-start mb-4">
                 <div className="w-12 h-12 flex-shrink-0 rounded-xl border-2 border-secondary-100 flex items-center justify-center bg-secondary-50/50">
-                  <service.icon className="w-6 h-6 text-primary-600" />
+                  <service.icon className="w-6 h-6 text-accent-500" />
                 </div>
                 <h3 className="text-lg font-bold text-secondary-900 leading-tight pt-1">{service.title}</h3>
               </div>
@@ -130,7 +130,7 @@ export function WhatWeDoSection() {
               )}
               
               {service.linkText && (
-                <a href="#" className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-secondary-900 hover:text-primary-600 transition-colors group w-fit">
+                <a href="#" className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-secondary-900 hover:text-accent-500 transition-colors group w-fit">
                   {service.linkText} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               )}
