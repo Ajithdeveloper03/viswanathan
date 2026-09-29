@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:.next/types/app/layout.ts
 // File: C:\Users\inyma\OneDrive\Desktop\Ajith System Backup\inymart projects\viswanathan\app\layout.tsx
 import * as entry from '../../../app/layout.js'
+========
+// File: C:\Users\user\Desktop\inymart\viswanathan  adv\app\about-us\page.tsx
+import * as entry from '../../../../app/about-us/page.js'
+>>>>>>>> 0d7a8a7bb134207b30461b352f3dbfe6048a955e:.next/types/app/about-us/page.ts
+=======
+// File: C:\Users\user\Desktop\inymart\viswanathan  adv\app\layout.tsx
+import * as entry from '../../../app/layout.js'
+>>>>>>> 0d7a8a7bb134207b30461b352f3dbfe6048a955e
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../app/layout.js')
