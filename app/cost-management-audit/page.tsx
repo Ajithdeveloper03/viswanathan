@@ -14,6 +14,7 @@ const CostManagementPage = () => {
       title: "Cost Optimization",
       desc: "Find hidden inefficiencies and reduce costs without compromising quality or output.",
       icon: TrendingDown,
+      image: "/vrassociates/What We Do 1.png",
       items: [
         "Identify key cost drivers and wastage",
         "Review procurement and make-versus-buy decisions",
@@ -24,6 +25,7 @@ const CostManagementPage = () => {
       title: "Cost Allocation & Profitability",
       desc: "See which products, services, and customers truly make money.",
       icon: PieChart,
+      image: "/vrassociates/What We Do 2.png",
       items: [
         "Fair allocation of direct and indirect costs",
         "Profitability by product, customer, plant, or unit",
@@ -34,6 +36,7 @@ const CostManagementPage = () => {
       title: "Pricing",
       desc: "Set prices grounded in real costs, not guesswork.",
       icon: Tag,
+      image: "/vrassociates/What We Do 3.png",
       items: [
         "Accurate unit and job costing",
         "Margin and break-even analysis",
@@ -44,6 +47,7 @@ const CostManagementPage = () => {
       title: "Cost Audit",
       desc: "An independent review of your costing records, methods, and controls in line with Cost Accounting Standards.",
       icon: ClipboardCheck,
+      image: "/vrassociates/What We Do 4.png",
       items: [
         "Verify accuracy of cost data and overhead absorption",
         "Identify errors, gaps, and cost leakage",
@@ -55,6 +59,7 @@ const CostManagementPage = () => {
       title: "Complete Costing System Setup",
       desc: "A costing system built for your business, and one your team can run confidently.",
       icon: Settings,
+      image: "/vrassociates/What We Do 5.png",
       items: [
         "Cost centres, cost sheets, and allocation methods",
         "MIS reports and ERP/accounting integration",
@@ -102,7 +107,7 @@ const CostManagementPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20 mx-auto">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="hover:text-accent-400 transition-colors duration-300 cursor-pointer">Services</span>
@@ -158,7 +163,7 @@ const CostManagementPage = () => {
       <WhyChooseUsSection
         heading="Why Work With Us"
         subheading="Our Advantage"
-        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
+        imageUrl="/vrassociates/Why Work With Us.png"
         imageAlt="Cost Management Experts"
         items={[
           { icon: <ShieldCheck className="w-5 h-5" />, title: "Wide industry experience, from heavy infrastructure to SaaS." },
@@ -223,3 +228,4 @@ const CostManagementPage = () => {
 };
 
 export default CostManagementPage;
+

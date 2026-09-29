@@ -1,6 +1,6 @@
 'use client';
 import { LineChart, Calculator, Settings, Shield, User, Scale, Briefcase, LayoutDashboard, Cog, ClipboardCheck, Lightbulb, Handshake, ArrowRight } from 'lucide-react';
-
+import Link from 'next/link';
 
 
 import { useRef, useEffect } from 'react';
@@ -28,74 +28,80 @@ export function WhatWeDoSection() {
 
   const services = [
     {
-      title: "Business valuation service in Chennai",
-      description: "and enterprise valuation with 1,000+ valuations covering wide range of businesses and valuation purposes",
+      title: "Business & Enterprise Valuation",
+      description: "Business valuation service in Chennai and enterprise valuation with 1,000+ valuations covering wide range of businesses and valuation purposes.",
       linkText: "Learn More",
+      href: "/business-valuation",
       icon: LineChart
     },
     {
       title: "Cost Optimization",
-      description: "through Cost Drivers, Cost Reporting and profitability analysis",
+      description: "Cost Optimization through Cost Drivers, Cost Reporting and profitability analysis.",
       linkText: "Learn More",
+      href: "/cost-management-audit",
       icon: Calculator
     },
     {
-      title: "Costing system Design and Setup",
-      description: "Cost Elements and Cost Drivers",
+      title: "Costing System Design",
+      description: "Costing system Design and Setup, Cost Elements and Cost Drivers.",
       linkText: "Learn More",
+      href: "/cost-management-audit",
       icon: Settings
     },
     {
       title: "Internal Audit",
-      description: "controls, risk management, and business process improvement",
+      description: "Internal Audit, controls, risk management, and business process improvement.",
       linkText: "Learn More",
+      href: "/internal-audit",
       icon: Shield
     },
     {
       title: "Independent Director",
-      description: "",
+      description: "Providing objective governance, strategic oversight, and board-level advisory.",
       linkText: "Learn More",
+      href: "/independent-director",
       icon: User
     },
     {
-      title: "Insolvency",
-      description: "restructuring, and resolution-related advisory",
+      title: "Insolvency Advisory",
+      description: "Insolvency, restructuring, and resolution-related advisory.",
       linkText: "Learn More",
+      href: "/insolvency-bankruptcy",
       icon: Scale
     },
     {
       title: "Virtual CFO",
-      description: "and Financial Management support",
+      description: "Virtual CFO and Financial Management support.",
       linkText: "",
       icon: Briefcase
     },
     {
-      title: "Financial planning",
-      description: "budgeting, management reporting, and business performance dashboards.",
+      title: "Financial Planning",
+      description: "Financial planning, budgeting, management reporting, and business performance dashboards.",
       linkText: "",
       icon: LayoutDashboard
     },
     {
-      title: "Standard Operating Procedure",
-      description: "implementation and business process automation.",
+      title: "SOP Implementation",
+      description: "Standard Operating Procedure implementation and business process automation.",
       linkText: "",
       icon: Cog
     },
     {
-      title: "Corporate governance",
-      description: "company secretarial matters, and statutory compliance.",
+      title: "Corporate Governance",
+      description: "Corporate governance, company secretarial matters, and statutory compliance.",
       linkText: "",
       icon: ClipboardCheck
     },
     {
-      title: "Strategic investment analysis",
-      description: "and business planning",
+      title: "Strategic Investment",
+      description: "Strategic investment analysis and business planning.",
       linkText: "",
       icon: Lightbulb
     },
     {
       title: "Mergers and Acquisitions",
-      description: "Private Equity, Venture Capital., Debt Funding, within and outside India, through Strategic Business Partner",
+      description: "Mergers and Acquisitions, Private Equity, Venture Capital, Debt Funding, within and outside India, through Strategic Business Partner.",
       linkText: "",
       icon: Handshake
     }
@@ -124,15 +130,17 @@ export function WhatWeDoSection() {
               </div>
 
               {service.description && (
-                <p className="text-secondary-600 text-sm leading-relaxed mb-6 flex-grow">
-                  {service.description}
-                </p>
+                <div className="flex-grow flex items-center mb-2">
+                  <p className="text-secondary-600 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               )}
               
-              {service.linkText && (
-                <a href="#" className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-secondary-900 hover:text-accent-500 transition-colors group w-fit">
-                  {service.linkText} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+              {service.href && (
+                <Link href={service.href} className="inline-flex items-center gap-2 mt-auto pt-4 text-sm font-bold text-secondary-900 hover:text-accent-500 transition-colors group w-fit">
+                  {service.linkText || "Learn More"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               )}
             </div>
           ))}

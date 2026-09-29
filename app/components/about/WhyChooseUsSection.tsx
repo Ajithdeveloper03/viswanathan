@@ -28,25 +28,25 @@ export function WhyChooseUsSection() {
     {
       title: "Expertise",
       description: "Deep finance, costing, valuation, and governance expertise.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
+      image: "/vrassociates/Expertise.jpeg",
       icon: Award
     },
     {
       title: "Experience",
       description: "Experience across multiple industries and international markets.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
+      image: "/vrassociates/Experience.jpeg",
       icon: Globe
     },
     {
       title: "Understanding",
       description: "Understanding of both boardroom priorities and operational realities.",
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
+      image: "/vrassociates/Understanding.jpeg",
       icon: Target
     },
     {
       title: "Collaboration",
       description: "Ability to work with promoters, management teams, investors, and professional advisers.",
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600",
+      image: "/vrassociates/Collaboration.jpeg",
       icon: Users
     },
     {
@@ -58,7 +58,7 @@ export function WhyChooseUsSection() {
     {
       title: "Integrity",
       description: "A professional commitment to confidentiality, independence, and integrity.",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
       icon: ShieldCheck
     }
   ];

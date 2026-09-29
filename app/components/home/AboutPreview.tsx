@@ -35,7 +35,7 @@ export function AboutPreview() {
           <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end px-6 lg:px-10 pt-16 pb-8 min-h-[350px] md:min-h-[300px] lg:h-[500px]">
             <div className="absolute inset-0 z-0">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1200"
+                src="/vrassociates/about us.png"
                 alt="Our Story"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000 brightness-110 contrast-125 saturate-150"
               />

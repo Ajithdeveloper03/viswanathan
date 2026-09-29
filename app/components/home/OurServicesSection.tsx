@@ -14,7 +14,7 @@ const servicesData = [
   {
     title: 'Insolvency & Bankruptcy',
     description: 'Comprehensive resolution services under the IBC code for distressed assets and businesses.',
-    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800',
+    image: '/vrassociates/Insolvency & Bankruptcy.jpeg',
     href: '/insolvency-bankruptcy',
   },
   {

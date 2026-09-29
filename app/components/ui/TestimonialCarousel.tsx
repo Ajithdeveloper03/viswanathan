@@ -80,7 +80,7 @@ const TestimonialCarousel = () => {
             </div>
 
             {/* Right: Content Area */}
-            <div className="lg:col-span-7 p-8 lg:p-16 lg:pl-0 flex flex-col justify-center">
+            <div className="lg:col-span-7 p-8 pb-48 lg:p-16 lg:pl-0 flex flex-col justify-center">
               
               <Quote className="w-16 h-16 text-white/10 mb-8" />
               

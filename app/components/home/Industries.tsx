@@ -65,7 +65,7 @@ const WaveShape = () => (
     <path 
       d="M 10 0 C 40 30 60 80 100 100 L 100 0 Z" 
       fill="#1F2C50" 
-      className="opacity-[0.5] group-hover:opacity-[0.08] transition-opacity duration-500 ease-in-out" 
+      className="opacity-100 group-hover:opacity-[0.15] transition-opacity duration-500 ease-in-out" 
     />
     <path 
       d="M 30 0 C 55 20 75 65 100 80 L 100 0 Z" 
