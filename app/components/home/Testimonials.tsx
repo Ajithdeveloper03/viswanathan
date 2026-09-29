@@ -6,19 +6,19 @@ const testimonialsData = [
     text: "Their precise business valuation services were instrumental during our recent merger. The team's deep industry knowledge and professional approach gave us immense confidence.",
     name: "Arun Prakash",
     role: "MANAGING DIRECTOR, CHENNAI",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=200"
   },
   {
     text: "VRA's cost optimization strategies transformed our manufacturing operations. They identified critical inefficiencies and helped us implement actionable, sustainable solutions.",
     name: "Priya Natarajan",
     role: "CFO, COIMBATORE",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
   },
   {
     text: "The guidance we received on corporate governance and compliance was exceptional. They act not just as consultants, but as true strategic partners for our business.",
     name: "Karthik Subramanian",
     role: "FOUNDER & CEO, BENGALURU",
-    image: "https://randomuser.me/api/portraits/men/78.jpg"
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
   }
 ];
 
