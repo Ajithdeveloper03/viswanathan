@@ -37,10 +37,10 @@ const IndustriesPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?auto=format&fit=crop&q=80&w=2000"
+            src="/vrassociates/images/industries-hero.png"
             alt="Industries Background"
             fill
-            className="object-cover opacity-30 mix-blend-luminosity scale-105"
+            className="object-cover opacity-60 mix-blend-luminosity scale-105"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
@@ -77,10 +77,10 @@ const IndustriesPage = () => {
           </div>
           <div className="lg:w-1/2 relative h-[320px] w-full group hidden lg:block">
             <div className="absolute top-0 right-0 w-[70%] h-[220px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
-              <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" alt="Industry 1" fill className="object-cover" />
+              <Image src="/vrassociates/images/industries1.png" alt="Industry 1" fill className="object-cover" />
             </div>
             <div className="absolute bottom-0 left-0 w-[60%] h-[190px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
-              <Image src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800" alt="Industry 2" fill className="object-cover" />
+              <Image src="/vrassociates/images/industries2.png" alt="Industry 2" fill className="object-cover" />
             </div>
           </div>
         </div>

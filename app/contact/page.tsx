@@ -9,10 +9,10 @@ const ContactPage = () => {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=2000"
+            src="/vrassociates/images/contact.png"
             alt="Contact Us Background"
             fill
-            className="object-cover opacity-30 mix-blend-luminosity scale-105"
+            className="object-cover opacity-60 mix-blend-luminosity scale-105"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
@@ -74,10 +74,10 @@ const ContactPage = () => {
           <div className="bg-white rounded-2xl lg:rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row">
             <div className="relative w-full lg:w-[45%] h-[250px] lg:h-[450px] lg:h-auto">
               <Image 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+                src="/vrassociates/images/form.png" 
                 alt="Modern Office" 
                 fill 
-                className="object-cover"
+                className="object-fill"
               />
               <div className="absolute inset-0 bg-accent-500/10 mix-blend-multiply"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl flex flex-col sm:flex-row gap-4 justify-between shadow-lg">

@@ -15,6 +15,7 @@ export interface ScrollItem {
   desc?: string;
   items: string[];
   icon?: React.ReactNode;
+  image?: string;
 }
 
 interface GSAPScrollSectionProps {
@@ -129,7 +130,7 @@ export default function GSAPScrollSection({ title, subtitle, items, bg = 'bg-whi
 
               <div className="w-full lg:w-[40%] relative min-h-[250px] lg:min-h-[400px]">
                 <Image
-                  src={defaultImages[idx % defaultImages.length]}
+                  src={item.image || defaultImages[idx % defaultImages.length]}
                   alt={`Slide ${idx + 1}`}
                   fill
                   className="object-cover absolute inset-0"

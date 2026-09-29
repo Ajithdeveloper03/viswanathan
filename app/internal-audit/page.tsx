@@ -91,7 +91,7 @@ const InternalAuditPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20 mx-auto">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="hover:text-accent-400 transition-colors duration-300 cursor-pointer">Services</span>
@@ -214,7 +214,6 @@ const InternalAuditPage = () => {
         ]}
       />
 
-      {/* 4. TYPES OF INTERNAL AUDIT — GSAP Scroll (gray-50 bg) */}
       <GSAPScrollSection
         bg="bg-gray-50"
         title="Types of Internal Audit Services"
@@ -263,3 +262,4 @@ const InternalAuditPage = () => {
 };
 
 export default InternalAuditPage;
+

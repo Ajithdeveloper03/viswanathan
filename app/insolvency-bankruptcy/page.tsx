@@ -1,4 +1,4 @@
-import { Building2, Briefcase, FileCheck, Landmark, Users, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
+import { Building2, Briefcase, FileCheck, Landmark, Users, ArrowRight, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -6,7 +6,6 @@ import Image from 'next/image';
 import ProcessFlow from '../components/ui/ProcessFlow';
 import GSAPScrollSection from '../components/ui/GSAPScrollSection';
 import ModalTriggerButton from '../components/ui/ModalTriggerButton';
-import WhyChooseUsSection from '../components/ui/WhyChooseUsSection';
 
 const IBCPage = () => {
   const sections = [
@@ -59,9 +58,9 @@ const IBCPage = () => {
   ];
 
   return (
-    <div className="bg-white text-secondary-900 font-sans">
+    <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
 
-      {/* 1. HERO */}
+      {/* 1. HERO SECTION */}
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -73,6 +72,7 @@ const IBCPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
         </div>
+
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/20">
             <Link href="/" className="hover:text-accent-400 transition-colors duration-300">Home</Link>
@@ -82,43 +82,45 @@ const IBCPage = () => {
             <span className="text-accent-400">Insolvency & Bankruptcy Code</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Insolvency & Bankruptcy <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
+            Insolvency & Bankruptcy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
           </h1>
         </div>
       </section>
 
-      {/* 2. OVERLAPPING INTRO BOX (white) */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
-        <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 items-center justify-between border border-secondary-100">
+      {/* 2. OVERLAPPING INTRO BOX */}
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
+        <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
+
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
               Registered Professional
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              Transparency. <br/>
-              <em className="not-italic text-secondary-400 font-light">Timely Execution.</em>
+            <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
+              Transparency. <br />
+              <span className="text-secondary-400 font-light">Timely Execution.</span>
             </h2>
-            <div className="bg-primary-50 border-l-4 border-primary-500 p-5 rounded-r-2xl flex items-start gap-4">
-              <ShieldCheck className="w-7 h-7 text-primary-900 flex-shrink-0 mt-0.5" />
+            <div className="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-2xl mb-6 flex items-start gap-4">
+              <ShieldCheck className="w-8 h-8 text-primary-900 flex-shrink-0 mt-1" />
               <p className="text-primary-900 font-medium leading-relaxed">
                 Successfully completed 16 comprehensive assignments across various categories of the Insolvency and Bankruptcy Code (IBC), 2016.
               </p>
             </div>
           </div>
+
           <div className="lg:w-1/2">
             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
               As a registered Insolvency Professional, I support creditors, operational creditors, promoters, guarantors, and companies under Sections 7, 9, 10, 59 and 95 of the IBC with fairness to all stakeholders.
             </p>
             <p className="text-secondary-500 leading-relaxed pl-6">
-              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation, covering the full spectrum of insolvency initiations and voluntary closures.
+              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation. Our practice covers the full spectrum of insolvency initiations and voluntary closures, ensuring objective and highly structured resolution services.
             </p>
           </div>
+
         </div>
       </div>
 
-      {/* 3. SECTIONS WE WORK UNDER — GSAP Scroll (gray-50 bg) */}
-      <GSAPScrollSection
-        bg="bg-gray-50"
+      {/* 3. SECTIONS WE WORK UNDER (GSAP Scroll Section) */}
+      <GSAPScrollSection theme="dark"
         title="Sections We Work Under"
         subtitle="IBC Frameworks"
         items={sections.map(s => ({
@@ -129,22 +131,53 @@ const IBCPage = () => {
         }))}
       />
 
-      {/* 4. OUR SERVICES — WhyChooseUsSection with gold theme */}
-      <WhyChooseUsSection
-        heading="Our Resolution Services"
-        subheading="Comprehensive Support"
-        imageUrl="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200"
-        imageAlt="Consulting"
-        theme="gold"
-        items={services.map(service => ({
-          icon: <CheckCircle2 className="w-5 h-5" />,
-          title: service
-        }))}
-      />
+      {/* 4. OUR SERVICES (Texon Split Layout) */}
+      <section className="py-12 md:py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-      {/* 5. PROCESS FLOW — gray-50 bg */}
-      <ProcessFlow
-        bg="bg-gray-50"
+            {/* Left: Image Collage */}
+            <div className="relative h-[700px] w-full hidden lg:block">
+              <div className="absolute top-0 left-0 w-[80%] h-[300px] lg:h-[500px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-10 hover:z-30 transition-all duration-500 group">
+                <Image src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200" alt="Consulting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="absolute bottom-0 right-0 w-[60%] h-[250px] lg:h-[400px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-20 border-8 border-white group">
+                <Image src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Reporting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="absolute top-1/2 -right-8 w-32 h-32 bg-accent-500 rounded-full blur-3xl opacity-20 z-0"></div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="flex flex-col">
+              <div className="mb-12">
+                <div className="inline-block px-4 py-1.5 bg-primary-50 text-primary-700 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
+                  Comprehensive Support
+                </div>
+                <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
+                  Our Resolution <br /><span className="text-secondary-400 font-light">Services</span>
+                </h2>
+              </div>
+
+              <ul className="space-y-6">
+                {services.map((service, idx) => (
+                  <li key={idx} className="flex gap-5 group">
+                    <div className="w-10 h-10 rounded-full bg-[#f8f9fa] border border-secondary-100 flex items-center justify-center flex-shrink-0 text-accent-500 group-hover:bg-accent-500 group-hover:text-white transition-all duration-300 shadow-sm mt-1">
+                      <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <span className="text-lg text-secondary-700 font-medium leading-relaxed group-hover:text-primary-900 transition-colors duration-300">
+                      {service}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* NEW PROCESS STRIP */}
+      <ProcessFlow theme="light"
         subtitle="Resolution Pathway"
         title="Our proven insolvency process for"
         highlightText="corporate distress"
@@ -156,40 +189,56 @@ const IBCPage = () => {
         ]}
       />
 
-      {/* 6. CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      {/* 5. CTA (Texon Banner) */}
+      <section id="contact" className="py-12 md:py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
+          <Image
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+            alt="CTA Background"
+            fill
+            className="object-cover opacity-30 mix-blend-luminosity"
+          />
           <div className="absolute inset-0 bg-primary-900/80"></div>
         </div>
+
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[250px] lg:h-[400px] lg:h-[600px] bg-accent-500 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3"></div>
         </div>
+
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              Require Insolvency <br/> <span className="text-accent-400">Resolution Assistance?</span>
+              Require Insolvency <br /> <span className="text-accent-400">Resolution Assistance?</span>
             </h2>
             <p className="text-xl md:text-2xl text-secondary-300 leading-relaxed font-light">
               Connect with us for highly structured, objective, and strictly regulated insolvency and voluntary closure services.
             </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-5 pt-4">
-              <ModalTriggerButton className="flex items-center justify-center gap-3 bg-white text-primary-900 px-8 py-4 rounded-full font-bold text-base hover:bg-accent-500 hover:text-white transition-all duration-300 shadow-xl hover:scale-105">
-                <Mail className="w-5 h-5" /> Email Our Office
+
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8">
+              <ModalTriggerButton className="flex items-center justify-center gap-3 bg-white text-primary-900 px-8 py-5 rounded-full font-bold text-lg hover:bg-accent-500 hover:text-white transition-all duration-300 shadow-xl hover:scale-105">
+                <Mail className="w-6 h-6" />
+                Email Our Office
               </ModalTriggerButton>
-              <a href="tel:+916379252059" className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105">
-                <Phone className="w-5 h-5" /> +91-6379252059
+              <a href="tel:+916379252059" className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/30 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105">
+                <Phone className="w-6 h-6" />
+                +91-6379252059
               </a>
-              <a href="https://www.linkedin.com/in/viswanathan-rajagopalan-13106838/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-[#0a66c2] text-white px-8 py-4 rounded-full font-bold text-base hover:bg-[#084e96] transition-all duration-300 shadow-lg hover:scale-105">
-                <Linkedin className="w-5 h-5" /> Connect on LinkedIn
+              <a href="https://www.linkedin.com/in/viswanathan-rajagopalan-13106838/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-[#0a66c2] text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-[#084e96] transition-all duration-300 shadow-lg hover:scale-105">
+                <Linkedin className="w-6 h-6" />
+                Connect on LinkedIn
               </a>
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 };
 
 export default IBCPage;
+
+
+

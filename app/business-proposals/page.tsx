@@ -14,6 +14,7 @@ const BusinessProposalsPage = () => {
       title: "Equity Funding",
       desc: "Raise capital from the right investors, on sound terms.",
       icon: TrendingUp,
+      image: "/vrassociates/images/business-proposals/equity-funding.png",
       items: [
         "Prepare investor-ready business plans, financial models, and pitch material",
         "Support valuation and deal structuring (private placement, preferential allotment)",
@@ -26,6 +27,7 @@ const BusinessProposalsPage = () => {
       title: "Debt Syndication",
       desc: "Secure the right funding at the right cost.",
       icon: Landmark,
+      image: "/vrassociates/images/business-proposals/debt.png",
       items: [
         "Assess your funding requirement and repayment capacity",
         "Prepare credit proposals, project reports, and Detailed Project Reports (DPRs)",
@@ -38,6 +40,7 @@ const BusinessProposalsPage = () => {
       title: "Mergers & Acquisitions",
       desc: "Buy, sell, merge, or restructure with confidence.",
       icon: Replace,
+      image: "/vrassociates/images/business-proposals/mergers.png",
       items: [
         "Valuation and fair-price assessment for both buyers and sellers",
         "Target identification and strategic-fit evaluation",
@@ -50,6 +53,7 @@ const BusinessProposalsPage = () => {
       title: "International Trade",
       desc: "Expand across borders without losing track of compliance and cost.",
       icon: Globe,
+      image: "/vrassociates/images/business-proposals/trade.png",
       items: [
         "Cross-border investment structuring: inbound (FDI) and outbound (ODI)",
         "Market-entry and joint-venture proposals",
@@ -75,10 +79,10 @@ const BusinessProposalsPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000"
+            src="/vrassociates/images/business-proposals/hero.png"
             alt="Business Proposals Background"
             fill
-            className="object-cover opacity-30 mix-blend-luminosity scale-105"
+            className="object-cover opacity-70 mix-blend-luminosity scale-105"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-primary-900/40 to-primary-950/70"></div>
@@ -177,15 +181,23 @@ const BusinessProposalsPage = () => {
             {/* Right: Image collage */}
             <div className="relative h-[500px] w-full hidden lg:block">
               <div className="absolute top-0 right-0 w-[80%] h-[320px] rounded-3xl overflow-hidden shadow-2xl z-10 hover:-translate-y-3 transition-all duration-500">
-                <Image src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200" alt="Global Trade" fill className="object-cover" />
+                <Image src="/vrassociates/images/business-proposals/trade.png" alt="Global Trade" fill className="object-cover" />
               </div>
               <div className="absolute bottom-0 left-0 w-[60%] h-[260px] rounded-3xl overflow-hidden shadow-2xl z-20 border-4 border-white">
-                <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="Corporate" fill className="object-cover" />
+                <Image src="/vrassociates/images/business-proposals/mergers.png" alt="Corporate" fill className="object-cover" />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+  <WhyChooseUsSection
+        heading="Why Choose Us"
+        subheading="Our Advantage"
+        imageUrl="/vrassociates/images/business-proposals/why-choose-us.png"
+        imageAlt="Business Advisors"
+        items={whyUs}
+      />
 
       {/* 5. PROCESS FLOW — gray-50 bg */}
       <ProcessFlow
@@ -202,18 +214,12 @@ const BusinessProposalsPage = () => {
         ]}
       />
 
-      <WhyChooseUsSection
-        heading="Why Choose Us"
-        subheading="Our Advantage"
-        imageUrl="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
-        imageAlt="Business Advisors"
-        items={whyUs}
-      />
+    
 
       {/* CTA — unchanged bg-primary-900 */}
       <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
+          <Image src="/vrassociates/images/business-proposals/equity-funding.png" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>
         </div>
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -247,3 +253,4 @@ const BusinessProposalsPage = () => {
 };
 
 export default BusinessProposalsPage;
+
