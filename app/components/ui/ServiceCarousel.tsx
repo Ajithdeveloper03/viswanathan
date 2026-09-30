@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { ArrowLeft, ArrowRight, LucideIcon } from 'lucide-react';
 
 import React, { useRef } from 'react';
@@ -26,7 +26,7 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ title, cards }) => {
   };
 
   return (
-    <section className="relative bg-primary-900 py-24 overflow-hidden">
+    <section className="relative bg-primary-900 py-12 overflow-hidden">
       
       <div className="container mx-auto px-4 md:px-8 lg:px-16 mb-16 flex justify-between items-end relative z-10">
         {title && (

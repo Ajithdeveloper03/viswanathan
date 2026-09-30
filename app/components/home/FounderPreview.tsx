@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 
@@ -40,13 +40,13 @@ export function FounderPreview() {
             </h2>
             <div className="text-secondary-600 text-lg leading-relaxed mb-8 reveal space-y-5 text-justify sm:text-left">
               <p className="text-xl font-medium text-secondary-800 border-l-4 border-primary-500 pl-4 py-1 mb-6">
-                “Transforming financial insight into measurable business value.”
+                â€œTransforming financial insight into measurable business value.â€
               </p>
               <p>
                 Viswanathan Rajagopalan is a Finance, Cost Management, and Corporate Secretary professional with over 30 years of cross-functional and global experience.
               </p>
               <p>
-                His expertise spans operationally complex industries—including Manufacturing, Mining, Automotive, Healthcare, IT, and Logistics—across India, Kuwait, the UAE, Egypt, and Liberia. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors whitespace-nowrap">(View LinkedIn Profile)</a>
+                His expertise spans operationally complex industriesâ€”including Manufacturing, Mining, Automotive, Healthcare, IT, and Logisticsâ€”across India, Kuwait, the UAE, Egypt, and Liberia. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors whitespace-nowrap">(View LinkedIn Profile)</a>
               </p>
               <p>
                 This deep understanding of diverse financial, regulatory, and cultural environments enables him to help businesses make better decisions, improve operational performance, and manage risk.

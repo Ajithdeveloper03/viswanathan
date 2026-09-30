@@ -1,4 +1,4 @@
-import {
+﻿import {
   Building2, Briefcase, Globe, Users, HeartHandshake, UserCheck,
   ArrowRight, BarChart, Phone, Search, FileText, FileSpreadsheet,
   Gem, ShieldCheck, Layers, Scale, TrendingUp
@@ -123,7 +123,7 @@ const BusinessValuation = () => {
   return (
     <div className="bg-white text-secondary-900 font-sans">
 
-      {/* ── 1. HERO ── */}
+      {/* â”€â”€ 1. HERO â”€â”€ */}
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -150,7 +150,7 @@ const BusinessValuation = () => {
         </div>
       </section>
 
-      {/* ── 2. OVERLAPPING INTRO BOX (white) ── */}
+      {/* â”€â”€ 2. OVERLAPPING INTRO BOX (white) â”€â”€ */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
         <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-10 items-start border border-secondary-100">
           <div className="lg:w-1/2">
@@ -178,8 +178,8 @@ const BusinessValuation = () => {
         </div>
       </div>
 
-      {/* ── 3. VALUATION FOR EVERY BUSINESS STRUCTURE — dark bg, left text + right 2×3 cards ── */}
-      <section className="py-16 lg:py-24 bg-primary-900 relative overflow-hidden">
+      {/* â”€â”€ 3. VALUATION FOR EVERY BUSINESS STRUCTURE â€” dark bg, left text + right 2Ã—3 cards â”€â”€ */}
+      <section className="py-8 lg:py-12 bg-primary-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-500/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px]" />
@@ -204,7 +204,7 @@ const BusinessValuation = () => {
               </ModalTriggerButton>
             </div>
 
-            {/* Right: 2×3 card grid */}
+            {/* Right: 2Ã—3 card grid */}
             <div className="grid grid-cols-2 gap-4">
               {entityTypes.map((item, idx) => {
                 const Icon = item.icon;
@@ -225,14 +225,14 @@ const BusinessValuation = () => {
         </div>
       </section>
 
-      {/* ── 4. OUR VALUATION SERVICES — GSAP scroll stack (white bg) ── */}
+      {/* â”€â”€ 4. OUR VALUATION SERVICES â€” GSAP scroll stack (white bg) â”€â”€ */}
       <GSAPScrollSection
         bg="bg-white"
         title="Our Valuation Services"
         subtitle="Specialized Services"
         items={services}
       />
- {/* ── 6. WHY CLIENTS CHOOSE US — white bg, Finor icon+title+desc rows ── */}
+ {/* â”€â”€ 6. WHY CLIENTS CHOOSE US â€” white bg, Finor icon+title+desc rows â”€â”€ */}
       <WhyChooseUsSection
         heading="Why Clients Choose Us"
         subheading="Our Advantage"
@@ -240,7 +240,7 @@ const BusinessValuation = () => {
         imageAlt="Valuation Professional"
         items={whyChooseUsSection}
       />
-      {/* ── 5. OUR VALUATION APPROACH — ProcessFlow (gray-50 bg) ── */}
+      {/* â”€â”€ 5. OUR VALUATION APPROACH â€” ProcessFlow (gray-50 bg) â”€â”€ */}
       <ProcessFlow
         bg="bg-gray-50"
         title="Our"
@@ -251,8 +251,8 @@ const BusinessValuation = () => {
 
      
 
-      {/* ── 7. CTA — unchanged bg-primary-900 ── */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      {/* â”€â”€ 7. CTA â€” unchanged bg-primary-900 â”€â”€ */}
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -290,7 +290,7 @@ const BusinessValuation = () => {
               </a>
             </div>
              <p className="text-secondary-400 text-base">
-              Whether for an acquisition, fundraising, regulatory compliance, tax purposes, financial reporting, restructuring, or strategic planning — we provide a structured, purpose-driven valuation service.
+              Whether for an acquisition, fundraising, regulatory compliance, tax purposes, financial reporting, restructuring, or strategic planning â€” we provide a structured, purpose-driven valuation service.
             </p>
             <p className="text-secondary-400 text-sm pt-2">
               Email: <a href="mailto:vishu@viswanathanrassociates.com" className="text-accent-400 hover:underline">vishu@viswanathanrassociates.com</a>

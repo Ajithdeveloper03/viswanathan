@@ -1,4 +1,4 @@
-import { Mountain, Zap, Monitor, Cloud, BrainCircuit, CreditCard, Landmark, Plane, Hotel, Utensils, Stethoscope, HeartPulse, Factory, ShoppingCart, Briefcase, Train, Ship, Droplet, Sun, Car, Home, ArrowRight, Globe } from 'lucide-react';
+﻿import { Mountain, Zap, Monitor, Cloud, BrainCircuit, CreditCard, Landmark, Plane, Hotel, Utensils, Stethoscope, HeartPulse, Factory, ShoppingCart, Briefcase, Train, Ship, Droplet, Sun, Car, Home, ArrowRight, Globe } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -83,7 +83,7 @@ const IndustriesPage = () => {
           </div>
         </div>
       </div>
-      <section className="py-16 lg:py-24 bg-secondary-900 relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-secondary-900 relative overflow-hidden">
         <style>{`
           @keyframes flowLine { to { stroke-dashoffset: -40; } }
           .flowing-line { stroke-dasharray: 6 6; animation: flowLine 2s linear infinite; }
@@ -207,8 +207,8 @@ const IndustriesPage = () => {
         <TestimonialCarousel />
       </div>
 
-      {/* 5. CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
+      {/* 5. CTA â€” unchanged bg-primary-900 */}
+      <section id="contact" className="py-8 lg:py-12 bg-primary-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"

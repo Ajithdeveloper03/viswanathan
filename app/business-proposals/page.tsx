@@ -1,4 +1,4 @@
-import { Briefcase, BarChart, ShieldCheck, Globe, TrendingUp, Landmark, Replace, CheckCircle2, ArrowRight, Mail, Phone, Linkedin, Target, FileCheck, Handshake } from 'lucide-react';
+﻿import { Briefcase, BarChart, ShieldCheck, Globe, TrendingUp, Landmark, Replace, CheckCircle2, ArrowRight, Mail, Phone, Linkedin, Target, FileCheck, Handshake } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -129,7 +129,7 @@ const BusinessProposalsPage = () => {
         </div>
       </div>
 
-      {/* 3. WHAT WE DO — GSAP Scroll (gray-50 bg) */}
+      {/* 3. WHAT WE DO â€” GSAP Scroll (gray-50 bg) */}
       <GSAPScrollSection
         bg="bg-gray-50"
         title="Our Focus Areas"
@@ -140,8 +140,8 @@ const BusinessProposalsPage = () => {
         }))}
       />
 
-      {/* 4. GLOBAL PERSPECTIVE — white bg, Finor split layout */}
-      <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      {/* 4. GLOBAL PERSPECTIVE â€” white bg, Finor split layout */}
+      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-50/50 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/2"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-50/50 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/3"></div>
@@ -199,7 +199,7 @@ const BusinessProposalsPage = () => {
         items={whyUs}
       />
 
-      {/* 5. PROCESS FLOW — gray-50 bg */}
+      {/* 5. PROCESS FLOW â€” gray-50 bg */}
       <ProcessFlow
         bg="bg-gray-50"
         subtitle="Deal Execution"
@@ -216,8 +216,8 @@ const BusinessProposalsPage = () => {
 
     
 
-      {/* CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      {/* CTA â€” unchanged bg-primary-900 */}
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/vrassociates/images/business-proposals/equity-funding.png" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>

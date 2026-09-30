@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { FileText, Phone } from 'lucide-react';
 import Image from 'next/image';
 import ModalTriggerButton from '@/app/components/ui/ModalTriggerButton';
@@ -28,7 +28,7 @@ export function AboutCTA() {
       <div className="container-custom relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8 md:space-y-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            Let’s Work <span className="text-accent-400">Together</span>
+            Letâ€™s Work <span className="text-accent-400">Together</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-secondary-300 leading-relaxed font-light max-w-3xl mx-auto">
             If your organization is looking to improve profitability, optimize costs, strengthen governance, evaluate an investment, or build better financial systems, we would be pleased to understand your requirements.

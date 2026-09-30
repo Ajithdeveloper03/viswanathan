@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { ReactNode } from 'react';
 import { ModalProvider } from './context/ModalContext';
 import ContactModal from './components/ui/ContactModal';

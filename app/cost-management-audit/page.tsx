@@ -1,4 +1,4 @@
-import { Layers, Briefcase, CheckCircle2, TrendingDown, PieChart, Tag, ClipboardCheck, Settings, ShieldCheck, Mail, Phone, Linkedin, Factory, Cog, Monitor, BarChart } from 'lucide-react';
+﻿import { Layers, Briefcase, CheckCircle2, TrendingDown, PieChart, Tag, ClipboardCheck, Settings, ShieldCheck, Mail, Phone, Linkedin, Factory, Cog, Monitor, BarChart } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -148,7 +148,7 @@ const CostManagementPage = () => {
         </div>
       </div>
 
-      {/* 3. WHAT WE DO — GSAP Scroll (gray-50 bg) */}
+      {/* 3. WHAT WE DO â€” GSAP Scroll (gray-50 bg) */}
       <GSAPScrollSection
         bg="bg-gray-50"
         title="What We Do"
@@ -173,7 +173,7 @@ const CostManagementPage = () => {
         ]}
       />
 
-      {/* 5. PROCESS FLOW — gray-50 bg */}
+      {/* 5. PROCESS FLOW â€” gray-50 bg */}
       <ProcessFlow
         bg="bg-gray-50"
         subtitle="Costing Process"
@@ -190,8 +190,8 @@ const CostManagementPage = () => {
 
       
 
-      {/* CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      {/* CTA â€” unchanged bg-primary-900 */}
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>

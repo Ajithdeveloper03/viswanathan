@@ -1,4 +1,4 @@
-import { CheckCircle2, ShieldCheck, Globe, LineChart, ShieldAlert, FileCheck, Calculator, Server, Phone, Mail, Linkedin, Target, ClipboardCheck } from 'lucide-react';
+﻿import { CheckCircle2, ShieldCheck, Globe, LineChart, ShieldAlert, FileCheck, Calculator, Server, Phone, Mail, Linkedin, Target, ClipboardCheck } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -135,8 +135,8 @@ const InternalAuditPage = () => {
         </div>
       </div>
 
-      {/* 3. IN INDIA vs OUTSIDE INDIA — white bg, alternating split layouts */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* 3. IN INDIA vs OUTSIDE INDIA â€” white bg, alternating split layouts */}
+      <section className="py-8 lg:py-12 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-16 space-y-24">
 
           {/* India */}
@@ -230,8 +230,8 @@ const InternalAuditPage = () => {
 
       
 
-      {/* 5. CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      {/* 5. CTA â€” unchanged bg-primary-900 */}
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>

@@ -108,18 +108,18 @@ export function AboutHero() {
           <div className="grid lg:grid-cols-2 gap-8 lg:p-12 lg:gap-16 items-stretch">
             
             {/* Left Side: Content */}
-            <div className="flex flex-col justify-center text-secondary-700 text-lg leading-relaxed text-justify sm:text-left h-full">
+            <div className="flex flex-col justify-center text-secondary-700 text-lg leading-relaxed text-justify h-full">
               <div className="mb-6 text-center sm:text-left">
                 <div className="section-label reveal inline-flex mb-4">About Us &ndash; Business Valuation Service in Chennai</div>
                 <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 mb-2 reveal">
                   Viswanathan R <span className="text-accent-500">Associates</span>
                 </h2>
                 <p className="text-xl md:text-2xl font-medium text-accent-500 mt-2">
-                  “Transforming financial insight into measurable business value.”
+                  Transforming financial insight into measurable business value.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 text-justify">
                 <p className="reveal">
                   At Viswanathan R Associates, we help businesses make better financial decisions, improve operational performance, manage risk, and create sustainable value.
                 </p>

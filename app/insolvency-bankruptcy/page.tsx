@@ -1,4 +1,4 @@
-import { Building2, Briefcase, FileCheck, Landmark, Users, ArrowRight, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
+﻿import { Building2, Briefcase, FileCheck, Landmark, Users, ArrowRight, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -69,7 +69,7 @@ const IBCPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/Insolvency & Bankruptcy.jpeg"
+            src="/vrassociates/images/independent/hero.png"
             alt="Law & Justice Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -93,7 +93,7 @@ const IBCPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-8 mb-12 lg:mb-16">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
 
           <div className="lg:w-1/2">
@@ -138,7 +138,7 @@ const IBCPage = () => {
       />
 
       {/* 4. OUR SERVICES (Texon Split Layout) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white">
+      <section className="py-12 md:py-8 lg:py-12 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
@@ -196,7 +196,7 @@ const IBCPage = () => {
       />
 
       {/* 5. CTA (Texon Banner) */}
-      <section id="contact" className="py-12 md:py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      <section id="contact" className="py-12 md:py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
 
         <div className="absolute inset-0 z-0">
           <Image

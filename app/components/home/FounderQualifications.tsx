@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { CheckCircle2, Award, ShieldCheck, GraduationCap } from 'lucide-react';
 
 

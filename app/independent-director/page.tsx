@@ -1,4 +1,4 @@
-import { Users, Target, ShieldCheck, Scale, AlertTriangle, Handshake, CheckCircle2, ArrowRight, Building2, Cpu, Plane, Mail, Phone, Linkedin, FileCheck } from 'lucide-react';
+﻿import { Users, Target, ShieldCheck, Scale, AlertTriangle, Handshake, CheckCircle2, ArrowRight, Building2, Cpu, Plane, Mail, Phone, Linkedin, FileCheck } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -96,7 +96,7 @@ const IndependentDirectorPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/images/independent/hero.png"
+            src="/vrassociates/Insolvency & Bankruptcy.jpeg"
             alt="Board Room Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -120,7 +120,7 @@ const IndependentDirectorPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-24 mb-32">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-8 mb-32">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
 
           <div className="lg:w-1/2">

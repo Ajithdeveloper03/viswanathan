@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { FileText, Phone } from 'lucide-react';
 import Image from 'next/image';
 import ModalTriggerButton from '@/app/components/ui/ModalTriggerButton';

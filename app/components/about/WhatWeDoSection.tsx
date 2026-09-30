@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { LineChart, Calculator, Settings, Shield, User, Scale, Briefcase, LayoutDashboard, Cog, ClipboardCheck, Lightbulb, Handshake, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -126,7 +126,7 @@ export function WhatWeDoSection() {
                 <h3 className="text-lg font-bold text-secondary-900 leading-tight pt-1">{service.title}</h3>
               </div>
               {service.description && (
-                <div className="flex-grow flex items-center mb-2">
+                <div className="flex-grow flex items-start mb-2">
                   <p className="text-secondary-600 text-sm leading-relaxed">
                     {service.description}
                   </p>

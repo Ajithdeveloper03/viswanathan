@@ -1,28 +1,8 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
 import { Eye, Settings2, ShieldCheck, Target, TrendingUp } from 'lucide-react';
 
 export function OurApproachSection() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach((el, i) => {
-              setTimeout(() => el.classList.add('visible'), i * 100);
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   const approaches = [
     {
@@ -53,17 +33,17 @@ export function OurApproachSection() {
   ];
 
   return (
-    <section ref={ref} className="relative bg-white py-8 lg:py-12 overflow-x-clip">
+    <section className="relative bg-white py-8 lg:py-12 overflow-x-clip">
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           <div className="lg:sticky lg:top-32">
-            <div className="reveal-left">
+            <div>
               <div className="section-label inline-flex mb-4">Methodology</div>
               <h2 className="section-title mb-6">Our <span className="text-accent-500">Approach</span></h2>
               <div className="text-secondary-600 text-lg leading-relaxed mb-8 space-y-4">
                 <p>
-                  Every organization has different goals, challenges, and operating realities. We begin by understanding the business—not just its financial statements.
+                  Every organization has different goals, challenges, and operating realities. We begin by understanding the businessâ€”not just its financial statements.
                 </p>
 
               </div>
@@ -83,7 +63,7 @@ export function OurApproachSection() {
 
           <div className="space-y-4">
             {approaches.map((item, index) => (
-              <div key={index} className="flex gap-4 card !p-5 hover:-translate-y-1 transition-transform reveal">
+              <div key={index} className="flex gap-4 card !p-5 hover:-translate-y-1 transition-transform">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-50 flex items-center justify-center border border-accent-100 mt-0.5">
                   <item.icon className="w-5 h-5 text-accent-500" />
                 </div>

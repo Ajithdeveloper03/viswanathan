@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React from 'react';
 import Image from 'next/image';
 
@@ -13,7 +13,7 @@ export interface WhyItem {
 interface WhyChooseUsSectionProps {
   heading: string;
   subheading?: string;
-  items: WhyItem[];          // ideally 4–8 items; split evenly left/right
+  items: WhyItem[];          // ideally 4â€“8 items; split evenly left/right
   imageUrl: string;
   imageAlt?: string;
   /** 'navy' uses subtle white translucency, 'gold' uses accent color gradients */
@@ -52,7 +52,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-primary-900 relative overflow-hidden">
+    <section className="py-8 lg:py-12 bg-primary-900 relative overflow-hidden">
       {/* Ambient glow orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[130px]" />
@@ -78,7 +78,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({
             {left.map((item, i) => <Card key={i} item={item} />)}
           </div>
 
-          {/* Center image — hidden on mobile */}
+          {/* Center image â€” hidden on mobile */}
           <div className="relative rounded-3xl overflow-hidden min-h-[320px] hidden lg:block shadow-2xl">
             <Image
               src={imageUrl}

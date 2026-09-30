@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { ArrowRight } from 'lucide-react';
 
 
@@ -54,7 +54,7 @@ export function AboutPreview() {
               <div className="section-label-dark reveal">About Us</div>
               <h2 className="text-[1.9rem] font-bold text-white leading-[1.1] mt-4 mb-8 reveal">
                 Viswanathan R Associates<br />
-                <span className="text-white/60 text-xl font-medium mt-2 block">“Transforming financial insight into measurable business value.”</span>
+                <span className="text-white/60 text-xl font-medium mt-2 block">â€œTransforming financial insight into measurable business value.â€</span>
               </h2>
 
               <div className="mb-10 reveal">
@@ -67,12 +67,12 @@ export function AboutPreview() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-12 md:py-16 lg:py-24 h-full">
+        <div className="flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-12 md:py-8 lg:py-12 h-full">
           <div className="w-full xl:pr-10">
             <div className="section-label reveal">Our Story</div>
             <div className="text-secondary-700 text-base md:text-lg leading-relaxed mb-10 reveal space-y-5 text-justify sm:text-left">
               <p>
-                Founded by Viswanathan Rajagopalan—a Finance and Corporate Secretary professional with over 30 years of global experience—our firm blends financial expertise, commercial insight, and governance knowledge.
+                Founded by Viswanathan Rajagopalanâ€”a Finance and Corporate Secretary professional with over 30 years of global experienceâ€”our firm blends financial expertise, commercial insight, and governance knowledge.
               </p>
               <p>
                 Our experience spans operationally complex industries like Manufacturing, Mining, Automotive, Healthcare, IT, Pharmaceuticals, and Logistics. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors">(View LinkedIn Profile)</a>

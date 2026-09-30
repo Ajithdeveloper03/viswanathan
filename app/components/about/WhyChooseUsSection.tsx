@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef, useEffect } from 'react';
 import { Award, Globe, Target, Users, Settings, ShieldCheck } from 'lucide-react';
@@ -70,7 +70,7 @@ export function WhyChooseUsSection() {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="section-label reveal inline-flex mb-4">Our Differentiators</div>
           <h2 className="section-title mb-6 reveal">
-            Why Choose Us for Business <br /> <span className="text-accent-500">Valuation Service in Chennai?</span>
+            Why <span className="text-accent-500">Choose Us</span>
           </h2>
           <p className="section-subtitle mx-auto reveal text-secondary-700">
             Clients choose Viswanathan R Associates for our combination of:
