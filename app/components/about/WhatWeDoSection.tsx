@@ -106,7 +106,6 @@ export function WhatWeDoSection() {
       icon: Handshake
     }
   ];
-
   return (
     <section ref={ref} className="relative bg-white py-8 lg:py-12">
       <div className="container-custom relative z-10">
@@ -117,18 +116,15 @@ export function WhatWeDoSection() {
             We support Promoters, Boards, Leadership teams, Investors, and Growing businesses through services including:
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-2xl border border-secondary-200 p-6 xl:p-8 flex flex-col text-left hover:shadow-soft hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 reveal h-full">
-              
               <div className="flex gap-4 items-start mb-4">
                 <div className="w-12 h-12 flex-shrink-0 rounded-xl border-2 border-secondary-100 flex items-center justify-center bg-secondary-50/50">
                   <service.icon className="w-6 h-6 text-accent-500" />
                 </div>
                 <h3 className="text-lg font-bold text-secondary-900 leading-tight pt-1">{service.title}</h3>
               </div>
-
               {service.description && (
                 <div className="flex-grow flex items-center mb-2">
                   <p className="text-secondary-600 text-sm leading-relaxed">
@@ -136,7 +132,7 @@ export function WhatWeDoSection() {
                   </p>
                 </div>
               )}
-              
+            
               {service.href && (
                 <Link href={service.href} className="inline-flex items-center gap-2 mt-auto pt-4 text-sm font-bold text-secondary-900 hover:text-accent-500 transition-colors group w-fit">
                   {service.linkText || "Learn More"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
