@@ -56,8 +56,6 @@ const IndustriesPage = () => {
           </h1>
         </div>
       </section>
-
-      {/* 2. INTRO BOX + IMAGE COLLAGE (white) */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
         <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-12 items-center justify-between border border-secondary-100">
           <div className="lg:w-1/2 relative z-10">
@@ -85,8 +83,6 @@ const IndustriesPage = () => {
           </div>
         </div>
       </div>
-
-      {/* 3. ECOSYSTEM REACH — dark bg, branching layout (keep original design) */}
       <section className="py-16 lg:py-24 bg-secondary-900 relative overflow-hidden">
         <style>{`
           @keyframes flowLine { to { stroke-dashoffset: -40; } }
