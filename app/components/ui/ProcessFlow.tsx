@@ -14,6 +14,7 @@ interface ProcessFlowProps {
   subtitle?: string;
   steps: ProcessStep[];
   bg?: string;
+  theme?: string;
 }
 
 const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldText, subtitle, steps, bg = 'bg-gray-50' }) => {
@@ -54,11 +55,11 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
         </div>
 
         {/* Steps Container */}
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-start gap-12 md:gap-0">
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-0">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
-              <div key={idx} className="flex-1 flex flex-col items-center text-center relative group px-4">
+              <div key={idx} className="w-full md:w-auto flex-1 flex flex-col items-center text-center relative group px-4">
 
                 {/* Connecting Line and Arrow to the next step */}
                 {idx < steps.length - 1 && (
@@ -73,7 +74,7 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
                 )}
 
                 {/* Icon Circle */}
-                <div className="w-28 h-28 rounded-full bg-primary-900 border-primary-900 flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-white group-hover:border-secondary-100 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.1)] border shadow-md">
+                <div className="w-28 h-28 mx-auto rounded-full bg-primary-900 border-primary-900 flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-white group-hover:border-secondary-100 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.1)] border shadow-md">
                   <Icon className="w-10 h-10 text-white group-hover:text-accent-500 transition-colors duration-500 group-hover:rotate-12" strokeWidth={2} />
                 </div>
 

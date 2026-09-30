@@ -27,6 +27,7 @@ const BusinessValuation = () => {
       title: "Corporate Transactions",
       desc: "M&A, demergers, private placements, buyback, preferential allotments, and management decision-making.",
       icon: <TrendingUp className="w-8 h-8" />,
+      image: "/vrassociates/Corporate Transactions.png",
       items: [
         "Mergers and acquisitions.",
         "Demergers and business reorganizations.",
@@ -41,6 +42,7 @@ const BusinessValuation = () => {
       title: "Mining",
       desc: "All types of mining, across every stage of the project lifecycle.",
       icon: <Layers className="w-8 h-8" />,
+      image: "/vrassociates/Mining.png",
       items: [
         "All types of mining, across every stage of the project lifecycle.",
       ]
@@ -49,6 +51,7 @@ const BusinessValuation = () => {
       title: "Intangible Assets & Intellectual Property",
       desc: "Brand, goodwill, patent, copyright, technology, and software valuation.",
       icon: <Gem className="w-8 h-8" />,
+      image: "/vrassociates/Intangible Assets.png",
       items: [
         "Intellectual property valuation.",
         "Brand valuation.",
@@ -62,6 +65,7 @@ const BusinessValuation = () => {
       title: "Regulatory & Cross-Border Valuation",
       desc: "Rule 11UA, FDI, ODI, cross-border investments, and PPP analysis.",
       icon: <Globe className="w-8 h-8" />,
+      image: "/vrassociates/Regulatory & Cross-Border Valuation.png",
       items: [
         "Valuation under Rule 11UA of the Income-tax Rules.",
         "Foreign Direct Investment (FDI) transactions.",
@@ -74,6 +78,7 @@ const BusinessValuation = () => {
       title: "Specialised Valuation",
       desc: "Startups, fundraising, ownership restructuring, financial reporting, and management planning.",
       icon: <BarChart className="w-8 h-8" />,
+      image: "/vrassociates/Specialised Valuation.png",
       items: [
         "Startup valuation.",
         "Mining business valuation at different stages of the lifecycle.",
@@ -86,6 +91,7 @@ const BusinessValuation = () => {
       title: "Securities & Financial Instruments",
       desc: "Equity, preference shares, debentures, and investments for regulatory, tax, and strategic purposes.",
       icon: <Scale className="w-8 h-8" />,
+      image: "/vrassociates/Securities & Financial Instruments.png",
       items: [
         "Valuation of equity shares.",
         "Valuation of preference shares.",
@@ -121,7 +127,7 @@ const BusinessValuation = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2000"
+            src="/vrassociates/Business Valuation.jpeg"
             alt="Business Valuation"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -230,7 +236,7 @@ const BusinessValuation = () => {
       <WhyChooseUsSection
         heading="Why Clients Choose Us"
         subheading="Our Advantage"
-        imageUrl="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200"
+        imageUrl="/vrassociates/Why Clients Choose Us 1.png"
         imageAlt="Valuation Professional"
         items={whyChooseUsSection}
       />

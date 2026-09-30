@@ -23,6 +23,7 @@ interface GSAPScrollSectionProps {
   subtitle?: string;
   items: ScrollItem[];
   bg?: string;
+  theme?: string;
 }
 
 const defaultImages = [

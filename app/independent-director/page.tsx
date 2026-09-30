@@ -12,6 +12,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Board & Strategy",
       icon: Target,
+      image: "/vrassociates/images/independent/corporate.png",
       items: [
         "Provide independent, unbiased views on strategy, expansion, and major decisions",
         "Challenge assumptions constructively and bring an outside perspective",
@@ -21,6 +22,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Audit Committee & Finance",
       icon: ShieldCheck,
+      image: "/vrassociates/images/independent/financial.png",
       items: [
         "Review financial statements, disclosures, and audit findings",
         "Evaluate internal financial controls, internal audit, and statutory audit quality",
@@ -30,6 +32,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Risk Management",
       icon: AlertTriangle,
+      image: "/vrassociates/images/independent/operational.png",
       items: [
         "Assess enterprise risks, including credit, operational, technology, and compliance risks",
         "Review the effectiveness of risk frameworks and controls",
@@ -39,6 +42,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Corporate Governance",
       icon: Scale,
+      image: "/vrassociates/images/independent/Personal Guarantors.png",
       items: [
         "Uphold governance standards and board processes",
         "Review related-party transactions and conflict-of-interest situations",
@@ -48,6 +52,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Stakeholder Protection",
       icon: Handshake,
+      image: "/vrassociates/images/independent/voluntary.png",
       items: [
         "Represent the interests of minority shareholders, lenders, and other stakeholders",
         "Support fair, transparent, and ethical decision-making"
@@ -56,6 +61,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Committee Participation",
       icon: Users,
+      image: "/vrassociates/images/independent/services.png",
       items: [
         "Audit Committee",
         "Nomination & Remuneration Committee",
@@ -90,7 +96,7 @@ const IndependentDirectorPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
+            src="/vrassociates/images/independent/hero.png"
             alt="Board Room Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"

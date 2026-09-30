@@ -3,22 +3,22 @@ import { Star, ChevronRight } from 'lucide-react';
 
 const testimonialsData = [
   {
-    text: "I have been investing in their Fixed Deposits for 3 years. The returns are excellent and the staff is always helpful and transparent.",
-    name: "Rajesh Kumar",
-    role: "RETIRED TEACHER, COIMBATORE",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    text: "Their precise business valuation services were instrumental during our recent merger. The team's deep industry knowledge and professional approach gave us immense confidence.",
+    name: "Arun Prakash",
+    role: "MANAGING DIRECTOR, CHENNAI",
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=200"
   },
   {
-    text: "SGNL's savings scheme helped me start my tailoring unit with confidence. The team guided me through every step with patience and professionalism.",
-    name: "Lakshmi Devi",
-    role: "WOMEN ENTREPRENEUR, MADURAI",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    text: "VRA's cost optimization strategies transformed our manufacturing operations. They identified critical inefficiencies and helped us implement actionable, sustainable solutions.",
+    name: "Priya Natarajan",
+    role: "CFO, COIMBATORE",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
   },
   {
-    text: "The financial advisory services have been a game-changer for our family business. Highly recommended for their trust and reliability.",
-    name: "Suresh Pillai",
-    role: "BUSINESS OWNER, CHENNAI",
-    image: "https://randomuser.me/api/portraits/men/78.jpg"
+    text: "The guidance we received on corporate governance and compliance was exceptional. They act not just as consultants, but as true strategic partners for our business.",
+    name: "Karthik Subramanian",
+    role: "FOUNDER & CEO, BENGALURU",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
   }
 ];
 
@@ -40,14 +40,14 @@ export function Testimonials() {
   };
 
   return (
-    <section className="relative w-full border-t-[8px] border-[#1F2C50] bg-white overflow-hidden py-12 lg:py-16">
+    <section className="relative w-full bg-white overflow-hidden py-12 lg:py-16">
       
       {/* Background Image with Curved Left Edge */}
       <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full z-0 hidden lg:block">
          <div className="absolute inset-0 bg-gray-200">
            <img 
-              src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=2000" 
-              alt="Background" 
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" 
+              alt="Corporate Background" 
               className="w-full h-full object-cover grayscale opacity-25 mix-blend-multiply"
             />
          </div>
@@ -68,10 +68,10 @@ export function Testimonials() {
                 Testimonials
               </span>
               <h2 className="text-4xl lg:text-[42px] font-extrabold text-[#0f172a] leading-[1.1] mb-6">
-                Trusted by Members Across Tamil Nadu
+                Trusted by Industry Leaders
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed">
-                Hear from members who have chosen SGNL for their savings, investment and insurance needs.
+                Discover how our strategic financial advisory and valuation services have empowered businesses to achieve sustainable growth and operational excellence.
               </p>
             </div>
             
@@ -81,7 +81,7 @@ export function Testimonials() {
                {/* Left Arrow */}
                <button 
                  onClick={scrollPrev} 
-                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-xl flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer opacity-0 md:opacity-100"
+                 className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.1)] flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer"
                >
                   <ChevronRight className="w-6 h-6 text-gray-700 rotate-180" strokeWidth={1.5} />
                </button>
@@ -94,7 +94,7 @@ export function Testimonials() {
                   {testimonialsData.map((testimonial, i) => (
                     <div 
                       key={i} 
-                      className="snap-start shrink-0 w-full md:w-[calc(50%-12px)] bg-white rounded-[40px] p-8 shadow-[0_12px_40px_rgba(0,0,0,0.06)] flex flex-col min-h-[260px] border border-gray-50"
+                      className="snap-start shrink-0 w-full md:w-[calc(50%-12px)] bg-white rounded-[40px] px-12 py-8 md:p-8 shadow-[0_12px_40px_rgba(0,0,0,0.06)] flex flex-col min-h-[260px] border border-gray-50"
                     >
                        {/* Stars */}
                        <div className="flex items-center gap-1.5 mb-5">
@@ -127,7 +127,7 @@ export function Testimonials() {
                {/* Right Arrow */}
                <button 
                  onClick={scrollNext} 
-                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-xl flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer opacity-0 md:opacity-100"
+                 className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.1)] flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer"
                >
                   <ChevronRight className="w-6 h-6 text-gray-700" strokeWidth={1.5} />
                </button>

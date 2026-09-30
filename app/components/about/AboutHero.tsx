@@ -51,8 +51,11 @@ export function AboutHero() {
           />
         </div>
 
-        {/* Light overlay for contrast */}
-        <div className="absolute inset-0 pointer-events-none z-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 40%, transparent 60%)' }} />
+        {/* Overlay - Dark on mobile, white gradient on desktop */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 bg-slate-900/60 sm:hidden" />
+          <div className="absolute inset-0 hidden sm:block" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 40%, transparent 60%)' }} />
+        </div>
 
         {/* Grid overlay */}
         <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none"
@@ -75,12 +78,12 @@ export function AboutHero() {
 
             {/* Main headline */}
             <div className="mb-6 w-full">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-secondary-900 leading-[1.1] drop-shadow-md text-center sm:text-left reveal">
-                Building Sustainable <span className="gradient-text block mt-2">Business Value</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white sm:text-secondary-900 leading-[1.1] drop-shadow-md text-center sm:text-left reveal">
+                Building Sustainable <span className="text-accent-400 sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-primary-700 sm:to-primary-900 block mt-2">Business Value</span>
               </h1>
             </div>
 
-            <p className="text-lg sm:text-xl text-secondary-600 font-medium max-w-xl mb-8 lg:mb-10 leading-relaxed text-center sm:text-left px-4 sm:px-0 reveal">
+            <p className="text-lg sm:text-xl text-gray-200 sm:text-secondary-600 font-medium max-w-xl mb-8 lg:mb-10 leading-relaxed text-center sm:text-left px-4 sm:px-0 reveal">
               A trusted partner providing end-to-end corporate finance, cost management, and governance advisory services for global enterprises.
             </p>
             
@@ -89,9 +92,9 @@ export function AboutHero() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer opacity-70 hover:opacity-100 transition-opacity" onClick={scrollToContent}>
-          <span className="text-xs font-semibold tracking-widest uppercase text-secondary-600 mb-2">Read More</span>
-          <div className="w-8 h-12 rounded-full border-2 border-secondary-400 flex items-start justify-center p-1">
-            <ArrowDown className="w-4 h-4 text-secondary-600 animate-bounce mt-1" />
+          <span className="text-xs font-semibold tracking-widest uppercase text-white sm:text-secondary-600 mb-2">Read More</span>
+          <div className="w-8 h-12 rounded-full border-2 border-white sm:border-secondary-400 flex items-start justify-center p-1">
+            <ArrowDown className="w-4 h-4 text-white sm:text-secondary-600 animate-bounce mt-1" />
           </div>
         </div>
       </section>
@@ -144,7 +147,7 @@ export function AboutHero() {
             <div className="reveal-scale h-full min-h-[250px] lg:h-[400px] lg:min-h-full">
               <div className="relative w-full h-full rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200" 
+                  src="/vrassociates/About Us – Business Valuation Service in Chennai.png" 
                   alt="Viswanathan R Associates Team" 
                   fill
                   className="object-cover"

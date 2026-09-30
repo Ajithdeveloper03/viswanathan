@@ -7,11 +7,10 @@ import { useEffect, useState } from 'react';
 import { companyInfo, navigation } from '@/app/lib/siteData';
 
 const words = ['Finance.', 'Transformation.', 'Value Creation.'];
-const wordColors = ['text-secondary-900', 'text-primary-600', 'text-accent-600'];
+const wordColors = ['text-white sm:text-secondary-900', 'text-primary-300 sm:text-primary-600', 'text-accent-400 sm:text-accent-600'];
 
 const bannerImages = [
   '/vrassociates/banner1.png',
-  '/vrassociates/banner2.png',
   '/vrassociates/banner3.png'
 ];
 
@@ -69,8 +68,11 @@ const Hero = () => {
         </div>
       ))}
 
-      {/* Light overlay for contrast */}
-      <div className="absolute inset-0 pointer-events-none z-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 30%, transparent 45%)' }} />
+      {/* Overlay - Dark on mobile, white gradient on desktop */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 bg-slate-900/60 sm:hidden" />
+        <div className="absolute inset-0 hidden sm:block" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 30%, transparent 45%)' }} />
+      </div>
 
       {/* Grid overlay */}
       <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none"
@@ -97,7 +99,7 @@ const Hero = () => {
 
           {/* Main headline */}
           <div className="mb-6 w-full">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary-900 leading-[1.1] animate-fade-in-up drop-shadow-md text-center sm:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white sm:text-secondary-900 leading-[1.1] animate-fade-in-up drop-shadow-md text-center sm:text-left">
               Business
             </h1>
             {/* Animated word cycle */}
@@ -127,7 +129,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-base sm:text-lg text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200 text-center sm:text-left px-4 sm:px-0">
+          <p className="text-base sm:text-lg text-gray-200 sm:text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200 text-center sm:text-left px-4 sm:px-0">
             {companyInfo.description} With 30+ years of global experience delivering measurable results for businesses, investors, and corporate leaders.
           </p>
 
@@ -145,7 +147,7 @@ const Hero = () => {
           {/* Credentials */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start gap-x-6 gap-y-3 mt-4 lg:mt-6 animate-fade-in animate-delay-500">
             {['IBBI Registered Valuer', 'IBBI Insolvency Professional', 'Independent Director'].map((cred) => (
-              <div key={cred} className="flex items-center justify-center sm:justify-start gap-2 text-secondary-600 text-sm font-medium">
+              <div key={cred} className="flex items-center justify-center sm:justify-start gap-2 text-gray-200 sm:text-secondary-600 text-sm font-medium">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500 shadow-[0_0_10px_rgba(197,154,27,0.3)]" />
                 {cred}
               </div>

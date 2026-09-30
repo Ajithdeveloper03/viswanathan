@@ -71,7 +71,7 @@ export function OurApproachSection() {
               <div className="hidden lg:block">
                 <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" 
+                    src="/vrassociates/Our Approach.png" 
                     alt="Team collaboration" 
                     className="w-full h-full object-cover"
                   />

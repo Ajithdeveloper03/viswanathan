@@ -9,19 +9,19 @@ const testimonials = [
     quote: "Every industry possesses unique cost drivers and operational variables. They bring deep, specialized costing expertise across a vast spectrum of sectors, ensuring our financial frameworks are perfectly aligned with our specific business realities.",
     name: "Viswanathan R.",
     title: "Senior Partner",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
+    image: "/vrassociates/Trusted by Industry Leaders 1.png",
   },
   {
     quote: "Their meticulous approach to cost management audit has completely transformed how we view our operational efficiencies. We are now able to pinpoint exact wastage areas and streamline everything.",
     name: "Sarah L.",
     title: "Operations Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800",
+    image: "/vrassociates/Trusted by Industry Leaders 2.png",
   },
   {
     quote: "With their deep dive into our manufacturing costs, we identified key pricing strategies that significantly boosted our margins without alienating our core customer base.",
     name: "David M.",
     title: "Chief Financial Officer",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800",
+    image: "/vrassociates/Trusted by Industry Leaders 3.png",
   }
 ];
 
@@ -67,7 +67,7 @@ const TestimonialCarousel = () => {
                   src={current.image} 
                   alt={current.name} 
                   fill 
-                  className="object-cover animate-fade-in"
+                  className="object-cover object-top animate-fade-in"
                 />
                 
                 {/* Decorative Frosted Triangles (as seen in the design) */}
@@ -80,7 +80,7 @@ const TestimonialCarousel = () => {
             </div>
 
             {/* Right: Content Area */}
-            <div className="lg:col-span-7 p-8 lg:p-16 lg:pl-0 flex flex-col justify-center">
+            <div className="lg:col-span-7 p-8 pb-48 lg:p-16 lg:pl-0 flex flex-col justify-center">
               
               <Quote className="w-16 h-16 text-white/10 mb-8" />
               
@@ -112,7 +112,7 @@ const TestimonialCarousel = () => {
                     className={`relative w-14 h-14 rounded-xl overflow-hidden border-4 border-[#f8f9fa] shadow-md transition-all duration-300 ${idx === currentIndex ? 'scale-110 z-10 ring-2 ring-accent-500 ring-offset-2 ring-offset-[#f8f9fa]' : 'opacity-60 scale-90 hover:opacity-100 cursor-pointer'}`}
                     onClick={() => setCurrentIndex(idx)}
                   >
-                    <Image src={t.image} alt={t.name} fill className="object-cover" />
+                    <Image src={t.image} alt={t.name} fill className="object-cover object-top" />
                   </div>
                 ))}
              </div>
