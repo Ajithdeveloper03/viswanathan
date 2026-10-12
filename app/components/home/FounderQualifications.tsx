@@ -97,8 +97,8 @@ export function FounderQualifications() {
           {/* Left Side: Image */}
           <div className="relative w-full md:w-[30%] min-h-[140px] md:min-h-[160px] shrink-0 overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000" 
-              alt="Academic Excellence Left" 
+              src="/vrassociates/Achievement 1.png" 
+              alt="Academic Achievement Medals" 
               className="absolute inset-0 w-full h-full object-cover object-center scale-105" 
             />
             {/* Mingle effect overlay */}
@@ -136,8 +136,8 @@ export function FounderQualifications() {
           <div className="relative w-full md:w-[30%] min-h-[140px] md:min-h-[160px] shrink-0 flex items-center justify-center overflow-hidden">
             {/* Gold Medal image on the right */}
             <img 
-              src="/vrassociates/Achievement.jpg" 
-              alt="Gold Medal Academic Excellence" 
+              src="/vrassociates/Achievement 2.png" 
+              alt="Academic Achievement Trophies" 
               className="absolute inset-0 w-full h-full object-cover object-center scale-105" 
             />
             {/* Mingle effect overlay */}

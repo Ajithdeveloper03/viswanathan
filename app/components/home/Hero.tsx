@@ -10,8 +10,9 @@ const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-white sm:text-secondary-900', 'text-primary-300 sm:text-primary-600', 'text-accent-400 sm:text-accent-600'];
 
 const bannerImages = [
-  '/vrassociates/banner1.png',
-  '/vrassociates/banner3.png'
+  '/vrassociates/banner 1.png',
+  '/vrassociates/about us banner.png',
+  '/vrassociates/banner 3.png'
 ];
 
 const heroServices = navigation.main.find(item => item.name === 'Our Services')?.submenu || [];
