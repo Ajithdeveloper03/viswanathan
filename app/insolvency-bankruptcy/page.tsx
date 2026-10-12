@@ -1,4 +1,4 @@
-﻿import { Building2, Briefcase, FileCheck, Landmark, Users, ArrowRight, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
+import { Building2, Briefcase, FileCheck, Landmark, Users, ArrowRight, ShieldCheck, Mail, Phone, Linkedin, CheckCircle2 } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -87,7 +87,7 @@ const IBCPage = () => {
             <span className="text-accent-400">Insolvency & Bankruptcy Code</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Insolvency & Bankruptcy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
+            Insolvency & Bankruptcy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services (IBC)</span>
           </h1>
         </div>
       </section>
@@ -98,7 +98,7 @@ const IBCPage = () => {
 
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-              Registered Professional
+              IBBI Registered Insolvency Professional
             </div>
             <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
               Transparency. <br />
@@ -114,10 +114,10 @@ const IBCPage = () => {
 
           <div className="lg:w-1/2">
             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-              As a registered Insolvency Professional, I support creditors, operational creditors, promoters, guarantors, and companies under Sections 7, 9, 10, 59 and 95 of the IBC with fairness to all stakeholders.
+              As a registered Insolvency Professional, I support creditors, operational creditors, promoters, guarantors, and companies under Sections 7, 9, 10, 59 and 95 of the Insolvency and Bankruptcy Code, 2016 (IBC), with transparency, timely execution, and fairness to all stakeholders.
             </p>
             <p className="text-secondary-500 leading-relaxed pl-6">
-              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation. Our practice covers the full spectrum of insolvency initiations and voluntary closures, ensuring objective and highly structured resolution services.
+              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation, having successfully completed 16 comprehensive assignments across various categories of the Insolvency and Bankruptcy Code (IBC), 2016. Our practice covers the full spectrum of insolvency initiations and voluntary closures, ensuring that both creditors and corporate debtors receive objective, strictly regulated, and highly structured resolution services.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ const IBCPage = () => {
                   Comprehensive Support
                 </div>
                 <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
-                  Our Resolution <br /><span className="text-secondary-400 font-light">Services</span>
+                  Our Services <br /><span className="text-secondary-400 font-light">under IBC</span>
                 </h2>
               </div>
 

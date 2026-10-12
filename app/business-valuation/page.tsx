@@ -39,44 +39,38 @@ const BusinessValuation = () => {
     },
     {
       title: "Mining",
-      desc: "All types of mining across every stage of the project lifecycle.",
+      desc: "All types of mining, across every stage of the project lifecycle",
       icon: <Layers className="w-8 h-8" />,
       image: "/vrassociates/Mining.png",
       items: [
-        "Pre-feasibility, exploration, and development stages.",
-        "Operating mines, reserve & resource estimation (JORC / NI 43-101 / UNFC standards).",
-        "Mining leases, mineral concessions, and extraction rights.",
-        "Mining machinery, processing facilities, and surface infrastructure.",
-        "Ores & precious stones: Iron ore, bauxite, coal, limestone, gold, and diamonds.",
-        "Environmental liabilities, mine closure, and rehabilitation provisions.",
+        "All types of mining, across every stage of the project lifecycle"
       ]
     },
     {
-      title: "Intangible Assets & Intellectual Property",
+      title: "Intangible Assets and Intellectual Property",
       desc: "Brand, goodwill, patent, copyright, technology, and software valuation.",
       icon: <Gem className="w-8 h-8" />,
       image: "/vrassociates/Intangible Assets.png",
       items: [
         "Intellectual property valuation.",
-        "Brand and trademark valuation using relief-from-royalty and excess earnings methods.",
-        "Goodwill valuation and Purchase Price Allocation (PPA) under Ind AS 103 / IFRS 3.",
-        "Patent and proprietary technology valuation.",
-        "Copyright and software valuation.",
-        "Customer contracts, customer relationships, and identifiable intangible assets.",
+        "Brand valuation.",
+        "Goodwill valuation.",
+        "Patent valuation.",
+        "Copyright valuation.",
+        "Valuation of technology, software, and other identifiable intangible assets."
       ]
     },
     {
-      title: "Regulatory & Cross-Border Valuation",
+      title: "Regulatory and Cross-Border Valuation",
       desc: "Rule 11UA, FDI, ODI, cross-border investments, and PPP analysis.",
       icon: <Globe className="w-8 h-8" />,
       image: "/vrassociates/Regulatory & Cross-Border Valuation.png",
       items: [
         "Valuation under Rule 11UA of the Income-tax Rules.",
-        "Foreign Direct Investment (FDI) transactions under FEMA / RBI regulations.",
+        "Foreign Direct Investment (FDI) transactions.",
         "Overseas Direct Investment (ODI) transactions.",
         "Valuation related to cross-border investments and corporate transactions.",
-        "Valuation under Companies Act, 2013 and SEBI Listing Regulations.",
-        "Purchasing Power Parity (PPP) analysis, country risk premiums, and cross-border currency adjustments.",
+        "Purchasing Power Parity (PPP) analysis, where relevant to business or investment assessment."
       ]
     },
     {
@@ -85,26 +79,24 @@ const BusinessValuation = () => {
       icon: <BarChart className="w-8 h-8" />,
       image: "/vrassociates/Specialised Valuation.png",
       items: [
-        "Startup valuation: DCF, First Chicago, Scorecard, and venture capital methods.",
+        "Startup valuation.",
         "Mining business valuation at different stages of the lifecycle.",
-        "Valuation for strategic investment and fundraising rounds.",
-        "Valuation for ownership restructuring, family settlement, and succession planning.",
-        "Valuation for financial reporting, impairment testing, and management planning.",
-        "Distressed assets and special situations valuation.",
+        "Valuation for strategic investment and fundraising.",
+        "Valuation for ownership restructuring and succession planning.",
+        "Valuation for financial reporting and management planning."
       ]
     },
     {
-      title: "Securities & Financial Instruments",
+      title: "Securities and Financial Instruments",
       desc: "Equity, preference shares, debentures, and investments for regulatory, tax, and strategic purposes.",
       icon: <Scale className="w-8 h-8" />,
       image: "/vrassociates/Securities & Financial Instruments.png",
       items: [
-        "Valuation of equity shares (common stock and differential voting rights).",
-        "Valuation of preference shares (CCPS, OCPS, and redeemable preference shares).",
-        "Valuation of all types of debentures (CCD, OCD, and NCD).",
-        "Valuation of Employee Stock Option Plans (ESOPs) using Black-Scholes and Binomial models.",
-        "Valuation of investments and hybrid financial instruments.",
-        "Valuation for regulatory, tax, accounting, transaction, and strategic purposes.",
+        "Valuation of equity shares.",
+        "Valuation of preference shares.",
+        "Valuation of all types of debentures.",
+        "Valuation of investments.",
+        "Valuation for regulatory, tax, accounting, transaction, and strategic purposes."
       ]
     },
   ];

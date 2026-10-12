@@ -29,51 +29,82 @@ export function WhatWeDoSection() {
   const services = [
     {
       title: "Business Valuation",
-      description: "Business valuation service in India or Overseas with 1,000+ valuations covering wide range of businesses and valuation purposes.",
-      linkText: "Learn More",
+      description: "Business valuation and enterprise valuation with 1,000+ valuations covering wide range of businesses and valuation purposes.",
+      linkText: "Valuation Services",
       href: "/business-valuation",
       icon: LineChart
     },
     {
       title: "Cost Optimization",
       description: "Cost Optimization through Cost Drivers, Cost Reporting and profitability analysis.",
-      linkText: "Learn More",
+      linkText: "Costing Services",
       href: "/cost-management-audit",
       icon: Calculator
     },
     {
       title: "Costing System Design",
       description: "Costing system Design and Setup, Cost Elements and Cost Drivers.",
-      linkText: "Learn More",
+      linkText: "Costing Services",
       href: "/cost-management-audit",
       icon: Settings
     },
     {
       title: "Internal Audit",
       description: "Internal Audit, controls, risk management, and business process improvement.",
-      linkText: "Learn More",
+      linkText: "Internal Audit Services",
       href: "/internal-audit",
       icon: Shield
     },
     {
       title: "Independent Director",
-      description: "Providing objective governance, strategic oversight, and board-level advisory.",
-      linkText: "Learn More",
+      description: "Independent Director appointments and board advisory services.",
+      linkText: "Independent Director Services",
       href: "/independent-director",
       icon: User
     },
     {
       title: "Insolvency Advisory",
       description: "Insolvency, restructuring, and resolution-related advisory.",
-      linkText: "Learn More",
+      linkText: "IBC Services",
       href: "/insolvency-bankruptcy",
       icon: Scale
+    },
+    {
+      title: "Virtual CFO",
+      description: "Virtual CFO and Financial Management support.",
+      linkText: "",
+      icon: LineChart
+    },
+    {
+      title: "Financial Planning & MIS",
+      description: "Financial planning, budgeting, management reporting, and business performance dashboards.",
+      linkText: "",
+      icon: ClipboardCheck
+    },
+    {
+      title: "SOP & Automation",
+      description: "Standard Operating Procedure implementation and business process automation.",
+      linkText: "",
+      icon: Settings
     },
     {
       title: "Corporate Governance",
       description: "Corporate governance, company secretarial matters, and statutory compliance.",
       linkText: "",
-      icon: ClipboardCheck
+      icon: Shield
+    },
+    {
+      title: "Strategic Investment Analysis",
+      description: "Strategic investment analysis and business planning.",
+      linkText: "",
+      icon: Calculator
+    },
+    {
+      title: "M&A, Funding & Strategic Advisory",
+      description: "Mergers and Acquisitions, Private Equity, Venture Capital, Debt Funding, within and outside India, through Strategic Business Partner.",
+      linkText: "Restructuring & Proposals",
+      href: "/business-proposals",
+      icon: Scale
     }
   ];
   return (

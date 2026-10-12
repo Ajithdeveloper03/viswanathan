@@ -119,13 +119,13 @@ export function AboutHero() {
                   At Viswanathan R Associates, we help businesses make better financial decisions, improve operational performance, manage risk, and create sustainable value.
                 </p>
                 <p className="reveal">
-                  Founded by Viswanathan Rajagopalan, a Finance, Cost Management, Internal Audit, Governance Advisory, Business Restructuring and Corporate Secretary professional, with more than 30 years of cross-functional and international experience, our firm combines financial expertise, commercial insight, Governance knowledge, and practical business understanding.
+                  Founded by Viswanathan Rajagopalan, a Finance, Cost Management and Corporate Secretary professional, with more than 30 years of cross-functional and international experience, our firm combines financial expertise, commercial insight, Governance knowledge, and practical business understanding.
                 </p>
                 <p className="reveal">
-                  Our professional experience spans key industries like Manufacturing, Mining, Automotive, Healthcare and Pharma-Retail, Manufacturing & Hospitals, Information Technology, Logistics, Airlines, FMCG, Service, Robotics, SaaS, and FinTech.
+                  Our professional experience spans Manufacturing, Mining, Automotive, Healthcare, Information Technology, Pharmaceuticals, Logistics, and other operationally complex industries.
                 </p>
                 <p className="reveal">
-                  Our international experience includes India, UAE, United States, Kuwait, Egypt, Liberia, and other business environments. This enables us to understand the financial, operational, regulatory, and cultural factors that influence business performance across markets.
+                  Our international experience includes India, Kuwait, the UAE, Egypt, Liberia, and other business environments. This enables us to understand the financial, operational, regulatory, and cultural factors that influence business performance across markets.
                 </p>
                 <p className="reveal">
                   We believe Finance should go beyond accounting and reporting. It should provide clear insight, support confident decision-making, and help organizations improve profitability. Our approach is therefore practical, analytical, and focused on measurable business outcomes.

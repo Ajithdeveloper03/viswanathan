@@ -1,4 +1,4 @@
-﻿import { Layers, Briefcase, CheckCircle2, TrendingDown, PieChart, Tag, ClipboardCheck, Settings, ShieldCheck, Mail, Phone, Linkedin, Factory, Cog, Monitor, BarChart } from 'lucide-react';
+import { Layers, Briefcase, CheckCircle2, TrendingDown, PieChart, Tag, ClipboardCheck, Settings, ShieldCheck, Mail, Phone, Linkedin, Factory, Cog, Monitor, BarChart } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -112,10 +112,10 @@ const CostManagementPage = () => {
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="hover:text-accent-400 transition-colors duration-300 cursor-pointer">Services</span>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
-            <span className="text-accent-400">Cost Management</span>
+            <span className="text-accent-400">Costing Setup Implementation & Audit</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Cost Management <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
+            Costing Setup Implementation <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">& Audit</span>
           </h1>
         </div>
       </section>
