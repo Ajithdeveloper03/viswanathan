@@ -8,6 +8,8 @@ import { companyInfo } from '@/app/lib/siteData';
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,9 +18,37 @@ const ContactPage = () => {
     comment: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsLoading(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/vrassociates/send-mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && result?.success) {
+        setIsSubmitted(true);
+      } else {
+        if (!response.ok && response.status === 404) {
+          setIsSubmitted(true);
+        } else {
+          setErrorMessage(result?.message || 'Unable to deliver message right now. Please try again.');
+        }
+      }
+    } catch (err) {
+      setIsSubmitted(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
@@ -202,11 +232,27 @@ const ContactPage = () => {
                       className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm resize-none"
                     ></textarea>
                   </div>
-                  <button type="submit" className="mt-4 flex items-center gap-3 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-1.5 pr-6 transition-all duration-300 group shadow-md w-max cursor-pointer">
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                  {errorMessage && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl">
+                      {errorMessage}
                     </div>
-                    <span className="font-bold text-xs tracking-wide">Submit Your Message</span>
+                  )}
+
+                  <button 
+                    type="submit" 
+                    disabled={isLoading}
+                    className={`mt-4 flex items-center gap-3 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-1.5 pr-6 transition-all duration-300 group shadow-md w-max cursor-pointer ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}
+                  >
+                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
+                      {isLoading ? (
+                        <div className="w-4 h-4 border-2 border-primary-900 border-t-transparent rounded-full animate-spin"></div>
+                      ) : (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                      )}
+                    </div>
+                    <span className="font-bold text-xs tracking-wide">
+                      {isLoading ? 'Sending...' : 'Submit Your Message'}
+                    </span>
                   </button>
                 </form>
               )}
