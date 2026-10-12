@@ -1,19 +1,23 @@
-﻿'use client';
+'use client';
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
   { value: 30, suffix: '+', label: 'Years of Experience', isNumeric: true },
   { value: 1000, suffix: '+', label: 'Valuations Completed', isNumeric: true },
-  { value: 25, suffix: '+', label: 'Industries Served', isNumeric: true },
+  { value: 25, suffix: '+', label: 'Industrial Sectors Served', isNumeric: true },
   { value: 100, suffix: '%', label: 'Client Commitment', isNumeric: true },
 ];
 
-const badges = [
-  { short: 'IBBI', label: 'Registered Valuer' },
-  { short: 'IP', label: 'Insolvency Professional' },
-  { short: 'CMA', label: 'Cost & Mgmt Accountant' },
-  { short: 'ID', label: 'Independent Director' },
+const credentials = [
+  'Business Valuation',
+  'Costing System Setup & Cost Audit',
+  'Internal Audit',
+  'Independent Director',
+  'Business Restructuring &Debt Funding & SEBI Listing',
+  'Insolvency & Bankruptcy (IBC)',
 ];
+
+const globalExperience = ['India', 'UAE', 'U.S.', 'Kuwait', 'Egypt', 'Liberia'];
 
 function CountUp({ target, suffix, isVisible }: { target: number; suffix: string; isVisible: boolean }) {
   const [count, setCount] = useState(0);
@@ -105,31 +109,29 @@ export function TrustIndicators() {
           ))}
         </div>
 
-        <div className="border-t border-secondary-100 pt-4">
-          <p className="text-center text-secondary-500 text-[9px] sm:text-[10px] tracking-[0.2em] uppercase mb-3">
+        <div className="border-t border-secondary-100 pt-5">
+          <p className="text-center text-secondary-500 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase mb-3">
             Professional Credentials
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-            {badges.map((badge, i) => (
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-3">
+            {credentials.map((cred, i) => (
               <div
                 key={i}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-secondary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-300 shadow-sm group"
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-secondary-200 hover:border-primary-400 hover:bg-primary-50 transition-all duration-300 shadow-sm"
               >
-                <span className="text-primary-700 font-bold text-[11px] sm:text-xs group-hover:text-primary-600 transition-colors">{badge.short}</span>
-                <span className="text-secondary-600 text-[10px] sm:text-[11px]">{badge.label}</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
+                <span className="text-secondary-800 text-[11px] sm:text-xs font-semibold">{cred}</span>
               </div>
             ))}
+          </div>
 
-            <div className="hidden md:flex items-center gap-2 ml-2 pl-3 border-l border-secondary-200">
-              <span className="text-secondary-500 text-[9px] tracking-widest uppercase">Global Experience</span>
-              <div className="flex gap-1">
-                {['IN', 'ME', 'SEA'].map((region) => (
-                  <span key={region} className="text-[9px] px-1.5 py-0.5 rounded bg-secondary-100 text-secondary-600 font-mono">
-                    {region}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-center">
+            <span className="text-secondary-600 text-xs font-bold tracking-wide">
+              Global Experience:
+            </span>
+            <span className="text-secondary-700 text-xs font-medium">
+              India; UAE; U.S.; Kuwait; Egypt; Liberia;
+            </span>
           </div>
         </div>
       </div>

@@ -1,9 +1,7 @@
-﻿'use client';
+'use client';
 import { ArrowRight, LucideIcon } from 'lucide-react';
-
-
-
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 import { services } from '@/app/lib/siteData';
 
@@ -126,12 +124,12 @@ export function ServicesGrid() {
                 Explore our all<br />expertises we offers
               </h3>
               
-              <button className="relative z-10 inline-flex items-center gap-3 px-4 py-2 bg-secondary-50 rounded border border-secondary-200 hover:bg-secondary-100 transition-colors group/btn">
+              <Link href="/business-valuation" className="relative z-10 inline-flex items-center gap-3 px-4 py-2 bg-secondary-50 rounded border border-secondary-200 hover:bg-secondary-100 transition-colors group/btn">
                 <span className="text-[11px] font-bold text-secondary-900">View All Services</span>
                 <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
                   <ArrowRight className="w-3 h-3 text-white" />
                 </div>
-              </button>
+              </Link>
             </div>
             
           </div>

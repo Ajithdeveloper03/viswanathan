@@ -1,4 +1,4 @@
-﻿import {
+import {
   Building2, Briefcase, Globe, Users, HeartHandshake, UserCheck,
   ArrowRight, BarChart, Phone, Search, FileText, FileSpreadsheet,
   Gem, ShieldCheck, Layers, Scale, TrendingUp
@@ -25,7 +25,6 @@ const BusinessValuation = () => {
   const services = [
     {
       title: "Corporate Transactions",
-      desc: "M&A, demergers, private placements, buyback, preferential allotments, and management decision-making.",
       icon: <TrendingUp className="w-8 h-8" />,
       image: "/vrassociates/Corporate Transactions.png",
       items: [
@@ -40,11 +39,16 @@ const BusinessValuation = () => {
     },
     {
       title: "Mining",
-      desc: "All types of mining, across every stage of the project lifecycle.",
+      desc: "All types of mining across every stage of the project lifecycle.",
       icon: <Layers className="w-8 h-8" />,
       image: "/vrassociates/Mining.png",
       items: [
-        "All types of mining, across every stage of the project lifecycle.",
+        "Pre-feasibility, exploration, and development stages.",
+        "Operating mines, reserve & resource estimation (JORC / NI 43-101 / UNFC standards).",
+        "Mining leases, mineral concessions, and extraction rights.",
+        "Mining machinery, processing facilities, and surface infrastructure.",
+        "Ores & precious stones: Iron ore, bauxite, coal, limestone, gold, and diamonds.",
+        "Environmental liabilities, mine closure, and rehabilitation provisions.",
       ]
     },
     {
@@ -54,11 +58,11 @@ const BusinessValuation = () => {
       image: "/vrassociates/Intangible Assets.png",
       items: [
         "Intellectual property valuation.",
-        "Brand valuation.",
-        "Goodwill valuation.",
-        "Patent valuation.",
-        "Copyright valuation.",
-        "Valuation of technology, software, and other identifiable intangible assets.",
+        "Brand and trademark valuation using relief-from-royalty and excess earnings methods.",
+        "Goodwill valuation and Purchase Price Allocation (PPA) under Ind AS 103 / IFRS 3.",
+        "Patent and proprietary technology valuation.",
+        "Copyright and software valuation.",
+        "Customer contracts, customer relationships, and identifiable intangible assets.",
       ]
     },
     {
@@ -68,10 +72,11 @@ const BusinessValuation = () => {
       image: "/vrassociates/Regulatory & Cross-Border Valuation.png",
       items: [
         "Valuation under Rule 11UA of the Income-tax Rules.",
-        "Foreign Direct Investment (FDI) transactions.",
+        "Foreign Direct Investment (FDI) transactions under FEMA / RBI regulations.",
         "Overseas Direct Investment (ODI) transactions.",
         "Valuation related to cross-border investments and corporate transactions.",
-        "Purchasing Power Parity (PPP) analysis, where relevant to business or investment assessment.",
+        "Valuation under Companies Act, 2013 and SEBI Listing Regulations.",
+        "Purchasing Power Parity (PPP) analysis, country risk premiums, and cross-border currency adjustments.",
       ]
     },
     {
@@ -80,11 +85,12 @@ const BusinessValuation = () => {
       icon: <BarChart className="w-8 h-8" />,
       image: "/vrassociates/Specialised Valuation.png",
       items: [
-        "Startup valuation.",
+        "Startup valuation: DCF, First Chicago, Scorecard, and venture capital methods.",
         "Mining business valuation at different stages of the lifecycle.",
-        "Valuation for strategic investment and fundraising.",
-        "Valuation for ownership restructuring and succession planning.",
-        "Valuation for financial reporting and management planning.",
+        "Valuation for strategic investment and fundraising rounds.",
+        "Valuation for ownership restructuring, family settlement, and succession planning.",
+        "Valuation for financial reporting, impairment testing, and management planning.",
+        "Distressed assets and special situations valuation.",
       ]
     },
     {
@@ -93,10 +99,11 @@ const BusinessValuation = () => {
       icon: <Scale className="w-8 h-8" />,
       image: "/vrassociates/Securities & Financial Instruments.png",
       items: [
-        "Valuation of equity shares.",
-        "Valuation of preference shares.",
-        "Valuation of all types of debentures.",
-        "Valuation of investments.",
+        "Valuation of equity shares (common stock and differential voting rights).",
+        "Valuation of preference shares (CCPS, OCPS, and redeemable preference shares).",
+        "Valuation of all types of debentures (CCD, OCD, and NCD).",
+        "Valuation of Employee Stock Option Plans (ESOPs) using Black-Scholes and Binomial models.",
+        "Valuation of investments and hybrid financial instruments.",
         "Valuation for regulatory, tax, accounting, transaction, and strategic purposes.",
       ]
     },
@@ -123,7 +130,7 @@ const BusinessValuation = () => {
   return (
     <div className="bg-white text-secondary-900 font-sans">
 
-      {/* â”€â”€ 1. HERO â”€â”€ */}
+      {/* ”€”€ 1. HERO ”€”€ */}
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -150,7 +157,7 @@ const BusinessValuation = () => {
         </div>
       </section>
 
-      {/* â”€â”€ 2. OVERLAPPING INTRO BOX (white) â”€â”€ */}
+      {/* ”€”€ 2. OVERLAPPING INTRO BOX (white) ”€”€ */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
         <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-10 items-start border border-secondary-100">
           <div className="lg:w-1/2">
@@ -178,7 +185,7 @@ const BusinessValuation = () => {
         </div>
       </div>
 
-      {/* â”€â”€ 3. VALUATION FOR EVERY BUSINESS STRUCTURE â€” dark bg, left text + right 2Ã—3 cards â”€â”€ */}
+      {/* ”€”€ 3. VALUATION FOR EVERY BUSINESS STRUCTURE — dark bg, left text + right 2×3 cards ”€”€ */}
       <section className="py-8 lg:py-12 bg-primary-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-500/10 rounded-full blur-[120px]" />
@@ -204,7 +211,7 @@ const BusinessValuation = () => {
               </ModalTriggerButton>
             </div>
 
-            {/* Right: 2Ã—3 card grid */}
+            {/* Right: 2×3 card grid */}
             <div className="grid grid-cols-2 gap-4">
               {entityTypes.map((item, idx) => {
                 const Icon = item.icon;
@@ -225,14 +232,14 @@ const BusinessValuation = () => {
         </div>
       </section>
 
-      {/* â”€â”€ 4. OUR VALUATION SERVICES â€” GSAP scroll stack (white bg) â”€â”€ */}
+      {/* ── 4. VALUATION FOR EVERY POSSIBLE BUSINESS PURPOSE ── */}
       <GSAPScrollSection
         bg="bg-white"
-        title="Our Valuation Services"
+        title="Valuation for Every Possible Business Purpose"
         subtitle="Specialized Services"
         items={services}
       />
- {/* â”€â”€ 6. WHY CLIENTS CHOOSE US â€” white bg, Finor icon+title+desc rows â”€â”€ */}
+ {/* ”€”€ 6. WHY CLIENTS CHOOSE US — white bg, Finor icon+title+desc rows ”€”€ */}
       <WhyChooseUsSection
         heading="Why Clients Choose Us"
         subheading="Our Advantage"
@@ -240,7 +247,7 @@ const BusinessValuation = () => {
         imageAlt="Valuation Professional"
         items={whyChooseUsSection}
       />
-      {/* â”€â”€ 5. OUR VALUATION APPROACH â€” ProcessFlow (gray-50 bg) â”€â”€ */}
+      {/* ”€”€ 5. OUR VALUATION APPROACH — ProcessFlow (gray-50 bg) ”€”€ */}
       <ProcessFlow
         bg="bg-gray-50"
         title="Our"
@@ -251,7 +258,7 @@ const BusinessValuation = () => {
 
      
 
-      {/* â”€â”€ 7. CTA â€” unchanged bg-primary-900 â”€â”€ */}
+      {/* ”€”€ 7. CTA — unchanged bg-primary-900 ”€”€ */}
       <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -290,7 +297,7 @@ const BusinessValuation = () => {
               </a>
             </div>
              <p className="text-secondary-400 text-base">
-              Whether for an acquisition, fundraising, regulatory compliance, tax purposes, financial reporting, restructuring, or strategic planning â€” we provide a structured, purpose-driven valuation service.
+              Whether for an acquisition, fundraising, regulatory compliance, tax purposes, financial reporting, restructuring, or strategic planning — we provide a structured, purpose-driven valuation service.
             </p>
             <p className="text-secondary-400 text-sm pt-2">
               Email: <a href="mailto:vishu@viswanathanrassociates.com" className="text-accent-400 hover:underline">vishu@viswanathanrassociates.com</a>

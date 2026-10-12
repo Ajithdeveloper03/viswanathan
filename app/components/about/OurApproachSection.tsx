@@ -43,7 +43,7 @@ export function OurApproachSection() {
               <h2 className="section-title mb-6">Our <span className="text-accent-500">Approach</span></h2>
               <div className="text-secondary-600 text-lg leading-relaxed mb-8 space-y-4">
                 <p>
-                  Every organization has different goals, challenges, and operating realities. We begin by understanding the businessâ€”not just its financial statements.
+                  Every organization has different goals, challenges, and operating realities. We begin by understanding the business—not just its financial statements.
                 </p>
 
               </div>

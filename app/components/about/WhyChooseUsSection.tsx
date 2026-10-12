@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useRef, useEffect } from 'react';
 import { Award, Globe, Target, Users, Settings, ShieldCheck } from 'lucide-react';
@@ -90,11 +90,11 @@ export function WhyChooseUsSection() {
                 </div>
               </div>
 
-              {/* Overlapping Plus Button */}
+              {/* Overlapping Icon Badge */}
               <div className="absolute top-[200px] right-6 z-10">
-                <button className="w-12 h-12 rounded-full bg-accent-500 text-white flex items-center justify-center shadow-lg hover:bg-accent-600 hover:scale-110 transition-all cursor-default">
+                <div className="w-12 h-12 rounded-full bg-accent-500 text-white flex items-center justify-center shadow-lg">
                   <reason.icon className="w-6 h-6" />
-                </button>
+                </div>
               </div>
 
               {/* Content area */}
@@ -111,7 +111,7 @@ export function WhyChooseUsSection() {
           <div className="bg-gradient-to-br from-primary-900 to-slate-900 rounded-[2rem] p-8 md:p-12 text-center shadow-2xl reveal-scale relative overflow-hidden">
             <div className="absolute inset-0 noise-bg opacity-30" />
             <p className="text-xl md:text-2xl text-white leading-relaxed font-serif relative z-10">
-              Whether you are seeking a business valuation service in Chennai, evaluating a business, improving cost performance, strengthening controls, planning an investment, managing compliance, or navigating financial and operational complexity, Viswanathan R Associates can help turn information into action and action into measurable value.
+              Whether you are seeking a business valuation service in India or Overseas * evaluating a business * improving cost performance * strengthening controls * planning an investment * managing compliance * or navigating financial and operational complexity, Viswanathan R Associates can help turn information into action and action into measurable value.
             </p>
           </div>
 

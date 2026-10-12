@@ -7,7 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import { Providers } from './providers';
 
 /**
- * DM Sans â€” clean, modern geometric sans-serif
+ * DM Sans — clean, modern geometric sans-serif
  * Used for: body text, navigation, labels, UI, buttons
  */
 const dmSans = DM_Sans({
@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 /**
- * Playfair Display â€” authoritative editorial serif
+ * Playfair Display — authoritative editorial serif
  * Widely used by financial publications, law firms & consulting groups
  * Used for: all h1, h2, h3 headings
  */

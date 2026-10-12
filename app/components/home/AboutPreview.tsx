@@ -1,5 +1,6 @@
-﻿'use client';
+'use client';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 
 
@@ -54,7 +55,7 @@ export function AboutPreview() {
               <div className="section-label-dark reveal">About Us</div>
               <h2 className="text-[1.9rem] font-bold text-white leading-[1.1] mt-4 mb-8 reveal">
                 Viswanathan R Associates<br />
-                <span className="text-white/60 text-xl font-medium mt-2 block">â€œTransforming financial insight into measurable business value.â€</span>
+                <span className="text-white/60 text-xl font-medium mt-2 block">&quot;Transforming financial insight into measurable business value.&quot;</span>
               </h2>
 
               <div className="mb-10 reveal">
@@ -72,23 +73,23 @@ export function AboutPreview() {
             <div className="section-label reveal">Our Story</div>
             <div className="text-secondary-700 text-base md:text-lg leading-relaxed mb-10 reveal space-y-5 text-justify sm:text-left">
               <p>
-                Founded by Viswanathan Rajagopalanâ€”a Finance and Corporate Secretary professional with over 30 years of global experienceâ€”our firm blends financial expertise, commercial insight, and governance knowledge.
+                Founded by Viswanathan Rajagopalan—a Finance and Corporate Secretary professional with over 30 years of global experience—our firm blends financial expertise, commercial insight, and governance knowledge.
               </p>
               <p>
-                Our experience spans operationally complex industries like Manufacturing, Mining, Automotive, Healthcare, IT, Pharmaceuticals, and Logistics. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors">(View LinkedIn Profile)</a>
+                Our experience spans key industries like Manufacturing, Mining, Automotive, Healthcare and Pharma-Retail, Manufacturing & Hospitals, IT, Logistics, Airlines, FMCG, Service, Robotics, SaaS, and FinTech. <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold hover:underline transition-colors">(View LinkedIn Profile)</a>
               </p>
               <p>
-                Our international footprint across India, the Middle East, and Africa enables us to navigate the unique financial, regulatory, and cultural factors that drive performance in diverse markets.
+                Our international footprint across India, UAE, United States, Kuwait, Egypt & Liberia enables us to navigate the unique financial, regulatory, and cultural factors that drive performance in diverse markets.
               </p>
               <p>
                 We believe finance must go beyond accounting to provide clear insights, support confident decisions, and improve profitability. Our approach is highly practical, analytical, and focused on measurable business outcomes.
               </p>
             </div>
 
-            <span className="btn-primary group cursor-pointer reveal">
+            <Link href="/about-us" className="btn-primary group cursor-pointer reveal inline-flex items-center">
               Learn More About Us
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </span>
+            </Link>
           </div>
         </div>
       </div>

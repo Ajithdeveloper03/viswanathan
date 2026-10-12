@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { ArrowRight, Plus } from 'lucide-react';
 import Link from 'next/link';
 
@@ -8,38 +8,38 @@ const servicesData = [
   {
     title: 'Business Valuation',
     description: 'Accurate valuation services for businesses to ensure informed decision-making.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800',
+    image: '/vrassociates/Business Valuation.jpeg',
     href: '/business-valuation',
+  },
+  {
+    title: 'Cost Management & Audit',
+    description: 'In-depth analysis to identify inefficiencies, setup costing systems, and implement strategic savings.',
+    image: '/vrassociates/What We Do 1.png',
+    href: '/cost-management-audit',
+  },
+  {
+    title: 'Internal Audit',
+    description: 'Robust internal controls and risk management frameworks for sustainable growth.',
+    image: '/vrassociates/Internal Audit banner.png',
+    href: '/internal-audit',
+  },
+  {
+    title: 'Independent Director',
+    description: 'Strategic advisory and independent governance oversight for your board of directors.',
+    image: '/vrassociates/images/independent/hero.png',
+    href: '/independent-director',
+  },
+  {
+    title: 'Business Proposals',
+    description: 'Expertly crafted business proposals for restructuring, debt funding, and partnerships.',
+    image: '/vrassociates/images/business-proposals/hero.png',
+    href: '/business-proposals',
   },
   {
     title: 'Insolvency & Bankruptcy',
     description: 'Comprehensive resolution services under the IBC code for distressed assets and businesses.',
     image: '/vrassociates/Insolvency & Bankruptcy.jpeg',
     href: '/insolvency-bankruptcy',
-  },
-  {
-    title: 'Business Proposals',
-    description: 'Expertly crafted business proposals to help you secure funding and partnerships.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
-    href: '/business-proposals',
-  },
-  {
-    title: 'Independent Director',
-    description: 'Strategic advisory and independent governance oversight for your board of directors.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
-    href: '/independent-director',
-  },
-  {
-    title: 'Internal Audit',
-    description: 'Robust internal controls and risk management frameworks for sustainable growth.',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800',
-    href: '/internal-audit',
-  },
-  {
-    title: 'Cost Management & Audit',
-    description: 'In-depth analysis to identify inefficiencies and implement strategic savings.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    href: '/cost-management-audit',
   }
 ];
 
@@ -65,7 +65,7 @@ export function OurServicesSection() {
   }, []);
 
   return (
-    <section className="relative pt-8 md:pt-12 pb-8 bg-[#fcfcfc] overflow-hidden">
+    <section id="services" className="relative pt-8 md:pt-12 pb-8 bg-[#fcfcfc] overflow-hidden">
       <div ref={ref} className="container-custom relative z-10">
         
         {/* Header Section */}
@@ -126,10 +126,10 @@ export function OurServicesSection() {
         
         {/* Bottom CTA Button */}
         <div className="mt-10 flex justify-center reveal-up">
-          <button className="btn-primary py-2.5 px-5 text-sm group flex items-center gap-2">
+          <Link href="/business-valuation" className="btn-primary py-2.5 px-5 text-sm group inline-flex items-center gap-2">
             View All Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
         
       </div>

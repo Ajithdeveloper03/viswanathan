@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import dynamic from 'next/dynamic';
 import { Hero } from './Hero';
 
@@ -8,7 +8,6 @@ const AboutPreview = dynamic(() => import('./AboutPreview').then(mod => mod.Abou
 const OurServicesSection = dynamic(() => import('./OurServicesSection').then(mod => mod.OurServicesSection), { ssr: true });
 const Testimonials = dynamic(() => import('./Testimonials').then(mod => mod.Testimonials), { ssr: true });
 const CTABanner = dynamic(() => import('./CTABanner').then(mod => mod.CTABanner), { ssr: true });
-const ClientLogos = dynamic(() => import('../ui/ClientLogos'), { ssr: true });
 
 const HomePage = () => {
   return (
@@ -19,7 +18,6 @@ const HomePage = () => {
       <Industries />
       
       <OurServicesSection />
-      <ClientLogos />
       <Testimonials />
       <CTABanner />
     </main>

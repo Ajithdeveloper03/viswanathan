@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { ArrowLeft, ArrowRight, LucideIcon } from 'lucide-react';
 
 import React, { useRef } from 'react';
@@ -101,13 +101,15 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ title, cards }) => {
       <div className="flex md:hidden justify-center gap-6 mt-4 relative z-20">
         <button 
           onClick={() => scroll('left')}
-          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 transition-all shadow-lg"
+          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all shadow-lg"
+          aria-label="Previous Services"
         >
           <ArrowLeft className="w-6 h-6" />
         </button>
         <button 
           onClick={() => scroll('right')}
-          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 transition-all shadow-lg"
+          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all shadow-lg"
+          aria-label="Next Services"
         >
           <ArrowRight className="w-6 h-6" />
         </button>

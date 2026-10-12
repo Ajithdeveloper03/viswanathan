@@ -13,7 +13,7 @@ export interface WhyItem {
 interface WhyChooseUsSectionProps {
   heading: string;
   subheading?: string;
-  items: WhyItem[];          // ideally 4â€“8 items; split evenly left/right
+  items: WhyItem[];          // ideally 4–8 items; split evenly left/right
   imageUrl: string;
   imageAlt?: string;
   /** 'navy' uses subtle white translucency, 'gold' uses accent color gradients */
@@ -78,7 +78,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({
             {left.map((item, i) => <Card key={i} item={item} />)}
           </div>
 
-          {/* Center image â€” hidden on mobile */}
+          {/* Center image — hidden on mobile */}
           <div className="relative rounded-3xl overflow-hidden min-h-[320px] hidden lg:block shadow-2xl">
             <Image
               src={imageUrl}

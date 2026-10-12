@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ const testimonials = [
   {
     quote: "Every industry possesses unique cost drivers and operational variables. They bring deep, specialized costing expertise across a vast spectrum of sectors, ensuring our financial frameworks are perfectly aligned with our specific business realities.",
     name: "Viswanathan R.",
-    title: "Senior Partner",
+    title: "Founding Partner",
     image: "/vrassociates/Trusted by Industry Leaders 1.png",
   },
   {
@@ -122,12 +122,14 @@ const TestimonialCarousel = () => {
                 <button 
                   onClick={handlePrev}
                   className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-white hover:shadow-md transition-all duration-300"
+                  aria-label="Previous Testimonial"
                 >
                   <ArrowLeft className="w-6 h-6" />
                 </button>
                 <button 
                   onClick={handleNext}
                   className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-white hover:shadow-md transition-all duration-300"
+                  aria-label="Next Testimonial"
                 >
                   <ArrowRight className="w-6 h-6" />
                 </button>

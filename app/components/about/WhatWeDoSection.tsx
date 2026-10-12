@@ -1,5 +1,5 @@
-﻿'use client';
-import { LineChart, Calculator, Settings, Shield, User, Scale, Briefcase, LayoutDashboard, Cog, ClipboardCheck, Lightbulb, Handshake, ArrowRight } from 'lucide-react';
+'use client';
+import { LineChart, Calculator, Settings, Shield, User, Scale, ClipboardCheck, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 
@@ -28,8 +28,8 @@ export function WhatWeDoSection() {
 
   const services = [
     {
-      title: "Business & Enterprise Valuation",
-      description: "Business valuation service in Chennai and enterprise valuation with 1,000+ valuations covering wide range of businesses and valuation purposes.",
+      title: "Business Valuation",
+      description: "Business valuation service in India or Overseas with 1,000+ valuations covering wide range of businesses and valuation purposes.",
       linkText: "Learn More",
       href: "/business-valuation",
       icon: LineChart
@@ -70,40 +70,10 @@ export function WhatWeDoSection() {
       icon: Scale
     },
     {
-      title: "Virtual CFO",
-      description: "Virtual CFO and Financial Management support.",
-      linkText: "",
-      icon: Briefcase
-    },
-    {
-      title: "Financial Planning",
-      description: "Financial planning, budgeting, management reporting, and business performance dashboards.",
-      linkText: "",
-      icon: LayoutDashboard
-    },
-    {
-      title: "SOP Implementation",
-      description: "Standard Operating Procedure implementation and business process automation.",
-      linkText: "",
-      icon: Cog
-    },
-    {
       title: "Corporate Governance",
       description: "Corporate governance, company secretarial matters, and statutory compliance.",
       linkText: "",
       icon: ClipboardCheck
-    },
-    {
-      title: "Strategic Investment",
-      description: "Strategic investment analysis and business planning.",
-      linkText: "",
-      icon: Lightbulb
-    },
-    {
-      title: "Mergers and Acquisitions",
-      description: "Mergers and Acquisitions, Private Equity, Venture Capital, Debt Funding, within and outside India, through Strategic Business Partner.",
-      linkText: "",
-      icon: Handshake
     }
   ];
   return (
