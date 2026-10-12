@@ -93,10 +93,10 @@ const BusinessProposalsPage = () => {
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="hover:text-accent-400 transition-colors duration-300 cursor-pointer">Services</span>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
-            <span className="text-accent-400">Business Proposals</span>
+            <span className="text-accent-400">Business Restructuring</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Strategic Transactions <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">& Capital Structuring</span>
+            Business Restructuring - Debt Funding <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">- Stock Exchange Listing</span>
           </h1>
         </div>
       </section>
@@ -106,11 +106,11 @@ const BusinessProposalsPage = () => {
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 items-center justify-between border border-secondary-100">
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-              Advisory Services
+              Business Restructuring Services
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              Data-Driven <br/>
-              <em className="not-italic text-secondary-400 font-light">Financial Engineering.</em>
+              Strategic Transactions <br/>
+              <em className="not-italic text-secondary-400 font-light">& Capital Structuring.</em>
             </h2>
             <div className="bg-primary-50 border-l-4 border-primary-500 p-5 rounded-r-2xl">
               <p className="text-primary-900 font-medium">
@@ -119,12 +119,18 @@ const BusinessProposalsPage = () => {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-              Securing capital, executing complex transactions, and expanding across borders require more than a vision; they demand rigorous financial engineering and compelling narratives.
-            </p>
-            <p className="text-secondary-500 leading-relaxed pl-6">
-              We specialize in structuring high-impact business proposals and executing strategic financial transactions that unlock growth, both within the dynamic Indian market and across the global economic landscape.
-            </p>
+            <div className="border-l-4 border-accent-500 pl-6 mb-6">
+              <h3 className="text-xl font-bold text-primary-900 mb-2">Business Proposals & Strategic Transactions</h3>
+              <p className="text-secondary-600 text-lg leading-relaxed">
+                Securing capital, executing complex transactions, and expanding across borders require more than a vision; they demand rigorous financial engineering and compelling narratives.
+              </p>
+            </div>
+            <div className="pl-6">
+              <h4 className="text-base font-bold text-primary-900 mb-1">A Global Perspective with Deep Local Expertise</h4>
+              <p className="text-secondary-500 leading-relaxed">
+                We specialize in structuring high-impact business proposals and executing strategic financial transactions that unlock growth, both within the dynamic Indian market and across the global economic landscape.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -132,8 +138,8 @@ const BusinessProposalsPage = () => {
       {/* 3. WHAT WE DO — GSAP Scroll (gray-50 bg) */}
       <GSAPScrollSection
         bg="bg-gray-50"
-        title="Our Focus Areas"
-        subtitle="Core Expertise"
+        title="Our Focus Areas in India / Europe / Africa"
+        subtitle="Global Coverage"
         items={whatWeDo.map(item => ({
           ...item,
           icon: item.icon ? <item.icon className="w-8 h-8" /> : undefined
@@ -141,7 +147,7 @@ const BusinessProposalsPage = () => {
       />
 
       {/* 4. GLOBAL PERSPECTIVE — white bg, Finor split layout */}
-      <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-50/50 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/2"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-50/50 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/3"></div>
@@ -217,7 +223,7 @@ const BusinessProposalsPage = () => {
     
 
       {/* CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/vrassociates/images/business-proposals/equity-funding.png" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>

@@ -17,7 +17,7 @@ const InternalAuditPage = () => {
       items: [
         "Financial Controls Audit: accuracy of records, reconciliations, and reporting",
         "Operational Audit: efficiency and effectiveness of processes",
-        "Process Audit: procure-to-pay, order-to-cash, hire-to-retire, and inventory",
+        "Process Audit: procure-to-pay, order-to-cash, hire-to-retire, and inventory cycles",
         "Cash & Treasury Audit: cash handling, bank operations, and fund management"
       ]
     },
@@ -27,7 +27,7 @@ const InternalAuditPage = () => {
       image: "/vrassociates/Risk & Controls.png",
       items: [
         "Risk-Based Internal Audit: audit plans built around your key risks",
-        "Internal Financial Controls (IFC): design and operating effectiveness",
+        "Internal Financial Controls (IFC) Review: design and operating effectiveness of controls",
         "Fraud Risk & Forensic Review: red-flag analysis and control weaknesses",
         "Enterprise Risk Assessment: identification and ranking of business risks"
       ]
@@ -37,9 +37,9 @@ const InternalAuditPage = () => {
       icon: FileCheck,
       image: "/vrassociates/Compliance.png",
       items: [
-        "Statutory & Regulatory Audit: Companies Act, tax, labor, and sector laws",
-        "Policy & Procedure Compliance: adherence to delegated authority",
-        "Contract & Vendor Compliance: terms, pricing, and payments"
+        "Statutory & Regulatory Compliance Audit: Companies Act, tax, labor, and sector-specific laws",
+        "Policy & Procedure Compliance: adherence to internal policies and delegated authority",
+        "Contract & Vendor Compliance: terms, pricing, and payments against agreements"
       ]
     },
     {
@@ -47,10 +47,10 @@ const InternalAuditPage = () => {
       icon: Calculator,
       image: "/vrassociates/Cost & Performance.png",
       items: [
-        "Cost Audit & Control Review: records, allocation, and leakage",
+        "Cost Audit & Cost Control Review: cost records, allocation, and leakage, in line with applicable Cost Accounting Standards",
         "Inventory & Fixed Asset Audit: verification, valuation, and controls",
         "Project & Contract Audit: budgets, cost overruns, and milestones",
-        "Procurement & Supply Chain: sourcing, vendor selection, value for money"
+        "Procurement & Supply Chain Audit: sourcing, vendor selection, and value for money"
       ]
     },
     {
@@ -59,25 +59,27 @@ const InternalAuditPage = () => {
       image: "/vrassociates/Systems & Governance.png",
       items: [
         "IT & ERP Controls Review: access, data integrity, and system controls",
-        "Corporate Governance Review: board processes, delegation, reporting",
-        "Related Party Transactions: approval, disclosure, and arm's-length checks",
-        "Follow-up & Assurance: confirming that recommendations were implemented"
+        "Corporate Governance Review: board processes, delegation, and reporting quality",
+        "Related Party Transactions Review: approval, disclosure, and arm's-length checks",
+        "Follow-up & Assurance Reviews: confirming that recommendations were implemented"
       ]
     }
   ];
 
   const indiaItems = [
-    "Risk-based internal audit plans approved by management",
-    "Reviews aligned with the Companies Act & ICAI standards",
+    "Risk-based internal audit plans approved by the management or audit committee",
+    "Reviews aligned with the Companies Act, applicable ICAI standards, and sector regulations",
     "Support for IFC assessment and documentation",
-    "Independent reporting to the Board and audit committee"
+    "Independent reporting to the Board, audit committee, and promoters",
+    "Follow-up on audit observations until closure"
   ];
 
   const globalItems = [
-    "Audit programs designed around globally recognized frameworks (IIA, COSO)",
-    "Cross-border reviews of subsidiaries, JVs, and project sites",
+    "Audit programs designed around globally recognized frameworks such as the IIA's Global Internal Audit Standards and the COSO internal control framework",
+    "Cross-border reviews of subsidiaries, joint ventures, and project sites",
     "Group-level reporting and consolidated audit findings",
-    "Alignment of local practices with the parent's policies"
+    "Alignment of local practices with the parent's policies and controls",
+    "Coordination with local teams, statutory auditors, and management"
   ];
 
   return (
@@ -129,14 +131,14 @@ const InternalAuditPage = () => {
               Internal audit is more than a compliance exercise. It is an independent check that your processes work, your risks are managed, and your numbers can be trusted.
             </p>
             <p className="text-secondary-500 leading-relaxed pl-6">
-              Led by a practising Cost Accountant, we provide risk-based internal audit services for organizations in India and overseas, tailored to your industry, size, and regulatory environment.
+              Led by a practising Accountant, we provide risk-based internal audit services for organizations in India and overseas, tailored to your industry, size, and regulatory environment.
             </p>
           </div>
         </div>
       </div>
 
       {/* 3. IN INDIA vs OUTSIDE INDIA — white bg, alternating split layouts */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-8 lg:py-12 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-16 space-y-24">
 
           {/* India */}
@@ -147,7 +149,7 @@ const InternalAuditPage = () => {
               </div>
               <h3 className="text-4xl md:text-5xl font-extrabold text-primary-900 mb-8 leading-[1.2]">Internal Audit in India</h3>
               <p className="text-secondary-600 mb-8 leading-relaxed text-lg border-l-2 border-secondary-200 pl-6">
-                Indian businesses operate under a demanding compliance framework. Under Section 138 of the Companies Act, 2013, certain classes of companies must appoint an internal auditor, and boards expect a strong internal audit function.
+                Indian businesses operate under a demanding compliance framework. Under Section 138 of the Companies Act, 2013, certain classes of companies must appoint an internal auditor, and boards, audit committees, lenders, and statutory auditors increasingly expect a strong internal audit function, including for Internal Financial Controls (IFC).
               </p>
               <ul className="space-y-4">
                 {indiaItems.map((item, idx) => (
@@ -176,7 +178,7 @@ const InternalAuditPage = () => {
               <div className="absolute bottom-0 left-0 w-4/5 h-[290px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
                 <Image src="/vrassociates/Global Reach 1.png" alt="Audit Outside India" fill className="object-cover" />
               </div>
-              <div className="absolute top-0 right-0 w-3/5 h-[230px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:-translate-x-3 transition-all duration-700">
+              <div className="absolute top-0 right-0 w-3/5 h-[230px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
                 <Image src="/vrassociates/Global Reach 2.png" alt="Global Audit" fill className="object-cover" />
               </div>
             </div>
@@ -186,9 +188,9 @@ const InternalAuditPage = () => {
               </div>
               <h3 className="text-4xl md:text-5xl font-extrabold text-primary-900 mb-8 leading-[1.2]">Internal Audit <br/>Outside India</h3>
               <p className="text-secondary-600 mb-8 leading-relaxed text-lg border-l-2 border-secondary-200 pl-6">
-                Companies with overseas subsidiaries, branches, or operations need consistent controls across borders. We support Indian groups with foreign operations, and multinational entities.
+                Companies with overseas subsidiaries, branches, or operations need consistent controls across borders. We support Indian groups with foreign operations, and foreign-owned or multinational entities.
               </p>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4">
                 {globalItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-4 text-secondary-700 font-medium group">
                     <div className="w-6 h-6 rounded-full bg-accent-50 text-accent-500 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-accent-500 group-hover:text-white transition-all duration-300">
@@ -198,9 +200,6 @@ const InternalAuditPage = () => {
                   </li>
                 ))}
               </ul>
-              <div className="bg-gray-50 p-5 rounded-2xl border border-secondary-100 text-sm text-secondary-600">
-                Note: the extent of overseas work depends on local licensing and legal requirements, which we assess with each engagement.
-              </div>
             </div>
           </div>
         </div>
@@ -231,7 +230,7 @@ const InternalAuditPage = () => {
       
 
       {/* 5. CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>

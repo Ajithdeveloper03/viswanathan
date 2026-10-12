@@ -1,9 +1,25 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import React from 'react';
+'use client';
+
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { companyInfo } from '@/app/lib/siteData';
+
 const ContactPage = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    comment: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
   return (
     <div className="bg-[#f8f9fa] text-secondary-900 font-sans">
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
@@ -105,40 +121,95 @@ const ContactPage = () => {
               <p className="text-secondary-600 text-base mb-8">
                 Schedule a free consultation to discover personalized solutions from our financial experts.
               </p>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="relative">
-                    <input type="text" placeholder="Full Name *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
+              {isSubmitted ? (
+                <div className="text-center py-12 space-y-4 bg-white rounded-2xl p-8 border border-secondary-100 shadow-sm">
+                  <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-8 h-8" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-primary-900">Thank You for Your Message!</h4>
+                  <p className="text-secondary-600 text-sm max-w-sm mx-auto">
+                    We have received your message. A member of our team will review your request and get back to you shortly.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({ name: '', email: '', phone: '', service: '', comment: '' });
+                    }}
+                    className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-primary-900 hover:bg-accent-500 text-white rounded-full text-xs font-semibold transition-all"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="relative">
+                      <input 
+                        type="text" 
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Full Name *" 
+                        className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" 
+                      />
+                    </div>
+                    <div className="relative">
+                      <input 
+                        type="email" 
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="Full Email *" 
+                        className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" 
+                      />
+                    </div>
                   </div>
                   <div className="relative">
-                    <input type="email" placeholder="Full Email *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
+                    <input 
+                      type="tel" 
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="Phone number *" 
+                      className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" 
+                    />
                   </div>
-                </div>
-                <div className="relative">
-                  <input type="tel" placeholder="Phone number *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm" />
-                </div>
-                <div className="relative">
-                  <select className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 font-medium appearance-none cursor-pointer text-sm">
-                    <option value="" disabled selected className="text-secondary-400">Select a Service *</option>
-                    <option value="business-valuation">Business Valuation</option>
-                    <option value="internal-audit">Internal Audit</option>
-                    <option value="cost-management">Cost Management & Audit</option>
-                    <option value="business-proposals">Business Proposals</option>
-                    <option value="insolvency">Insolvency & Bankruptcy Code</option>
-                    <option value="independent-director">Independent Director</option>
-                    <option value="other">Other Inquiry</option>
-                  </select>
-                </div>
-                <div className="relative">
-                  <textarea rows={3} placeholder="Your comment *" className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm resize-none"></textarea>
-                </div>
-                <button type="button" className="mt-4 flex items-center gap-3 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-1.5 pr-6 transition-all duration-300 group shadow-md w-max">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                  <div className="relative">
+                    <select 
+                      required
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 font-medium appearance-none cursor-pointer text-sm"
+                    >
+                      <option value="" disabled className="text-secondary-400">Select a Service *</option>
+                      <option value="business-valuation">Business Valuation</option>
+                      <option value="internal-audit">Internal Audit</option>
+                      <option value="cost-management">Cost Management & Audit</option>
+                      <option value="business-proposals">Business Proposals</option>
+                      <option value="insolvency">Insolvency & Bankruptcy Code</option>
+                      <option value="independent-director">Independent Director</option>
+                      <option value="other">Other Inquiry</option>
+                    </select>
                   </div>
-                  <span className="font-bold text-xs tracking-wide">Submit Your Message</span>
-                </button>
-              </form>
+                  <div className="relative">
+                    <textarea 
+                      rows={3} 
+                      required
+                      value={formData.comment}
+                      onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
+                      placeholder="Your comment *" 
+                      className="w-full pb-2 border-b border-secondary-200 bg-transparent focus:outline-none focus:border-primary-900 transition-colors text-primary-900 placeholder:text-secondary-400 font-medium text-sm resize-none"
+                    ></textarea>
+                  </div>
+                  <button type="submit" className="mt-4 flex items-center gap-3 bg-primary-900 hover:bg-accent-500 text-white rounded-full p-1.5 pr-6 transition-all duration-300 group shadow-md w-max cursor-pointer">
+                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-900 group-hover:text-accent-500 transition-colors">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                    <span className="font-bold text-xs tracking-wide">Submit Your Message</span>
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

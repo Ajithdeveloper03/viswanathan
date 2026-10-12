@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import { AboutHero } from '../components/about/AboutHero';
 import { FounderQualifications } from '../components/home/FounderQualifications';
 import { WhatWeDoSection } from '../components/about/WhatWeDoSection';

@@ -96,7 +96,7 @@ const IndependentDirectorPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/images/independent/hero.png"
+            src="/vrassociates/Insolvency & Bankruptcy.jpeg"
             alt="Board Room Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -120,7 +120,7 @@ const IndependentDirectorPage = () => {
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-24 mb-32">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-8 mb-32">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
 
           <div className="lg:w-1/2">
@@ -128,22 +128,22 @@ const IndependentDirectorPage = () => {
               Objective Oversight
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
-              Independent Judgement. <br />
-              <span className="text-secondary-400 font-light">Strong Governance.</span>
+              Board Level Experience <br />
+              <span className="text-secondary-400 font-light">in multiple Sectors.</span>
             </h2>
             <div className="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-2xl mb-6">
               <p className="text-primary-900 font-medium">
-                We have completed the proficiency self-assessment test and hold a life time registration under the Independent Directors Databank under the Ministry of Corporate Affairs (MCA).
+                We have completed the proficiency self-assessment test and hold a life time registration under Independent Directors Databank under the Ministry of Corporate Affairs (MCA).
               </p>
             </div>
           </div>
 
           <div className="lg:w-1/2">
             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-              Good governance protects a company&apos;s reputation, its investors, and its long-term value. As a practising Cost Accountant with board experience, I bring an independent, finance-driven perspective to boards of companies in India.
+              Good governance protects a company&apos;s reputation, its investors, and its long-term value. As a practising Cost Accountant with board experience across Non-Banking Finance Companies (NBFCs), semiconductor manufacturing, and drone manufacturing and services, I bring an independent, finance-driven perspective to boards of companies in India.
             </p>
             <p className="text-secondary-500 leading-relaxed pl-6">
-              An Independent Director is more than a compliance requirement. The role offers objective oversight, a check on conflicts of interest, and experienced counsel on strategy, risk, and financial integrity under the Companies Act, 2013 and applicable SEBI and RBI norms.
+              An Independent Director is more than a compliance requirement. The role offers objective oversight, a check on conflicts of interest, and experienced counsel on strategy, risk, and financial integrity. Independent Directors under the Companies Act, 2013 (including Section 149 and Schedule IV, the Code for Independent Directors) and applicable SEBI and RBI norms are expected to safeguard the interests of all stakeholders, especially minority shareholders.
             </p>
           </div>
 

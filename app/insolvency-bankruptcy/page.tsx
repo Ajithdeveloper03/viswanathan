@@ -69,7 +69,7 @@ const IBCPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/Insolvency & Bankruptcy.jpeg"
+            src="/vrassociates/images/independent/hero.png"
             alt="Law & Justice Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -87,18 +87,18 @@ const IBCPage = () => {
             <span className="text-accent-400">Insolvency & Bankruptcy Code</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Insolvency & Bankruptcy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
+            Insolvency & Bankruptcy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services (IBC)</span>
           </h1>
         </div>
       </section>
 
       {/* 2. OVERLAPPING INTRO BOX */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 -mt-16 lg:-mt-24 mb-12 lg:mb-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-8 mb-12 lg:mb-16">
         <div className="bg-white rounded-3xl lg:rounded-[3rem] p-6 md:p-10 lg:p-16 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-8 lg:p-12 items-center justify-between border border-secondary-100">
 
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 bg-accent-50 text-accent-600 font-bold text-sm tracking-wider uppercase rounded-full mb-6">
-              Registered Professional
+              IBBI Registered Insolvency Professional
             </div>
             <h2 className="text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2] mb-6">
               Transparency. <br />
@@ -114,10 +114,10 @@ const IBCPage = () => {
 
           <div className="lg:w-1/2">
             <p className="text-secondary-600 text-lg leading-relaxed mb-6 border-l-4 border-accent-500 pl-6">
-              As a registered Insolvency Professional, I support creditors, operational creditors, promoters, guarantors, and companies under Sections 7, 9, 10, 59 and 95 of the IBC with fairness to all stakeholders.
+              As a registered Insolvency Professional, I support creditors, operational creditors, promoters, guarantors, and companies under Sections 7, 9, 10, 59 and 95 of the Insolvency and Bankruptcy Code, 2016 (IBC), with transparency, timely execution, and fairness to all stakeholders.
             </p>
             <p className="text-secondary-500 leading-relaxed pl-6">
-              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation. Our practice covers the full spectrum of insolvency initiations and voluntary closures, ensuring objective and highly structured resolution services.
+              With a proven track record of executing complex insolvency proceedings, we bring hands-on experience in managing corporate distress and liquidation, having successfully completed 16 comprehensive assignments across various categories of the Insolvency and Bankruptcy Code (IBC), 2016. Our practice covers the full spectrum of insolvency initiations and voluntary closures, ensuring that both creditors and corporate debtors receive objective, strictly regulated, and highly structured resolution services.
             </p>
           </div>
 
@@ -138,7 +138,7 @@ const IBCPage = () => {
       />
 
       {/* 4. OUR SERVICES (Texon Split Layout) */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white">
+      <section className="py-12 md:py-8 lg:py-12 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
@@ -160,7 +160,7 @@ const IBCPage = () => {
                   Comprehensive Support
                 </div>
                 <h2 className="text-4xl md:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 leading-[1.2]">
-                  Our Resolution <br /><span className="text-secondary-400 font-light">Services</span>
+                  Our Services <br /><span className="text-secondary-400 font-light">under IBC</span>
                 </h2>
               </div>
 
@@ -196,7 +196,7 @@ const IBCPage = () => {
       />
 
       {/* 5. CTA (Texon Banner) */}
-      <section id="contact" className="py-12 md:py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      <section id="contact" className="py-12 md:py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
 
         <div className="absolute inset-0 z-0">
           <Image

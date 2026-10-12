@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useModal } from '@/app/context/ModalContext';
 
 import { companyInfo, navigation } from '@/app/lib/siteData';
 
@@ -18,6 +19,7 @@ const bannerImages = [
 const heroServices = navigation.main.find(item => item.name === 'Our Services')?.submenu || [];
 
 const Hero = () => {
+  const { openModal } = useModal();
   const [currentWord, setCurrentWord] = useState(0);
   const [currentBg, setCurrentBg] = useState(0);
   const [currentService, setCurrentService] = useState(0);
@@ -72,7 +74,7 @@ const Hero = () => {
       {/* Overlay - Dark on mobile, white gradient on desktop */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 bg-slate-900/60 sm:hidden" />
-        <div className="absolute inset-0 hidden sm:block" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 30%, transparent 45%)' }} />
+        <div className="absolute inset-0 hidden sm:block" style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 30%, transparent 60%)' }} />
       </div>
 
       {/* Grid overlay */}
@@ -131,26 +133,33 @@ const Hero = () => {
           </div>
 
           <p className="text-base sm:text-lg text-gray-200 sm:text-secondary-600 max-w-xl mb-8 lg:mb-10 leading-relaxed animate-fade-in-up animate-delay-200 text-center sm:text-left px-4 sm:px-0">
-            {companyInfo.description} With 30+ years of global experience delivering measurable results for businesses, investors, and corporate leaders.
+            Transforming financial insight into measurable business value. Our firm combines financial expertise, commercial insight, Governance knowledge, and practical business understanding. We help businesses make better financial decisions, improve operational performance, manage risk, and create sustainable value.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300 justify-center sm:justify-start">
-            <span className="btn-primary group cursor-pointer text-sm tracking-wider">
+            <button 
+              type="button" 
+              onClick={openModal}
+              className="btn-primary group cursor-pointer text-sm tracking-wider"
+            >
               Book a Consultation
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200" />
-            </span>
-            <span className="btn-secondary cursor-pointer text-sm tracking-wider">
+            </button>
+            <Link 
+              href="/#services" 
+              className="btn-secondary cursor-pointer text-sm tracking-wider inline-flex items-center"
+            >
               Explore Services
-            </span>
+            </Link>
           </div>
 
-          {/* Credentials */}
+          {/* Bullet points */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start gap-x-6 gap-y-3 mt-4 lg:mt-6 animate-fade-in animate-delay-500">
-            {['IBBI Registered Valuer', 'IBBI Insolvency Professional', 'Independent Director'].map((cred) => (
-              <div key={cred} className="flex items-center justify-center sm:justify-start gap-2 text-gray-200 sm:text-secondary-600 text-sm font-medium">
+            {['Business Valuation', 'Costing & Cost Audit', 'Internal Audit', 'Independent Director'].map((item) => (
+              <div key={item} className="flex items-center justify-center sm:justify-start gap-2 text-gray-200 sm:text-secondary-600 text-sm font-medium">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500 shadow-[0_0_10px_rgba(197,154,27,0.3)]" />
-                {cred}
+                {item}
               </div>
             ))}
           </div>

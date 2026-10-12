@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React from 'react';
 import Image from 'next/image';
 
@@ -52,7 +52,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-primary-900 relative overflow-hidden">
+    <section className="py-8 lg:py-12 bg-primary-900 relative overflow-hidden">
       {/* Ambient glow orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[130px]" />

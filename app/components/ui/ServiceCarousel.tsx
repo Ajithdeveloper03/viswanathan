@@ -26,7 +26,7 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ title, cards }) => {
   };
 
   return (
-    <section className="relative bg-primary-900 py-24 overflow-hidden">
+    <section className="relative bg-primary-900 py-12 overflow-hidden">
       
       <div className="container mx-auto px-4 md:px-8 lg:px-16 mb-16 flex justify-between items-end relative z-10">
         {title && (
@@ -101,13 +101,15 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ title, cards }) => {
       <div className="flex md:hidden justify-center gap-6 mt-4 relative z-20">
         <button 
           onClick={() => scroll('left')}
-          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 transition-all shadow-lg"
+          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all shadow-lg"
+          aria-label="Previous Services"
         >
           <ArrowLeft className="w-6 h-6" />
         </button>
         <button 
           onClick={() => scroll('right')}
-          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 transition-all shadow-lg"
+          className="w-14 h-14 rounded-full bg-white text-primary-900 flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all shadow-lg"
+          aria-label="Next Services"
         >
           <ArrowRight className="w-6 h-6" />
         </button>

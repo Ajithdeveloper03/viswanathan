@@ -27,19 +27,25 @@ const Footer = () => {
               Delivering excellence in valuation, restructuring, and corporate governance for over 25 years.
             </p>
             <div className="flex gap-3 mt-auto pt-2">
-              <a href="#"
+              <a href={companyInfo.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#"
+              <a href={companyInfo.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#"
+              <a href="https://www.linkedin.com/in/viswanathan-rajagopalan-13106838/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center opacity-80 text-white hover:bg-accent-600 hover:border-accent-600 hover:opacity-100 hover:text-white transition-all duration-300"
                 aria-label="LinkedIn"
               >
@@ -55,7 +61,7 @@ const Footer = () => {
               {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
-                    href="/"
+                    href={item.href === '#' ? '/business-valuation' : item.href}
                     className="text-white/80 hover:text-white hover:pl-1 transition-all duration-200 text-sm inline-flex items-center gap-1"
                   >
                     <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100" />
@@ -70,14 +76,14 @@ const Footer = () => {
           <div className="flex flex-col h-full">
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {services.slice(0, 6).map((service) => (
-                <li key={service.id}>
+              {(navigation.main.find(item => item.name === 'Our Services')?.submenu || []).map((service) => (
+                <li key={service.name}>
                   <Link
-                    href="/"
-                    className="text-white/80 hover:text-white transition-colors duration-200 text-sm inline-flex items-center gap-1"
+                    href={service.href}
+                    className="text-white/80 hover:text-white hover:pl-1 transition-all duration-200 text-sm inline-flex items-center gap-1"
                   >
                     <ChevronRight className="w-4 h-4" />
-                    {service.title}
+                    {service.name}
                   </Link>
                 </li>
               ))}

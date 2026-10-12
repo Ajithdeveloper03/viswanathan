@@ -1,4 +1,4 @@
-import { Mountain, Zap, Monitor, Cloud, BrainCircuit, CreditCard, Landmark, Plane, Hotel, Utensils, Stethoscope, HeartPulse, Factory, ShoppingCart, Briefcase, Train, Ship, Droplet, Sun, Car, Home, ArrowRight, Globe } from 'lucide-react';
+import { Mountain, Zap, Monitor, Cloud, BrainCircuit, CreditCard, Landmark, Plane, Hotel, Utensils, Stethoscope, HeartPulse, Factory, ShoppingCart, Briefcase, Train, Ship, Droplet, Sun, Car, Home, ArrowRight, Globe, GraduationCap, Trophy, Scissors, Flame } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
@@ -7,27 +7,30 @@ import TestimonialCarousel from '../components/ui/TestimonialCarousel';
 
 const IndustriesPage = () => {
   const industries = [
-    { name: "Mining Industry", icon: Mountain, img: "https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&w=600" },
+    { name: "Mining - Ores & Precious Stones", icon: Mountain, img: "https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&w=600" },
+    { name: "Oil & Gas", icon: Droplet, img: "https://images.unsplash.com/photo-1605142859862-386be456208a?auto=format&fit=crop&w=600" },
     { name: "Power Plants", icon: Zap, img: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600" },
+    { name: "Solar Plant", icon: Sun, img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600" },
     { name: "Software", icon: Monitor, img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600" },
     { name: "SAAS", icon: Cloud, img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600" },
-    { name: "Artificial Intelligence", icon: BrainCircuit, img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" },
+    { name: "Robotics & AI", icon: BrainCircuit, img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" },
     { name: "FinTech", icon: CreditCard, img: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600" },
     { name: "NBFC", icon: Landmark, img: "https://images.unsplash.com/photo-1507675920774-4f05e0c8b389?auto=format&fit=crop&w=600" },
-    { name: "Airlines", icon: Plane, img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600" },
-    { name: "Hotels", icon: Hotel, img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600" },
-    { name: "Restaurant", icon: Utensils, img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600" },
     { name: "Hospitals", icon: Stethoscope, img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600" },
     { name: "Healthcare", icon: HeartPulse, img: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=600" },
-    { name: "Manufacturing", icon: Factory, img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600" },
-    { name: "FMCG", icon: ShoppingCart, img: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600" },
-    { name: "Service", icon: Briefcase, img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600" },
+    { name: "Hotels", icon: Hotel, img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600" },
+    { name: "Restaurant", icon: Utensils, img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600" },
+    { name: "Airlines", icon: Plane, img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600" },
     { name: "Rail", icon: Train, img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600" },
     { name: "Port", icon: Ship, img: "https://images.unsplash.com/photo-1586528116311-ad8ed7fc30a0?auto=format&fit=crop&w=600" },
-    { name: "Fuel", icon: Droplet, img: "https://images.unsplash.com/photo-1605142859862-386be456208a?auto=format&fit=crop&w=600" },
-    { name: "Solar Plant", icon: Sun, img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600" },
     { name: "Automotive", icon: Car, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600" },
     { name: "Real Estate", icon: Home, img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600" },
+    { name: "Service", icon: Briefcase, img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600" },
+    { name: "Education", icon: GraduationCap, img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600" },
+    { name: "Manufacturing", icon: Factory, img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600" },
+    { name: "FMCG", icon: ShoppingCart, img: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600" },
+    { name: "Sports Clubs", icon: Trophy, img: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=600" },
+    { name: "Textiles", icon: Scissors, img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600" },
   ];
 
   return (
@@ -56,8 +59,6 @@ const IndustriesPage = () => {
           </h1>
         </div>
       </section>
-
-      {/* 2. INTRO BOX + IMAGE COLLAGE (white) */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-20 mt-5 lg:mt-0 mb-0">
         <div className="bg-white rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row gap-12 items-center justify-between border border-secondary-100">
           <div className="lg:w-1/2 relative z-10">
@@ -85,9 +86,7 @@ const IndustriesPage = () => {
           </div>
         </div>
       </div>
-
-      {/* 3. ECOSYSTEM REACH — dark bg, branching layout (keep original design) */}
-      <section className="py-16 lg:py-24 bg-secondary-900 relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-secondary-900 relative overflow-hidden">
         <style>{`
           @keyframes flowLine { to { stroke-dashoffset: -40; } }
           .flowing-line { stroke-dasharray: 6 6; animation: flowLine 2s linear infinite; }
@@ -115,9 +114,9 @@ const IndustriesPage = () => {
             {/* LEFT COLUMN */}
             <div className="flex-1 relative h-full">
               {[
-                { cat: "ENERGY", items: [{n: "Mining", i: Mountain}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}, {n: "Fuel", i: Droplet}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "AI", i: BrainCircuit}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                { cat: "FINANCE", items: [{n: "FinTech", i: CreditCard}, {n: "NBFC", i: Landmark}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "ENERGY", items: [{n: "Mining - Ores & Precious Stones", i: Mountain}, {n: "Oil & Gas", i: Droplet}, {n: "Power", i: Zap}, {n: "Solar", i: Sun}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "TECH", items: [{n: "Software", i: Monitor}, {n: "SAAS", i: Cloud}, {n: "Robotics & AI", i: BrainCircuit}, {n: "FinTech", i: CreditCard}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "FINANCE", items: [{n: "NBFC", i: Landmark}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                 { cat: "HEALTH", items: [{n: "Hospitals", i: Stethoscope}, {n: "Healthcare", i: HeartPulse}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
               ].map((category, idx) => {
                 const top = 12.5 + idx * 25;
@@ -155,10 +154,11 @@ const IndustriesPage = () => {
                 <path d="M 0 37.5 C 40 37.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
                 <path d="M 0 62.5 C 40 62.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
                 <path d="M 0 87.5 C 40 87.5, 20 50, 50 50" fill="none" stroke="url(#navyToGoldLeft)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" />
-                <path d="M 100 12.5 C 60 12.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                <path d="M 100 37.5 C 60 37.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                <path d="M 100 62.5 C 60 62.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
-                <path d="M 100 87.5 C 60 87.5, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 10 C 60 10, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 30 C 60 30, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 50 C 60 50, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 70 C 60 70, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
+                <path d="M 100 90 C 60 90, 80 50, 50 50" fill="none" stroke="url(#navyToGoldRight)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" className="flowing-line" style={{ animationDirection: 'reverse' }} />
               </svg>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
@@ -170,12 +170,13 @@ const IndustriesPage = () => {
             {/* RIGHT COLUMN */}
             <div className="flex-1 relative h-full">
               {[
-                { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}, {n: "FMCG", i: ShoppingCart}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "HOSPITALITY", items: [{n: "Hotels", i: Hotel}, {n: "Restaurant", i: Utensils}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
                 { cat: "TRANSPORT", items: [{n: "Airlines", i: Plane}, {n: "Rail", i: Train}, {n: "Port", i: Ship}, {n: "Auto", i: Car}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                { cat: "INFRA", items: [{n: "Real Estate", i: Home}, {n: "Manufacturing", i: Factory}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
-                { cat: "SERVICES", items: [{n: "Service", i: Briefcase}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "INFRA", items: [{n: "Real Estate", i: Home}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "SERVICES", items: [{n: "Service", i: Briefcase}, {n: "Education", i: GraduationCap}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
+                { cat: "GENERAL", items: [{n: "Manufacturing", i: Factory}, {n: "FMCG", i: ShoppingCart}, {n: "Sports Clubs", i: Trophy}, {n: "Textiles", i: Scissors}], theme: "bg-white/15 backdrop-blur-md text-white border-white/20 hover:bg-accent-500 hover:border-accent-400", iconTheme: "text-accent-400 group-hover:text-white" },
               ].map((category, idx) => {
-                const top = 12.5 + idx * 25;
+                const top = 10 + idx * 20;
                 return (
                   <div key={idx} className="absolute w-full flex items-center justify-start gap-4 xl:gap-6 pl-4" style={{ top: `${top}%`, transform: 'translateY(-50%)' }}>
                     <div className="w-2.5 h-2.5 rounded-sm absolute left-0 -translate-x-1/2 bg-accent-500 shadow-[0_0_10px_rgba(178,143,82,0.6)] animate-[pulseSoft_2s_ease-in-out_infinite]"></div>
@@ -212,7 +213,7 @@ const IndustriesPage = () => {
       </div>
 
       {/* 5. CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
+      <section id="contact" className="py-8 lg:py-12 bg-primary-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"

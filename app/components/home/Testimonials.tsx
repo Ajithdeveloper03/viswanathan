@@ -82,6 +82,7 @@ export function Testimonials() {
                <button 
                  onClick={scrollPrev} 
                  className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.1)] flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer"
+                 aria-label="Previous Testimonials"
                >
                   <ChevronRight className="w-6 h-6 text-gray-700 rotate-180" strokeWidth={1.5} />
                </button>
@@ -128,6 +129,7 @@ export function Testimonials() {
                <button 
                  onClick={scrollNext} 
                  className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-full border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.1)] flex justify-center items-center hover:bg-gray-50 z-30 transition-all cursor-pointer"
+                 aria-label="Next Testimonials"
                >
                   <ChevronRight className="w-6 h-6 text-gray-700" strokeWidth={1.5} />
                </button>

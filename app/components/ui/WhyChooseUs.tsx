@@ -1,4 +1,4 @@
-import { LucideIcon, Target } from 'lucide-react';
+﻿import { LucideIcon, Target } from 'lucide-react';
 import React from 'react';
 
 interface WhyChooseCard {
@@ -25,7 +25,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
   cards 
 }) => {
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-white font-sans">
+    <section className="py-12 md:py-8 lg:py-12 bg-white font-sans">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         
         {/* Top Header Section */}

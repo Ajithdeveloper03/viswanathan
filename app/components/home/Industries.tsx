@@ -57,22 +57,18 @@ const industryGroups = [
 ];
 
 const WaveShape = () => (
-  <svg 
-    className="absolute top-0 right-0 w-28 h-28 pointer-events-none rounded-tr-2xl" 
-    viewBox="0 0 100 100" 
-    preserveAspectRatio="none"
-  >
-    <path 
-      d="M 10 0 C 40 30 60 80 100 100 L 100 0 Z" 
-      fill="#1F2C50" 
-      className="opacity-100 group-hover:opacity-[0.15] transition-opacity duration-500 ease-in-out" 
+  <>
+    <img 
+      src="/vrassociates/shape.png" 
+      alt="Shape"
+      className="absolute top-0 right-0 w-28 h-28 pointer-events-none rounded-tr-2xl opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out object-contain"
     />
-    <path 
-      d="M 30 0 C 55 20 75 65 100 80 L 100 0 Z" 
-      fill="#B28F52" 
-      className="opacity-[0.85] group-hover:opacity-[0.15] transition-opacity duration-500 ease-in-out" 
+    <img 
+      src="/vrassociates/shape2.png" 
+      alt="Shape Hover"
+      className="absolute top-0 right-0 w-28 h-28 pointer-events-none rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out object-contain"
     />
-  </svg>
+  </>
 );
 
 const CategoryCard = ({ category, icon: CategoryIcon, items, index }: any) => (
@@ -128,7 +124,7 @@ export function Industries() {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden" ref={ref}>
+    <section className="py-16 md:py-12 bg-white relative overflow-hidden" ref={ref}>
       <div className="container-custom relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-20 flex flex-col items-center">

@@ -112,10 +112,10 @@ const CostManagementPage = () => {
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
             <span className="hover:text-accent-400 transition-colors duration-300 cursor-pointer">Services</span>
             <span className="w-1 h-1 bg-accent-500 rounded-full mx-1"></span>
-            <span className="text-accent-400">Cost Management</span>
+            <span className="text-accent-400">Costing Setup Implementation & Audit</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
-            Cost Management <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Services</span>
+            Costing Setup Implementation <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">& Audit</span>
           </h1>
         </div>
       </section>
@@ -191,7 +191,7 @@ const CostManagementPage = () => {
       
 
       {/* CTA — unchanged bg-primary-900 */}
-      <section id="contact" className="py-16 lg:py-24 relative bg-primary-900 overflow-hidden">
+      <section id="contact" className="py-8 lg:py-12 relative bg-primary-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="CTA Background" fill className="object-cover opacity-30 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-primary-900/80"></div>
