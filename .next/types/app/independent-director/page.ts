@@ -1,4 +1,4 @@
-// File: C:\Users\inyma\OneDrive\Desktop\Ajith System Backup\inymart projects\viswanathan\app\independent-director\page.tsx
+// File: C:\Users\user\Desktop\inymart\viswanathan  adv\app\independent-director\page.tsx
 import * as entry from '../../../../app/independent-director/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
