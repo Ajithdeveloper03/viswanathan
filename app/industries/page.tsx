@@ -40,7 +40,7 @@ const IndustriesPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/images/industries-hero.png"
+            src="/images/industries-hero.png"
             alt="Industries Background"
             fill
             className="object-cover opacity-60 mix-blend-luminosity scale-105"
@@ -78,10 +78,10 @@ const IndustriesPage = () => {
           </div>
           <div className="lg:w-1/2 relative h-[320px] w-full group hidden lg:block">
             <div className="absolute top-0 right-0 w-[70%] h-[220px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
-              <Image src="/vrassociates/images/industries1.png" alt="Industry 1" fill className="object-cover" />
+              <Image src="/images/industries1.png" alt="Industry 1" fill className="object-cover" />
             </div>
             <div className="absolute bottom-0 left-0 w-[60%] h-[190px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
-              <Image src="/vrassociates/images/industries2.png" alt="Industry 2" fill className="object-cover" />
+              <Image src="/images/industries2.png" alt="Industry 2" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ const IndustriesPage = () => {
               </svg>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 xl:w-44 xl:h-44 bg-primary-900 rounded-3xl shadow-[0_0_50px_rgba(178,143,82,0.2)] border border-white/10 flex items-center justify-center z-20 hover:scale-110 hover:shadow-[0_0_60px_rgba(178,143,82,0.4)] transition-all duration-500 cursor-pointer">
                 <div className="relative w-24 h-24 xl:w-32 xl:h-32 flex items-center justify-center bg-white rounded-2xl p-2 shadow-inner">
-                  <Image src="/vrassociates/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
+                  <Image src="/vr-logo.png" alt="VR Logo" fill className="object-contain p-2" />
                 </div>
               </div>
             </div>

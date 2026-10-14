@@ -11,9 +11,9 @@ const words = ['Finance.', 'Transformation.', 'Value Creation.'];
 const wordColors = ['text-white sm:text-secondary-900', 'text-primary-300 sm:text-primary-600', 'text-accent-400 sm:text-accent-600'];
 
 const bannerImages = [
-  '/vrassociates/banner 1.png',
-  '/vrassociates/about us banner.png',
-  '/vrassociates/banner 3.png'
+  '/banner 1.png',
+  '/about us banner.png',
+  '/banner 3.png'
 ];
 
 const heroServices = navigation.main.find(item => item.name === 'Our Services')?.submenu || [];
@@ -147,7 +147,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200" />
             </button>
             <Link 
-              href="/#services" 
+              href="/services" 
               className="btn-secondary cursor-pointer text-sm tracking-wider inline-flex items-center"
             >
               Explore Services
@@ -156,11 +156,20 @@ const Hero = () => {
 
           {/* Bullet points */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start gap-x-6 gap-y-3 mt-4 lg:mt-6 animate-fade-in animate-delay-500">
-            {['Business Valuation', 'Costing & Cost Audit', 'Internal Audit', 'Independent Director'].map((item) => (
-              <div key={item} className="flex items-center justify-center sm:justify-start gap-2 text-gray-200 sm:text-secondary-600 text-sm font-medium">
+            {[
+              { label: 'Business Valuation', href: '/business-valuation' },
+              { label: 'Costing & Cost Audit', href: '/cost-management-audit' },
+              { label: 'Internal Audit', href: '/internal-audit' },
+              { label: 'Independent Director', href: '/independent-director' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="flex items-center justify-center sm:justify-start gap-2 text-gray-200 sm:text-secondary-600 text-sm font-medium hover:text-accent-400 sm:hover:text-primary-700 transition-colors"
+              >
                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500 shadow-[0_0_10px_rgba(197,154,27,0.3)]" />
-                {item}
-              </div>
+                {item.label}
+              </Link>
             ))}
           </div>
           

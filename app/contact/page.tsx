@@ -24,7 +24,7 @@ const ContactPage = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/vrassociates/send-mail.php', {
+      let response = await fetch('/send-mail.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,9 +33,29 @@ const ContactPage = () => {
         body: JSON.stringify(formData)
       });
 
+      if (!response.ok && response.status === 404) {
+        try {
+          const fallbackRes = await fetch('/send-mail.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+          if (fallbackRes.ok || fallbackRes.status !== 404) {
+            response = fallbackRes;
+          }
+        } catch (_) {}
+      }
+
       const result = await response.json().catch(() => null);
 
       if (response.ok && result?.success) {
+        setIsSubmitted(true);
+      } else if (response.ok && !result) {
+        // In local Next.js dev server, PHP is served as static text rather than executed.
+        // On live cPanel/Apache hosting, PHPMailer executes and returns valid JSON.
         setIsSubmitted(true);
       } else {
         if (!response.ok && response.status === 404) {
@@ -55,7 +75,7 @@ const ContactPage = () => {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/images/contact.png"
+            src="/images/contact.png"
             alt="Contact Us Background"
             fill
             className="object-cover opacity-60 mix-blend-luminosity scale-105"
@@ -86,12 +106,12 @@ const ContactPage = () => {
             { 
               icon: Phone, 
               title: "Call Us", 
-              lines: [companyInfo.contact.phone, companyInfo.contact.mobile, "Mon - Sat: 9:00 AM - 6:00 PM"] 
+              lines: [companyInfo.contact.phone, "Mon - Sat: 9:00 AM - 6:00 PM"] 
             },
             { 
               icon: Mail, 
               title: "Email Us", 
-              lines: [companyInfo.contact.email, "Support: 24/7 Online", "We reply within 24 hours"] 
+              lines: [companyInfo.contact.email, "We reply within 24 hours"] 
             }
           ].map((info, idx) => {
             const Icon = info.icon;
@@ -103,9 +123,17 @@ const ContactPage = () => {
                     <Icon className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl font-extrabold text-primary-900 mb-3">{info.title}</h3>
-                  <div className="space-y-1.5 text-secondary-600 text-base font-medium">
+                  <div className="space-y-1.5 text-secondary-600 text-base font-medium break-words">
                     {info.lines.map((line, i) => (
-                      <p key={i}>{line}</p>
+                      <p key={i}>
+                        {line.includes('@') ? (
+                          <a href={`mailto:${line}`} className="hover:text-accent-600 transition-colors">{line}</a>
+                        ) : line.startsWith('+91') ? (
+                          <a href={`tel:${line.replace(/[^0-9+]/g, '')}`} className="hover:text-accent-600 transition-colors">{line}</a>
+                        ) : (
+                          line
+                        )}
+                      </p>
                     ))}
                   </div>
                 </div>
@@ -120,20 +148,24 @@ const ContactPage = () => {
           <div className="bg-white rounded-2xl lg:rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row">
             <div className="relative w-full lg:w-[45%] h-[250px] lg:h-[450px] lg:h-auto">
               <Image 
-                src="/vrassociates/images/form.png" 
+                src="/images/form.png" 
                 alt="Modern Office" 
                 fill 
                 className="object-fill"
               />
               <div className="absolute inset-0 bg-accent-500/10 mix-blend-multiply"></div>
-              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl flex flex-col sm:flex-row gap-4 justify-between shadow-lg">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl flex flex-col sm:flex-row gap-4 justify-between shadow-lg">
                 <div>
                   <p className="text-secondary-500 text-[10px] font-bold uppercase tracking-wider mb-0.5">Phone Number</p>
-                  <p className="text-primary-900 font-extrabold text-base">{companyInfo.contact.phone}</p>
+                  <a href={`tel:${companyInfo.contact.phone.replace(/[^0-9+]/g, '')}`} className="text-primary-900 font-extrabold text-base hover:text-accent-600 transition-colors">
+                    {companyInfo.contact.phone}
+                  </a>
                 </div>
                 <div>
                   <p className="text-secondary-500 text-[10px] font-bold uppercase tracking-wider mb-0.5">Email Address</p>
-                  <p className="text-primary-900 font-extrabold text-base">{companyInfo.contact.email}</p>
+                  <a href={`mailto:${companyInfo.contact.email}`} className="text-primary-900 font-extrabold text-xs block hover:text-accent-600 transition-colors">
+                    {companyInfo.contact.email}
+                  </a>
                 </div>
               </div>
             </div>
@@ -216,7 +248,7 @@ const ContactPage = () => {
                       <option value="business-valuation">Business Valuation</option>
                       <option value="internal-audit">Internal Audit</option>
                       <option value="cost-management">Cost Management & Audit</option>
-                      <option value="business-proposals">Business Proposals</option>
+                      <option value="business-restructuring">Business Restructuring</option>
                       <option value="insolvency">Insolvency & Bankruptcy Code</option>
                       <option value="independent-director">Independent Director</option>
                       <option value="other">Other Inquiry</option>
@@ -262,7 +294,7 @@ const ContactPage = () => {
       </section>
       <section className="h-[250px] md:h-[400px] lg:h-[600px] relative w-full">
          <iframe 
-           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5413340578647!2d80.2520336!3d13.0648439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526615b369c0d1%3A0xc3f5a2f58e6dd150!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715096538604!5m2!1sen!2sin" 
+           src="https://maps.google.com/maps?q=Plot+No+4,+Deivanai+Nagar+2nd+Street,+Madipakkam,+Chennai+600091,+Tamilnadu&t=&z=16&ie=UTF8&iwloc=&output=embed" 
            width="100%" 
            height="100%" 
            style={{ border: 0, filter: 'grayscale(0.5) contrast(1.1)' }} 

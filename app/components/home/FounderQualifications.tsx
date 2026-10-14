@@ -1,8 +1,6 @@
-﻿'use client';
-import { CheckCircle2, Award, ShieldCheck, GraduationCap } from 'lucide-react';
-
-
-
+'use client';
+import { CheckCircle2, Award, ShieldCheck, GraduationCap, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 
 const professionalQualifications = [
@@ -14,9 +12,9 @@ const professionalQualifications = [
 ];
 
 const certifications = [
-  'IBBI Registered Valuer',
-  'Independent Director',
-  'IBBI Registered Insolvency Professional',
+  { name: 'IBBI Registered Valuer', href: '/business-valuation' },
+  { name: 'Independent Director', href: '/independent-director' },
+  { name: 'IBBI Registered Insolvency Professional', href: '/insolvency-bankruptcy' },
 ];
 
 export function FounderQualifications() {
@@ -79,13 +77,19 @@ export function FounderQualifications() {
             </div>
             <div className="flex flex-col gap-3 flex-1">
               {certifications.map((cert, i) => (
-                <div
+                <Link
                   key={i}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-primary-50/50 hover:bg-primary-50 transition-colors border border-primary-100"
+                  href={cert.href}
+                  className="flex items-center justify-between p-4 rounded-xl bg-primary-50/50 hover:bg-primary-100/70 transition-colors border border-primary-100 group"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0" />
-                  <span className="text-secondary-800 font-medium leading-snug">{cert}</span>
-                </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0" />
+                    <span className="text-secondary-800 font-medium leading-snug group-hover:text-primary-800 transition-colors">
+                      {cert.name}
+                    </span>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-primary-400 group-hover:text-primary-700 group-hover:translate-x-1 transition-all" />
+                </Link>
               ))}
             </div>
           </div>
@@ -97,7 +101,7 @@ export function FounderQualifications() {
           {/* Left Side: Image */}
           <div className="relative w-full md:w-[30%] min-h-[140px] md:min-h-[160px] shrink-0 overflow-hidden">
             <img 
-              src="/vrassociates/Achievement 1.png" 
+              src="/Achievement 1.png" 
               alt="Academic Achievement Medals" 
               className="absolute inset-0 w-full h-full object-cover object-center scale-105" 
             />
@@ -136,7 +140,7 @@ export function FounderQualifications() {
           <div className="relative w-full md:w-[30%] min-h-[140px] md:min-h-[160px] shrink-0 flex items-center justify-center overflow-hidden">
             {/* Gold Medal image on the right */}
             <img 
-              src="/vrassociates/Achievement 2.png" 
+              src="/Achievement 2.png" 
               alt="Academic Achievement Trophies" 
               className="absolute inset-0 w-full h-full object-cover object-center scale-105" 
             />

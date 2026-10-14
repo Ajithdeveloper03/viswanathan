@@ -26,7 +26,7 @@ const BusinessValuation = () => {
     {
       title: "Corporate Transactions",
       icon: <TrendingUp className="w-8 h-8" />,
-      image: "/vrassociates/Corporate Transactions.png",
+      image: "/Corporate Transactions.png",
       items: [
         "Mergers and acquisitions.",
         "Demergers and business reorganizations.",
@@ -41,7 +41,7 @@ const BusinessValuation = () => {
       title: "Mining",
       desc: "All types of mining, across every stage of the project lifecycle",
       icon: <Layers className="w-8 h-8" />,
-      image: "/vrassociates/Mining.png",
+      image: "/Mining.png",
       items: [
         "All types of mining, across every stage of the project lifecycle"
       ]
@@ -50,7 +50,7 @@ const BusinessValuation = () => {
       title: "Intangible Assets and Intellectual Property",
       desc: "Brand, goodwill, patent, copyright, technology, and software valuation.",
       icon: <Gem className="w-8 h-8" />,
-      image: "/vrassociates/Intangible Assets.png",
+      image: "/Intangible Assets.png",
       items: [
         "Intellectual property valuation.",
         "Brand valuation.",
@@ -64,7 +64,7 @@ const BusinessValuation = () => {
       title: "Regulatory and Cross-Border Valuation",
       desc: "Rule 11UA, FDI, ODI, cross-border investments, and PPP analysis.",
       icon: <Globe className="w-8 h-8" />,
-      image: "/vrassociates/Regulatory & Cross-Border Valuation.png",
+      image: "/Regulatory & Cross-Border Valuation.png",
       items: [
         "Valuation under Rule 11UA of the Income-tax Rules.",
         "Foreign Direct Investment (FDI) transactions.",
@@ -77,7 +77,7 @@ const BusinessValuation = () => {
       title: "Specialised Valuation",
       desc: "Startups, fundraising, ownership restructuring, financial reporting, and management planning.",
       icon: <BarChart className="w-8 h-8" />,
-      image: "/vrassociates/Specialised Valuation.png",
+      image: "/Specialised Valuation.png",
       items: [
         "Startup valuation.",
         "Mining business valuation at different stages of the lifecycle.",
@@ -90,7 +90,7 @@ const BusinessValuation = () => {
       title: "Securities and Financial Instruments",
       desc: "Equity, preference shares, debentures, and investments for regulatory, tax, and strategic purposes.",
       icon: <Scale className="w-8 h-8" />,
-      image: "/vrassociates/Securities & Financial Instruments.png",
+      image: "/Securities & Financial Instruments.png",
       items: [
         "Valuation of equity shares.",
         "Valuation of preference shares.",
@@ -109,7 +109,7 @@ const BusinessValuation = () => {
   ];
 
   const whyChooseUsSection = [
-    { icon: <BarChart className="w-5 h-5" />,        title: "More than 1,000 valuations completed." },
+    { icon: <BarChart className="w-5 h-5" />,        title: "More than 1000 valuations completed. Valuation Report in Quickest possible time" },
     { icon: <Briefcase className="w-5 h-5" />,       title: "Experience across a wide range of business entities and industries." },
     { icon: <Globe className="w-5 h-5" />,           title: "Exposure to domestic and cross-border transactions." },
     { icon: <Building2 className="w-5 h-5" />,       title: "Understanding of both operating businesses and specialised assets." },
@@ -126,7 +126,7 @@ const BusinessValuation = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/Business Valuation.jpeg"
+            src="/Business Valuation.jpeg"
             alt="Business Valuation"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -235,7 +235,7 @@ const BusinessValuation = () => {
       <WhyChooseUsSection
         heading="Why Clients Choose Us"
         subheading="Our Advantage"
-        imageUrl="/vrassociates/Why Clients Choose Us 1.png"
+        imageUrl="/Why Clients Choose Us 1.png"
         imageAlt="Valuation Professional"
         items={whyChooseUsSection}
       />
@@ -291,9 +291,10 @@ const BusinessValuation = () => {
              <p className="text-secondary-400 text-base">
               Whether for an acquisition, fundraising, regulatory compliance, tax purposes, financial reporting, restructuring, or strategic planning — we provide a structured, purpose-driven valuation service.
             </p>
-            <p className="text-secondary-400 text-sm pt-2">
-              Email: <a href="mailto:vishu@viswanathanrassociates.com" className="text-accent-400 hover:underline">vishu@viswanathanrassociates.com</a>
-              &nbsp;&nbsp;|&nbsp;&nbsp;
+            <p className="text-secondary-400 text-sm pt-2 flex flex-wrap items-center justify-center gap-3">
+              <span>Email:</span>
+              <a href="mailto:vishu@viswanathanrassociates.com" className="text-accent-400 hover:underline">vishu@viswanathanrassociates.com</a>
+              <span>|</span>
               <a href="https://www.linkedin.com/in/viswanathan-rajagopalan-13106838/" target="_blank" rel="noreferrer" className="text-accent-400 hover:underline">LinkedIn Profile</a>
             </p>
           </div>

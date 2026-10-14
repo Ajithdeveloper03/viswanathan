@@ -63,6 +63,13 @@ export function WhatWeDoSection() {
       icon: User
     },
     {
+      title: "Business Restructuring, Funding & Exchange Listing",
+      description: "Mergers and Acquisitions, Private Equity, Venture Capital, Debt Funding, within and outside India, through Strategic Business Partner.",
+      linkText: "Business Restructuring",
+      href: "/business-proposals",
+      icon: Scale
+    },
+    {
       title: "Insolvency Advisory",
       description: "Insolvency, restructuring, and resolution-related advisory.",
       linkText: "IBC Services",
@@ -72,39 +79,37 @@ export function WhatWeDoSection() {
     {
       title: "Virtual CFO",
       description: "Virtual CFO and Financial Management support.",
-      linkText: "",
+      linkText: "Advisory Services",
+      href: "/services",
       icon: LineChart
     },
     {
       title: "Financial Planning & MIS",
       description: "Financial planning, budgeting, management reporting, and business performance dashboards.",
-      linkText: "",
+      linkText: "Advisory Services",
+      href: "/services",
       icon: ClipboardCheck
     },
     {
       title: "SOP & Automation",
       description: "Standard Operating Procedure implementation and business process automation.",
-      linkText: "",
+      linkText: "Advisory Services",
+      href: "/services",
       icon: Settings
     },
     {
       title: "Corporate Governance",
       description: "Corporate governance, company secretarial matters, and statutory compliance.",
-      linkText: "",
+      linkText: "Governance Advisory",
+      href: "/independent-director",
       icon: Shield
     },
     {
       title: "Strategic Investment Analysis",
       description: "Strategic investment analysis and business planning.",
-      linkText: "",
+      linkText: "Advisory Services",
+      href: "/services",
       icon: Calculator
-    },
-    {
-      title: "M&A, Funding & Strategic Advisory",
-      description: "Mergers and Acquisitions, Private Equity, Venture Capital, Debt Funding, within and outside India, through Strategic Business Partner.",
-      linkText: "Restructuring & Proposals",
-      href: "/business-proposals",
-      icon: Scale
     }
   ];
   return (
@@ -112,7 +117,11 @@ export function WhatWeDoSection() {
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="section-label reveal inline-flex mb-4">Our Services</div>
-          <h2 className="section-title mb-6 reveal">What <span className="text-accent-500">We Do</span></h2>
+          <h2 className="section-title mb-6 reveal">
+            <Link href="/services" className="hover:text-primary-700 transition-colors">
+              What <span className="text-accent-500">We Do</span>
+            </Link>
+          </h2>
           <p className="section-subtitle mx-auto reveal">
             We support Promoters, Boards, Leadership teams, Investors, and Growing businesses through services including:
           </p>
@@ -147,6 +156,13 @@ export function WhatWeDoSection() {
           <p className="text-secondary-700 text-lg leading-relaxed">
             With more than 1,000+ valuation assignments completed in India and overseas, Cost Audit & Cost Optimization for wide range of Industries in India and Overseas, Internal Audit, Governance, and Financial Leadership, vast experience in Insolvency, we bring a broad perspective to every engagement.
           </p>
+        </div>
+
+        <div className="mt-10 flex justify-center reveal">
+          <Link href="/services" className="btn-primary py-3 px-8 text-sm sm:text-base group inline-flex items-center gap-2">
+            Explore All Practice Areas &amp; Services
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

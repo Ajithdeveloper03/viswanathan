@@ -13,7 +13,7 @@ const InternalAuditPage = () => {
     {
       title: "Financial & Operational",
       icon: LineChart,
-      image: "/vrassociates/Financial & Operational.png",
+      image: "/Financial & Operational.png",
       items: [
         "Financial Controls Audit: accuracy of records, reconciliations, and reporting",
         "Operational Audit: efficiency and effectiveness of processes",
@@ -24,7 +24,7 @@ const InternalAuditPage = () => {
     {
       title: "Risk & Controls",
       icon: ShieldAlert,
-      image: "/vrassociates/Risk & Controls.png",
+      image: "/Risk & Controls.png",
       items: [
         "Risk-Based Internal Audit: audit plans built around your key risks",
         "Internal Financial Controls (IFC) Review: design and operating effectiveness of controls",
@@ -35,7 +35,7 @@ const InternalAuditPage = () => {
     {
       title: "Compliance",
       icon: FileCheck,
-      image: "/vrassociates/Compliance.png",
+      image: "/Compliance.png",
       items: [
         "Statutory & Regulatory Compliance Audit: Companies Act, tax, labor, and sector-specific laws",
         "Policy & Procedure Compliance: adherence to internal policies and delegated authority",
@@ -45,7 +45,7 @@ const InternalAuditPage = () => {
     {
       title: "Cost & Performance",
       icon: Calculator,
-      image: "/vrassociates/Cost & Performance.png",
+      image: "/Cost & Performance.png",
       items: [
         "Cost Audit & Cost Control Review: cost records, allocation, and leakage, in line with applicable Cost Accounting Standards",
         "Inventory & Fixed Asset Audit: verification, valuation, and controls",
@@ -56,7 +56,7 @@ const InternalAuditPage = () => {
     {
       title: "Systems & Governance",
       icon: Server,
-      image: "/vrassociates/Systems & Governance.png",
+      image: "/Systems & Governance.png",
       items: [
         "IT & ERP Controls Review: access, data integrity, and system controls",
         "Corporate Governance Review: board processes, delegation, and reporting quality",
@@ -89,7 +89,7 @@ const InternalAuditPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/Internal Audit banner.png"
+            src="/Internal Audit banner.png"
             alt="Internal Audit Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -164,10 +164,10 @@ const InternalAuditPage = () => {
             </div>
             <div className="order-1 lg:order-2 relative h-[420px] w-full group">
               <div className="absolute top-0 right-0 w-4/5 h-[290px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
-                <Image src="/vrassociates/Domestic Focus 1.png" alt="Audit in India" fill className="object-cover" />
+                <Image src="/Domestic Focus 1.png" alt="Audit in India" fill className="object-cover" />
               </div>
               <div className="absolute bottom-0 left-0 w-3/5 h-[230px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
-                <Image src="/vrassociates/Domestic Focus 2.png" alt="Audit Details" fill className="object-cover" />
+                <Image src="/Domestic Focus 2.png" alt="Audit Details" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -176,10 +176,10 @@ const InternalAuditPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative h-[420px] w-full group">
               <div className="absolute bottom-0 left-0 w-4/5 h-[290px] rounded-3xl overflow-hidden shadow-2xl z-20 group-hover:-translate-y-3 transition-all duration-700">
-                <Image src="/vrassociates/Global Reach 1.png" alt="Audit Outside India" fill className="object-cover" />
+                <Image src="/Global Reach 1.png" alt="Audit Outside India" fill className="object-cover" />
               </div>
               <div className="absolute top-0 right-0 w-3/5 h-[230px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white group-hover:translate-x-3 transition-all duration-700">
-                <Image src="/vrassociates/Global Reach 2.png" alt="Global Audit" fill className="object-cover" />
+                <Image src="/Global Reach 2.png" alt="Global Audit" fill className="object-cover" />
               </div>
             </div>
             <div>
@@ -208,7 +208,7 @@ const InternalAuditPage = () => {
 <WhyChooseUsSection
         heading="What You Gain"
         subheading="Benefits"
-        imageUrl="/vrassociates/What You Gain.png"
+        imageUrl="/What You Gain.png"
         imageAlt="Internal Audit Benefits"
         items={[
           { icon: <CheckCircle2 className="w-5 h-5" />, title: "Early detection of errors, leakage, and fraud risk." },

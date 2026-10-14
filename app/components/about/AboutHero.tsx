@@ -142,7 +142,7 @@ export function AboutHero() {
             <div className="reveal-scale h-full min-h-[250px] lg:h-[400px] lg:min-h-full">
               <div className="relative w-full h-full rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="/vrassociates/About Us – Business Valuation Service in Chennai.png" 
+                  src="/vrassociates/Viswnathan.png" 
                   alt="Viswanathan R Associates Team" 
                   fill
                   className="object-cover"

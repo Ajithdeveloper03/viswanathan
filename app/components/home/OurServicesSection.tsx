@@ -8,37 +8,37 @@ const servicesData = [
   {
     title: 'Business Valuation',
     description: 'Accurate valuation services for businesses to ensure informed decision-making.',
-    image: '/vrassociates/Business Valuation.jpeg',
+    image: '/Business Valuation.jpeg',
     href: '/business-valuation',
   },
   {
     title: 'Cost Management & Audit',
     description: 'In-depth analysis to identify inefficiencies, setup costing systems, and implement strategic savings.',
-    image: '/vrassociates/What We Do 1.png',
+    image: '/What We Do 1.png',
     href: '/cost-management-audit',
   },
   {
     title: 'Internal Audit',
     description: 'Robust internal controls and risk management frameworks for sustainable growth.',
-    image: '/vrassociates/Internal Audit banner.png',
+    image: '/Internal Audit banner.png',
     href: '/internal-audit',
   },
   {
     title: 'Independent Director',
     description: 'Strategic advisory and independent governance oversight for your board of directors.',
-    image: '/vrassociates/images/independent/hero.png',
+    image: '/images/independent/hero.png',
     href: '/independent-director',
   },
   {
-    title: 'Business Proposals',
-    description: 'Expertly crafted business proposals for restructuring, debt funding, and partnerships.',
-    image: '/vrassociates/images/business-proposals/hero.png',
+    title: 'Business Restructuring',
+    description: 'Expertly crafted business restructuring for equity funding, debt syndication, M&A, and partnerships.',
+    image: '/images/business-proposals/hero.png',
     href: '/business-proposals',
   },
   {
     title: 'Insolvency & Bankruptcy',
     description: 'Comprehensive resolution services under the IBC code for distressed assets and businesses.',
-    image: '/vrassociates/Insolvency & Bankruptcy.jpeg',
+    image: '/Insolvency & Bankruptcy.jpeg',
     href: '/insolvency-bankruptcy',
   }
 ];
@@ -71,7 +71,9 @@ export function OurServicesSection() {
         {/* Header Section */}
         <div className="mb-14 text-center max-w-3xl mx-auto flex flex-col items-center justify-center">
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-secondary-900 leading-[1.2] tracking-tight mb-5">
-            Our Services
+            <Link href="/services" className="hover:text-primary-700 transition-colors">
+              Our Services
+            </Link>
           </h2>
           <p className="text-secondary-600 text-[15px] md:text-base leading-relaxed">
             Explore our comprehensive suite of professional services designed to optimize your operations, ensure compliance, and drive sustainable financial growth for your business.
@@ -117,7 +119,7 @@ export function OurServicesSection() {
                 </p>
                 <Link href={service.href} className="mt-auto self-start flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors group/btn">
                   Learn More
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -126,7 +128,7 @@ export function OurServicesSection() {
         
         {/* Bottom CTA Button */}
         <div className="mt-10 flex justify-center reveal-up">
-          <Link href="/business-valuation" className="btn-primary py-2.5 px-5 text-sm group inline-flex items-center gap-2">
+          <Link href="/services" className="btn-primary py-2.5 px-6 text-sm group inline-flex items-center gap-2">
             View All Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>

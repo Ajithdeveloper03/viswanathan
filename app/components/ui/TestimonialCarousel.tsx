@@ -6,22 +6,28 @@ import { ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
+    quote: "Their strategic insight, meticulous financial structuring, and cross-border proficiency are exceptional. They act as true strategic partners navigating complex regulatory environments and high-stakes financial mandates.",
+    name: "Naresh Ganesan",
+    title: "AI Professional, USA",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+  },
+  {
     quote: "Every industry possesses unique cost drivers and operational variables. They bring deep, specialized costing expertise across a vast spectrum of sectors, ensuring our financial frameworks are perfectly aligned with our specific business realities.",
     name: "Viswanathan R.",
     title: "Founding Partner",
-    image: "/vrassociates/Trusted by Industry Leaders 1.png",
+    image: "/Trusted by Industry Leaders 1.png",
   },
   {
     quote: "Their meticulous approach to cost management audit has completely transformed how we view our operational efficiencies. We are now able to pinpoint exact wastage areas and streamline everything.",
     name: "Sarah L.",
     title: "Operations Director",
-    image: "/vrassociates/Trusted by Industry Leaders 2.png",
+    image: "/Trusted by Industry Leaders 2.png",
   },
   {
     quote: "With their deep dive into our manufacturing costs, we identified key pricing strategies that significantly boosted our margins without alienating our core customer base.",
     name: "David M.",
     title: "Chief Financial Officer",
-    image: "/vrassociates/Trusted by Industry Leaders 3.png",
+    image: "/Trusted by Industry Leaders 3.png",
   }
 ];
 

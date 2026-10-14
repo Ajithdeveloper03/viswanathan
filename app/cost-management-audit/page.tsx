@@ -14,7 +14,7 @@ const CostManagementPage = () => {
       title: "Cost Optimization",
       desc: "Find hidden inefficiencies and reduce costs without compromising quality or output.",
       icon: TrendingDown,
-      image: "/vrassociates/What We Do 1.png",
+      image: "/What We Do 1.png",
       items: [
         "Identify key cost drivers and wastage",
         "Review procurement and make-versus-buy decisions",
@@ -25,7 +25,7 @@ const CostManagementPage = () => {
       title: "Cost Allocation & Profitability",
       desc: "See which products, services, and customers truly make money.",
       icon: PieChart,
-      image: "/vrassociates/What We Do 2.png",
+      image: "/What We Do 2.png",
       items: [
         "Fair allocation of direct and indirect costs",
         "Profitability by product, customer, plant, or unit",
@@ -36,7 +36,7 @@ const CostManagementPage = () => {
       title: "Pricing",
       desc: "Set prices grounded in real costs, not guesswork.",
       icon: Tag,
-      image: "/vrassociates/What We Do 3.png",
+      image: "/What We Do 3.png",
       items: [
         "Accurate unit and job costing",
         "Margin and break-even analysis",
@@ -47,7 +47,7 @@ const CostManagementPage = () => {
       title: "Cost Audit",
       desc: "An independent review of your costing records, methods, and controls in line with Cost Accounting Standards.",
       icon: ClipboardCheck,
-      image: "/vrassociates/What We Do 4.png",
+      image: "/What We Do 4.png",
       items: [
         "Verify accuracy of cost data and overhead absorption",
         "Identify errors, gaps, and cost leakage",
@@ -59,7 +59,7 @@ const CostManagementPage = () => {
       title: "Complete Costing System Setup",
       desc: "A costing system built for your business, and one your team can run confidently.",
       icon: Settings,
-      image: "/vrassociates/What We Do 5.png",
+      image: "/What We Do 5.png",
       items: [
         "Cost centres, cost sheets, and allocation methods",
         "MIS reports and ERP/accounting integration",
@@ -163,10 +163,10 @@ const CostManagementPage = () => {
       <WhyChooseUsSection
         heading="Why Work With Us"
         subheading="Our Advantage"
-        imageUrl="/vrassociates/Why Work With Us.png"
+        imageUrl="/Why Work With Us.png"
         imageAlt="Cost Management Experts"
         items={[
-          { icon: <ShieldCheck className="w-5 h-5" />, title: "Wide industry experience, from heavy infrastructure to SaaS." },
+          { icon: <ShieldCheck className="w-5 h-5" />, title: "Wide industry experience, from Heavy Engineering, Robotics, Healthcare to Complex Manufacturing." },
           { icon: <Layers className="w-5 h-5" />,      title: "Practical, implementable recommendations, not just reports." },
           { icon: <Settings className="w-5 h-5" />,    title: "Systems your team can run long after the engagement ends." },
           { icon: <BarChart className="w-5 h-5" />,    title: "Clear, data-backed insight for better pricing and investment decisions." },

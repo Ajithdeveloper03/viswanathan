@@ -13,7 +13,7 @@ const IBCPage = () => {
       id: "Section 7",
       title: "Financial Creditor (CIRP)",
       icon: Landmark,
-      image: "/vrassociates/Financial Creditor (CIRP).png",
+      image: "/Financial Creditor (CIRP).png",
       desc: "A financial creditor (bank, institution, or lender) may apply to the NCLT to begin CIRP when a corporate debtor defaults on a financial debt. Once admitted, control of the company's affairs passes to the insolvency professional.",
       how: "Managing the CIRP as Interim Resolution Professional (IRP) or Resolution Professional (RP), running the Committee of Creditors, and guiding the resolution plan process."
     },
@@ -21,7 +21,7 @@ const IBCPage = () => {
       id: "Section 9",
       title: "Operational Creditor (CIRP)",
       icon: Briefcase,
-      image: "/vrassociates/Operational Creditor (CIRP).png",
+      image: "/Operational Creditor (CIRP).png",
       desc: "A supplier, contractor, or operational creditor with unpaid dues may start the process after serving a demand notice under Section 8. If the debtor neither pays nor disputes the debt, the creditor can apply to the NCLT.",
       how: "Supporting the process after admission, verifying operational creditors' claims, and running the CIRP fairly for all stakeholders."
     },
@@ -29,7 +29,7 @@ const IBCPage = () => {
       id: "Section 10",
       title: "Corporate Applicant (CIRP)",
       icon: Building2,
-      image: "/vrassociates/Corporate Applicant (CIRP).png",
+      image: "/Corporate Applicant (CIRP).png",
       desc: "The corporate debtor itself, acting through its board or members, can apply to the NCLT to begin insolvency resolution when it has defaulted, seeking an orderly, court-supervised resolution instead of waiting for creditor action.",
       how: "Assisting the company in preparation, acting as IRP or RP, and steering the company toward revival where possible."
     },
@@ -37,7 +37,7 @@ const IBCPage = () => {
       id: "Section 59",
       title: "Voluntary Liquidation",
       icon: FileCheck,
-      image: "/vrassociates/Voluntary Liquidation.png",
+      image: "/Voluntary Liquidation.png",
       desc: "A solvent company that has not defaulted and wishes to close its business may liquidate voluntarily, requiring a declaration of solvency, member approval, and the appointment of a liquidator following IBBI regulations.",
       how: "Acting as Liquidator, realizing assets, settling liabilities in the proper order, distributing balance proceeds, and completing the closure with full documentation."
     },
@@ -45,7 +45,7 @@ const IBCPage = () => {
       id: "Section 95",
       title: "Personal Guarantors",
       icon: Users,
-      image: "/vrassociates/Personal Guarantors.png",
+      image: "/Personal Guarantors.png",
       desc: "Personal guarantors to corporate debtors can face insolvency proceedings when the guaranteed debt is in default. A creditor applies to the NCLT, and a Resolution Professional examines the application.",
       how: "Acting as Resolution Professional, examining applications, verifying claims, coordinating with creditors, and supporting a repayment plan or other settlement for the guarantor."
     }
@@ -69,7 +69,7 @@ const IBCPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/images/independent/hero.png"
+            src="/images/independent/hero.png"
             alt="Law & Justice Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -145,7 +145,7 @@ const IBCPage = () => {
             {/* Left: Image Collage */}
             <div className="relative h-[700px] w-full hidden lg:block">
               <div className="absolute top-0 left-0 w-[80%] h-[300px] lg:h-[500px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-10 hover:z-30 transition-all duration-500 group">
-                <Image src="/vrassociates/Our Resolution Services.png" alt="Consulting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/Our Resolution Services.png" alt="Consulting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="absolute bottom-0 right-0 w-[60%] h-[250px] lg:h-[400px] rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl z-20 border-8 border-white group">
                 <Image src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Reporting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -182,16 +182,17 @@ const IBCPage = () => {
         </div>
       </section>
 
-      {/* NEW PROCESS STRIP */}
+      {/* RESOLUTION PATHWAY PROCESS STRIP */}
       <ProcessFlow theme="light"
         subtitle="Resolution Pathway"
-        title="Our proven insolvency process for"
-        highlightText="corporate distress"
+        title="Our Proven"
+        highlightText="Resolution Pathway"
         steps={[
-          { title: "Initiate", desc: "File application and commence CIRP proceedings.", icon: FileCheck },
-          { title: "Assume", desc: "Take control as IRP/RP and collate claims.", icon: Briefcase },
-          { title: "Convene", desc: "Form the Committee of Creditors and hold meetings.", icon: Users },
-          { title: "Resolve", desc: "Evaluate resolution plans and seek NCLT approval.", icon: CheckCircle2 }
+          { title: "NeSL-Information Utility", desc: "Recording of default and obtaining authenticated record from Information Utility.", icon: FileCheck },
+          { title: "Application to Hon'ble NCLT", desc: "Formal petition filing under relevant IBC provisions before the NCLT Bench.", icon: Landmark },
+          { title: "Appearance before Hon'ble NCLT Bench", desc: "Expert representation and advocacy before the Hon'ble NCLT Bench.", icon: Briefcase },
+          { title: "Compliance with Orders of the Bench", desc: "Strict execution and compliance with judicial directives and orders.", icon: ShieldCheck },
+          { title: "Closure of the Case", desc: "Orderly completion and successful legal closure of the insolvency proceedings.", icon: CheckCircle2 }
         ]}
       />
 

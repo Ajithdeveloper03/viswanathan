@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/vrassociates',
+  trailingSlash: true,
   images: {
     unoptimized: true,
     domains: [
@@ -14,5 +14,4 @@ const nextConfig = {
     tsconfigPath: './tsconfig.json',
   },
 };
-
 module.exports = nextConfig;

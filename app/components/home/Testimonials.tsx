@@ -3,6 +3,12 @@ import { Star, ChevronRight } from 'lucide-react';
 
 const testimonialsData = [
   {
+    text: "Viswanathan R Associates brings extraordinary depth and precision in corporate financial advisory and restructuring. Their strategic frameworks, regulatory acumen, and board-level insights bridge complex requirements effortlessly.",
+    name: "Naresh Ganesan",
+    role: "AI Professional, USA",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+  },
+  {
     text: "Their precise business valuation services were instrumental during our recent merger. The team's deep industry knowledge and professional approach gave us immense confidence.",
     name: "Arun Prakash",
     role: "MANAGING DIRECTOR, CHENNAI",
@@ -111,11 +117,7 @@ export function Testimonials() {
 
                        {/* Author Info */}
                        <div className="flex items-center gap-4 mt-6">
-                         <img 
-                           src={testimonial.image} 
-                           alt={testimonial.name} 
-                           className="w-11 h-11 rounded-full object-cover shadow-sm"
-                         />
+                         <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1F2C50] to-[#2a3b68] text-[#B28F52] flex items-center justify-center font-bold text-base shadow-sm ring-2 ring-[#B28F52]/20 shrink-0">{testimonial.name.charAt(0)}</div>
                          <div>
                            <h4 className="text-[#0f172a] font-bold text-[14px]">{testimonial.name}</h4>
                            <p className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mt-0.5">{testimonial.role}</p>

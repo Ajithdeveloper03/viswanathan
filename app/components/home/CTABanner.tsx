@@ -1,6 +1,7 @@
-﻿'use client';
-import { FileText, Phone } from 'lucide-react';
+'use client';
+import { FileText, Phone, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ModalTriggerButton from '@/app/components/ui/ModalTriggerButton';
 import { companyInfo } from '@/app/lib/siteData';
 
@@ -40,6 +41,13 @@ export function CTABanner() {
             <ModalTriggerButton className="w-full sm:w-auto flex items-center justify-center gap-3 bg-accent-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-accent-600 transition-all duration-300 shadow-xl hover:shadow-[0_20px_40px_-10px_rgba(178,143,82,0.4)]">
               Contact Us Today
             </ModalTriggerButton>
+            <Link
+              href="/services"
+              className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-5 rounded-full font-bold text-lg transition-all duration-300 backdrop-blur-sm"
+            >
+              Explore All Services
+              <ArrowRight className="w-5 h-5 text-accent-400" />
+            </Link>
           </div>
         </div>
       </div>

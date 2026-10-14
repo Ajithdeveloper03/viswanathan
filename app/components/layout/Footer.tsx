@@ -74,7 +74,11 @@ const Footer = () => {
 
           {/* Our Services */}
           <div className="flex flex-col h-full">
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6">
+              <Link href="/services" className="hover:text-accent-400 transition-colors">
+                Our Services
+              </Link>
+            </h4>
             <ul className="space-y-3">
               {(navigation.main.find(item => item.name === 'Our Services')?.submenu || []).map((service) => (
                 <li key={service.name}>
@@ -108,12 +112,12 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-200 text-sm"
                 >
                   <Mail className="w-5 h-5 text-accent-500 shrink-0" />
-                  {companyInfo.contact.email}
+                  <span>{companyInfo.contact.email}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href={`tel:${companyInfo.contact.phone.replace(/\s/g, '')}`}
+                  href={`tel:${companyInfo.contact.phone.replace(/[^0-9+]/g, '')}`}
                   className="flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-200 text-sm"
                 >
                   <Phone className="w-5 h-5 text-accent-500 shrink-0" />

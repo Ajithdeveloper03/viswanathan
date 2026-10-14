@@ -36,7 +36,7 @@ export function AboutPreview() {
           <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end px-6 lg:px-10 pt-16 pb-8 min-h-[350px] md:min-h-[300px] lg:h-[500px]">
             <div className="absolute inset-0 z-0">
               <img
-                src="/vrassociates/about us.png"
+                src="/about us.png"
                 alt="Our Story"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000 brightness-110 contrast-125 saturate-150"
               />
@@ -86,10 +86,16 @@ export function AboutPreview() {
               </p>
             </div>
 
-            <Link href="/about-us" className="btn-primary group cursor-pointer reveal inline-flex items-center">
-              Learn More About Us
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-4 reveal">
+              <Link href="/about-us" className="btn-primary group cursor-pointer inline-flex items-center">
+                Learn More About Us
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link href="/services" className="btn-secondary group cursor-pointer inline-flex items-center">
+                Explore Our Services
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

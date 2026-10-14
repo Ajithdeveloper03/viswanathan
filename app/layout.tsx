@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Header from './components/layout/Header';
@@ -36,8 +36,12 @@ export const metadata: Metadata = {
   description: 'Strategic Financial Advisory for Businesses, Investors, Banks, and Corporate Leaders.',
   keywords: 'Business Valuation, Financial Advisory, Corporate Finance, Insolvency',
   icons: {
-    icon: '/vrassociates/vr-logo.png',
-    shortcut: '/vrassociates/vr-logo.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/vr-logo.png' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   openGraph: {
     title: 'Viswanathan R Associates',

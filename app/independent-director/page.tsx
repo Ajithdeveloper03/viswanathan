@@ -12,7 +12,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Board & Strategy",
       icon: Target,
-      image: "/vrassociates/images/independent/corporate.png",
+      image: "/images/independent/corporate.png",
       items: [
         "Provide independent, unbiased views on strategy, expansion, and major decisions",
         "Challenge assumptions constructively and bring an outside perspective",
@@ -22,7 +22,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Audit Committee & Finance",
       icon: ShieldCheck,
-      image: "/vrassociates/images/independent/financial.png",
+      image: "/images/independent/financial.png",
       items: [
         "Review financial statements, disclosures, and audit findings",
         "Evaluate internal financial controls, internal audit, and statutory audit quality",
@@ -32,7 +32,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Risk Management",
       icon: AlertTriangle,
-      image: "/vrassociates/images/independent/operational.png",
+      image: "/images/independent/operational.png",
       items: [
         "Assess enterprise risks, including credit, operational, technology, and compliance risks",
         "Review the effectiveness of risk frameworks and controls",
@@ -42,7 +42,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Corporate Governance",
       icon: Scale,
-      image: "/vrassociates/images/independent/Personal Guarantors.png",
+      image: "/images/independent/Personal Guarantors.png",
       items: [
         "Uphold governance standards and board processes",
         "Review related-party transactions and conflict-of-interest situations",
@@ -52,7 +52,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Stakeholder Protection",
       icon: Handshake,
-      image: "/vrassociates/images/independent/voluntary.png",
+      image: "/images/independent/voluntary.png",
       items: [
         "Represent the interests of minority shareholders, lenders, and other stakeholders",
         "Support fair, transparent, and ethical decision-making"
@@ -61,7 +61,7 @@ const IndependentDirectorPage = () => {
     {
       title: "Committee Participation",
       icon: Users,
-      image: "/vrassociates/images/independent/services.png",
+      image: "/images/independent/services.png",
       items: [
         "Audit Committee",
         "Nomination & Remuneration Committee",
@@ -96,7 +96,7 @@ const IndependentDirectorPage = () => {
       <section className="relative pt-40 pb-32 flex items-center justify-center bg-primary-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/vrassociates/Insolvency & Bankruptcy.jpeg"
+            src="/Insolvency & Bankruptcy.jpeg"
             alt="Board Room Background"
             fill
             className="object-cover opacity-30 mix-blend-luminosity scale-105"
@@ -206,13 +206,22 @@ const IndependentDirectorPage = () => {
                       1
                     </div>
                     <div>
+                      <h4 className="text-xl font-bold mb-2">Governance Discipline</h4>
+                      <p className="text-secondary-300">Strong grounding in board processes, committee work, and regulatory compliance.</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-5">
+                    <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 text-accent-400 border border-white/10">
+                      2
+                    </div>
+                    <div>
                       <h4 className="text-xl font-bold mb-2">Finance & Cost Expertise</h4>
                       <p className="text-secondary-300">Cost accounting, valuation, internal audit, and controls all under one roof.</p>
                     </div>
                   </li>
                   <li className="flex gap-5">
                     <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 text-accent-400 border border-white/10">
-                      2
+                      3
                     </div>
                     <div>
                       <h4 className="text-xl font-bold mb-2">Cross-Sector Exposure</h4>
@@ -221,20 +230,11 @@ const IndependentDirectorPage = () => {
                   </li>
                   <li className="flex gap-5">
                     <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 text-accent-400 border border-white/10">
-                      3
+                      4
                     </div>
                     <div>
                       <h4 className="text-xl font-bold mb-2">Practical, Independent Voice</h4>
                       <p className="text-secondary-300">Balanced, well-prepared, and sharply focused on the company&apos;s long-term health.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-5">
-                    <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 text-accent-400 border border-white/10">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-2">Governance Discipline</h4>
-                      <p className="text-secondary-300">Strong grounding in board processes, committee work, and regulatory compliance.</p>
                     </div>
                   </li>
                 </ul>

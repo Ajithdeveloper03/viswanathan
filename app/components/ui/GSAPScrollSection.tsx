@@ -69,9 +69,6 @@ export default function GSAPScrollSection({ title, subtitle, items, bg = 'bg-whi
 
           {/* Desktop/Tablet Prev & Next Buttons */}
           <div className="flex items-center gap-3 self-start md:self-end">
-            <span className="text-sm font-semibold text-secondary-500 mr-2">
-              {currentIndex + 1} / {items.length}
-            </span>
             <button
               onClick={handlePrev}
               aria-label="Previous service slide"
@@ -108,11 +105,19 @@ export default function GSAPScrollSection({ title, subtitle, items, bg = 'bg-whi
 
             {/* Card Content */}
             <div className="w-full lg:w-[55%] p-6 sm:p-8 lg:p-12 flex flex-col justify-center bg-white">
-              {currentItem.icon && (
-                <div className="w-12 h-12 bg-accent-50 rounded-2xl flex items-center justify-center text-accent-600 mb-5 shadow-sm border border-accent-100">
-                  {currentItem.icon}
+              {/* Top Header Row with Icon and Counter Badge inside Content Area */}
+              <div className="flex items-center justify-between mb-5">
+                {currentItem.icon ? (
+                  <div className="w-12 h-12 bg-accent-50 rounded-2xl flex items-center justify-center text-accent-600 shadow-sm border border-accent-100">
+                    {currentItem.icon}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+                <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-primary-50 text-primary-900 font-bold text-xs sm:text-sm tracking-wider border border-primary-100 shadow-sm">
+                  {currentIndex + 1} / {items.length}
                 </div>
-              )}
+              </div>
               
               <h3 className="text-2xl sm:text-3xl font-extrabold text-primary-900 mb-3 leading-snug">
                 {currentItem.title}

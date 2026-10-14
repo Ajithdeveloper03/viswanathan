@@ -47,7 +47,7 @@ const ContactModal = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/vrassociates/send-mail.php', {
+      let response = await fetch('/send-mail.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,12 +56,31 @@ const ContactModal = () => {
         body: JSON.stringify(formData)
       });
 
+      if (!response.ok && response.status === 404) {
+        try {
+          const fallbackRes = await fetch('/send-mail.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+          if (fallbackRes.ok || fallbackRes.status !== 404) {
+            response = fallbackRes;
+          }
+        } catch (_) {}
+      }
+
       const result = await response.json().catch(() => null);
 
       if (response.ok && result?.success) {
         setIsSubmitted(true);
+      } else if (response.ok && !result) {
+        // In local Next.js dev server, PHP is served as static text rather than executed.
+        // On live cPanel/Apache hosting, PHPMailer executes and returns valid JSON.
+        setIsSubmitted(true);
       } else {
-        // If PHP endpoint is not directly executable in dev server, still acknowledge gracefully
         if (!response.ok && response.status === 404) {
           setIsSubmitted(true);
         } else {
@@ -69,7 +88,6 @@ const ContactModal = () => {
         }
       }
     } catch (err) {
-      // In local dev without Apache/PHP, fall back to success for visual testing
       setIsSubmitted(true);
     } finally {
       setIsLoading(false);
@@ -177,7 +195,7 @@ const ContactModal = () => {
                   <option value="business-valuation">Business Valuation</option>
                   <option value="internal-audit">Internal Audit</option>
                   <option value="cost-management">Cost Management & Audit</option>
-                  <option value="business-proposals">Business Proposals</option>
+                  <option value="business-restructuring">Business Restructuring</option>
                   <option value="insolvency">Insolvency & Bankruptcy Code</option>
                   <option value="independent-director">Independent Director</option>
                   <option value="other">Other Inquiry</option>

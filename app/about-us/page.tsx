@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 import { AboutHero } from '../components/about/AboutHero';
 import { FounderQualifications } from '../components/home/FounderQualifications';
 import { WhatWeDoSection } from '../components/about/WhatWeDoSection';
@@ -18,9 +18,9 @@ export default function AboutUsPage() {
     <div className="flex flex-col min-h-screen">
       <AboutHero />
       <FounderQualifications />
-      <WhatWeDoSection />
-      <OurApproachSection />
       <VisionMissionSection />
+      <OurApproachSection />
+      <WhatWeDoSection />
       <WhyChooseUsSection />
       <AboutCTA />
     </div>

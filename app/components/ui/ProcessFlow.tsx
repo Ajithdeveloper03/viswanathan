@@ -1,4 +1,4 @@
-﻿import { LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 import React from 'react';
 
 interface ProcessStep {
@@ -18,6 +18,8 @@ interface ProcessFlowProps {
 }
 
 const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldText, subtitle, steps, bg = 'bg-gray-50' }) => {
+  const isMultiStep = steps.length > 5;
+
   return (
     <section className={`py-12 md:py-16 ${bg} relative font-sans overflow-hidden`}>
       {/* Premium Subtle Background Pattern */}
@@ -39,7 +41,7 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
 
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
 
-        {/* Header section matching the image style */}
+        {/* Header section */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           {subtitle && (
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -55,41 +57,74 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
         </div>
 
         {/* Steps Container */}
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-0">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            return (
-              <div key={idx} className="w-full md:w-auto flex-1 flex flex-col items-center text-center relative group px-4">
-
-                {/* Connecting Line and Arrow to the next step */}
-                {idx < steps.length - 1 && (
-                  <div className="hidden md:flex absolute top-[3.5rem] left-[calc(50%+3.5rem)] w-[calc(100%-7rem)] z-0 items-center justify-end">
-                    {/* Dashed Line */}
-                    <div className="absolute left-0 right-1 top-1/2 -translate-y-1/2 border-t-[4px] border-dashed border-[#e5e7eb] group-hover:border-accent-400 transition-colors duration-500"></div>
-                    {/* Arrow SVG */}
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="relative z-10 text-secondary-300 group-hover:text-accent-500 transition-colors duration-500 group-hover:translate-x-2">
-                      <path d="M9 18l6-6-6-6" />
-                    </svg>
+        {isMultiStep ? (
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 lg:gap-5 xl:gap-3.5">
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <div 
+                  key={idx} 
+                  className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 xl:px-3.5 xl:py-5 border border-secondary-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center group relative overflow-hidden"
+                >
+                  <div className="absolute top-2.5 left-2.5 text-[10px] font-extrabold text-accent-600 bg-accent-50 px-2 py-0.5 rounded-full border border-accent-100">
+                    0{idx + 1}
                   </div>
-                )}
 
-                {/* Icon Circle */}
-                <div className="w-28 h-28 mx-auto rounded-full bg-primary-900 border-primary-900 flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-white group-hover:border-secondary-100 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.1)] border shadow-md">
-                  <Icon className="w-10 h-10 text-white group-hover:text-accent-500 transition-colors duration-500 group-hover:rotate-12" strokeWidth={2} />
+                  {/* Icon Circle */}
+                  <div className="w-14 h-14 xl:w-12 xl:h-12 rounded-2xl bg-primary-900 flex items-center justify-center mb-4 mt-2 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent-500 shadow-md">
+                    <Icon className="w-7 h-7 xl:w-6 xl:h-6 text-white transition-transform duration-300 group-hover:rotate-6" strokeWidth={2} />
+                  </div>
+
+                  {/* Content */}
+                  <h4 className="text-[15px] xl:text-[13.5px] font-bold text-primary-900 mb-2 leading-snug group-hover:text-accent-600 transition-colors duration-200">
+                    {step.title}
+                  </h4>
+                  {step.desc && (
+                    <p className="text-secondary-500 text-xs xl:text-[11.5px] leading-relaxed">
+                      {step.desc}
+                    </p>
+                  )}
                 </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-0">
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <div key={idx} className="w-full md:w-auto flex-1 flex flex-col items-center text-center relative group px-4">
 
-                {/* Content */}
-                <h4 className="text-[22px] font-bold text-primary-900 mb-4 group-hover:text-accent-600 transition-colors duration-300">{step.title}</h4>
-                {step.desc && (
-                  <p className="text-secondary-600 text-[15px] leading-relaxed max-w-[240px] transition-colors duration-300">
-                    {step.desc}
-                  </p>
-                )}
+                  {/* Connecting Line and Arrow to the next step */}
+                  {idx < steps.length - 1 && (
+                    <div className="hidden md:flex absolute top-[3.5rem] left-[calc(50%+3.5rem)] w-[calc(100%-7rem)] z-0 items-center justify-end">
+                      {/* Dashed Line */}
+                      <div className="absolute left-0 right-1 top-1/2 -translate-y-1/2 border-t-[4px] border-dashed border-[#e5e7eb] group-hover:border-accent-400 transition-colors duration-500"></div>
+                      {/* Arrow SVG */}
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="relative z-10 text-secondary-300 group-hover:text-accent-500 transition-colors duration-500 group-hover:translate-x-2">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg>
+                    </div>
+                  )}
 
-              </div>
-            )
-          })}
-        </div>
+                  {/* Icon Circle */}
+                  <div className="w-28 h-28 mx-auto rounded-full bg-primary-900 border-primary-900 flex items-center justify-center mb-8 relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 group-hover:bg-white group-hover:border-secondary-100 group-hover:shadow-[0_20px_40px_-10px_rgba(31,44,80,0.1)] border shadow-md">
+                    <Icon className="w-10 h-10 text-white group-hover:text-accent-500 transition-colors duration-500 group-hover:rotate-12" strokeWidth={2} />
+                  </div>
+
+                  {/* Content */}
+                  <h4 className="text-[20px] font-bold text-primary-900 mb-4 group-hover:text-accent-600 transition-colors duration-300">{step.title}</h4>
+                  {step.desc && (
+                    <p className="text-secondary-600 text-[15px] leading-relaxed max-w-[240px] transition-colors duration-300">
+                      {step.desc}
+                    </p>
+                  )}
+
+                </div>
+              );
+            })}
+          </div>
+        )}
 
       </div>
     </section>
@@ -97,4 +132,3 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({ title, highlightText, boldTex
 };
 
 export default ProcessFlow;
-

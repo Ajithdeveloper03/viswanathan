@@ -15,9 +15,8 @@ const HomePage = () => {
       <Hero />
       <TrustIndicators />
       <AboutPreview />
-      <Industries />
-      
       <OurServicesSection />
+      <Industries />
       <Testimonials />
       <CTABanner />
     </main>

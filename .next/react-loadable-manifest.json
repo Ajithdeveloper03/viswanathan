@@ -2,31 +2,31 @@
   "app\\components\\home\\HomePage.tsx -> ./AboutPreview": {
     "id": 3873,
     "files": [
-      "static/chunks/873.0a79cf4a1b8aa30d.js"
+      "static/chunks/873.b4ce0bb1f52b18dc.js"
     ]
   },
   "app\\components\\home\\HomePage.tsx -> ./CTABanner": {
     "id": 1667,
     "files": [
-      "static/chunks/667.a712905262620ec0.js"
+      "static/chunks/667.243544ce18cb14c3.js"
     ]
   },
   "app\\components\\home\\HomePage.tsx -> ./Industries": {
-    "id": 4911,
+    "id": 2736,
     "files": [
-      "static/chunks/911.b3c918d753bfaf22.js"
+      "static/chunks/736.348f3c26f1a8ee19.js"
     ]
   },
   "app\\components\\home\\HomePage.tsx -> ./OurServicesSection": {
     "id": 6996,
     "files": [
-      "static/chunks/996.ec24741678c4a380.js"
+      "static/chunks/996.e7150276cbfb9fd1.js"
     ]
   },
   "app\\components\\home\\HomePage.tsx -> ./Testimonials": {
     "id": 5329,
     "files": [
-      "static/chunks/329.a61258349ac6dc4c.js"
+      "static/chunks/329.c46f4ec756e75290.js"
     ]
   },
   "app\\components\\home\\HomePage.tsx -> ./TrustIndicators": {

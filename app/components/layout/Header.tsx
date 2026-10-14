@@ -1,8 +1,6 @@
 ﻿'use client';
 import { ChevronDown, Menu, X } from 'lucide-react';
-
 import { useState, useEffect, useRef } from 'react';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -14,7 +12,10 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const isServicePage = pathname && pathname !== '/' && pathname !== '/about-us';
+  const cleanPath = pathname ? pathname.replace(/\/$/, '') : '';
+  
+  // Apply dark text & header styling to both Home ('') and About Us ('/about-us')
+  const isLightHeader = cleanPath === '' || cleanPath === '/about-us';
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -44,21 +45,17 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isServicePage
-          ? `fixed ${
-              isScrolled
-                ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-1'
-                : 'bg-transparent py-3'
-            }`
-          : 'absolute py-3'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-1'
+          : 'bg-transparent py-3'
       }`}
     >
-      {/* White gradient overlay for home/about pages only */}
-      {!isServicePage && (
+      {/* Subtle white top gradient on Home and About Us pages only */}
+      {isLightHeader && !isScrolled && (
         <div 
           className="absolute inset-0 pointer-events-none z-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.6) 50%, transparent 100%)' }}
         />
       )}
 
@@ -67,15 +64,21 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className={`relative flex items-center justify-center transition-all duration-300 shrink-0 ${
-              isServicePage
-                ? isScrolled
-                  ? 'bg-white p-1 rounded-full shadow-md w-12 h-12 lg:w-24 lg:h-24'
-                  : 'bg-white p-2 rounded-full shadow-lg w-20 h-20 lg:w-24 lg:h-24'
-                : 'bg-transparent w-32 h-32'
+              isLightHeader
+                ? 'bg-transparent p-0 shadow-none'
+                : 'bg-white p-2 rounded-full shadow-lg'
+            } ${
+              isScrolled
+                ? isLightHeader
+                  ? 'w-16 h-16 lg:w-22 lg:h-22'
+                  : 'w-14 h-14 lg:w-20 lg:h-20'
+                : isLightHeader
+                  ? 'w-20 h-20 lg:w-28 lg:h-28'
+                  : 'w-18 h-18 lg:w-24 lg:h-24'
             }`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/vrassociates/vr-logo.png" 
+                src="/vr-logo.png" 
                 alt="VR Logo" 
                 className="w-full h-full object-contain"
               />
@@ -93,21 +96,22 @@ const Header = () => {
               >
                 {item.submenu ? (
                   <div className="relative">
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
+                    <Link
+                      href={item.href && item.href !== '#' ? item.href : '/services'}
+                      onClick={() => setOpenDropdown(null)}
                       className={`flex items-center gap-1 px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 cursor-pointer ${
-                        isServicePage
-                          ? isScrolled
+                        isLightHeader
+                          ? 'text-secondary-900 hover:text-accent-600 hover:bg-black/5'
+                          : isScrolled
                             ? 'text-primary-900 hover:text-accent-600 hover:bg-gray-50'
                             : 'text-white hover:bg-white/20'
-                          : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
                       } ${
-                        openDropdown === item.name && !isServicePage
-                          ? 'text-primary-700 bg-white/50'
-                          : openDropdown === item.name && isServicePage && isScrolled
-                          ? 'text-accent-600 bg-gray-50'
-                          : openDropdown === item.name && isServicePage
-                          ? 'bg-white/20'
+                        openDropdown === item.name
+                          ? isLightHeader
+                            ? 'text-accent-600 bg-black/5'
+                            : isScrolled
+                              ? 'text-accent-600 bg-gray-50'
+                              : 'bg-white/20'
                           : ''
                       }`}
                     >
@@ -117,23 +121,22 @@ const Header = () => {
                           openDropdown === item.name ? 'rotate-180' : ''
                         }`}
                       />
-                    </button>
+                    </Link>
 
                     {/* Dropdown Menu */}
                     <div
-                      className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-soft-lg border border-secondary-100 overflow-hidden transition-all duration-200 ${
+                      className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-soft-lg border border-secondary-100 overflow-hidden transition-all duration-200 ${
                         openDropdown === item.name
                           ? 'opacity-100 translate-y-0 visible'
                           : 'opacity-0 -translate-y-2 invisible'
                       }`}
                     >
                       <div className="py-2">
-                        {item.submenu.map((subItem, index) => (
+                        {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
                             className="block px-4 py-2.5 text-base text-secondary-700 hover:text-primary-700 hover:bg-primary-50 transition-colors duration-150"
-                            style={{ animationDelay: `${index * 50}ms` }}
                           >
                             {subItem.name}
                           </Link>
@@ -145,11 +148,11 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={`block px-2 xl:px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
-                      isServicePage
-                        ? isScrolled
+                      isLightHeader
+                        ? 'text-secondary-900 hover:text-accent-600 hover:bg-black/5'
+                        : isScrolled
                           ? 'text-primary-900 hover:text-accent-600 hover:bg-gray-50'
                           : 'text-white hover:bg-white/20'
-                        : 'text-secondary-900 hover:text-primary-700 hover:bg-white/50'
                     }`}
                   >
                     {item.name}
@@ -163,11 +166,9 @@ const Header = () => {
           <Link
             href={navigation.cta.href}
             className={`hidden lg:inline-flex items-center gap-2 transition-all duration-300 whitespace-nowrap text-xs xl:text-sm px-5 xl:px-7 py-2.5 rounded-full font-bold shadow-md ${
-              isServicePage
-                ? isScrolled
-                  ? 'bg-accent-500 text-white hover:bg-accent-600'
-                  : 'bg-[#1F2C50] text-white hover:bg-[#151f3b]'
-                : 'btn-primary'
+              isScrolled
+                ? 'bg-accent-500 text-white hover:bg-accent-600'
+                : 'bg-[#1F2C50] text-white hover:bg-[#151f3b]'
             }`}
           >
             {navigation.cta.name}
@@ -177,11 +178,11 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-              isServicePage
-                ? isScrolled
+              isLightHeader
+                ? 'text-secondary-900 hover:bg-secondary-100'
+                : isScrolled
                   ? 'text-primary-900 hover:bg-gray-100'
                   : 'text-white hover:bg-white/20'
-                : 'text-secondary-900 hover:bg-secondary-100'
             }`}
             aria-label="Toggle menu"
           >
@@ -201,17 +202,27 @@ const Header = () => {
                 <div key={item.name}>
                   {item.submenu ? (
                     <div>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-all duration-200 text-secondary-900 hover:bg-white/50"
-                      >
-                        <span className="font-medium">{item.name}</span>
-                        <ChevronDown
-                          className={`w-5 h-5 transition-transform duration-200 ${
-                            openDropdown === item.name ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
+                      <div className="w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-all duration-200 text-secondary-900 hover:bg-white/50">
+                        <Link
+                          href={item.href && item.href !== '#' ? item.href : '/services'}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="font-medium flex-1 text-secondary-900 hover:text-primary-700"
+                        >
+                          {item.name}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => toggleDropdown(item.name)}
+                          className="p-1 -mr-1 text-secondary-600 hover:text-primary-700 cursor-pointer"
+                          aria-label="Toggle submenu"
+                        >
+                          <ChevronDown
+                            className={`w-5 h-5 transition-transform duration-200 ${
+                              openDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                      </div>
                       <div
                         className={`overflow-hidden transition-all duration-200 ${
                           openDropdown === item.name ? 'max-h-96' : 'max-h-0'
